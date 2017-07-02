@@ -4,4 +4,4 @@
 - [Airbnb JavaScript Style Guide](#airbnb)
 
 ## Airbnb
-A mostly reasonable approach to JavaScript [Click](#https://github.com/airbnb/javascript)
+A mostly reasonable approach to JavaScript [Click](https://github.com/airbnb/javascript)
