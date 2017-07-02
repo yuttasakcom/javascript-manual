@@ -1,7 +1,7 @@
 ## Javascript 101
 
 ## สารบัญ
-- [Airbnb](#airbnb)
+- [Airbnb JavaScript Style Guide](#airbnb)
 
-## Airbnb JavaScript Style Guide
-[A mostly reasonable approach to JavaScript](#https://github.com/airbnb/javascript)
+## Airbnb
+A mostly reasonable approach to JavaScript [Click](#https://github.com/airbnb/javascript)
