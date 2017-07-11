@@ -18,3 +18,35 @@ The best way to learn about standard is to just install it and give it a try on 
 ## Promise
 
 ## Reactive
+```javascript
+function createReactiveObject (obj) {
+	const keys = Object.keys(obj)
+  obj.$data = Object.assign({}, obj)
+  keys.forEach((key) => {
+  	Object.defineProperty(obj, key, {
+    	get: reactiveGetter.bind(obj, key),
+      set: reactiveSetter.bind(obj, key)
+    })
+  })
+}
+
+function reactiveSetter (property, value) {
+	this.$data[property] = value
+  console.log(`${property} changed to ${value}`)
+}
+
+function reactiveGetter (property) {
+	console.log(`get ${property}`)
+  return this.$data[property]
+}
+
+let user = {
+	name: '',
+	score: 0
+}
+
+createReactiveObject(user)
+
+user.name='Yo'
+console.log(user.score) 
+```
