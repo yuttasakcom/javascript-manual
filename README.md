@@ -4,7 +4,7 @@
 - [Airbnb JavaScript Style Guide](#airbnb)
 - [JavaScript Standard Style](#standard)
 - [Callback](#callback)
-  - [Recursive Loop](#recursive-loop)
+  - [Recursive Function](#recursive-function)
 - [Promise](#promise)
 - [Reactive](#reactive)
 
@@ -82,7 +82,7 @@ Open(res => {
 })
 ```
 
-## Recursive Loop
+## Recursive Function
 ```javascript
 function Open(cb) {
   let rand = Rand()
