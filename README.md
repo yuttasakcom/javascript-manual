@@ -14,6 +14,7 @@
 - [Reactive](#reactive)
 - [Airbnb JavaScript Style Guide](#airbnb)
 - [JavaScript Standard Style](#standard)
+- [แปลและสรุปเรื่อง Ten Things A *Serious* JavaScript Developer Should Learn ของพี่ปุ๋ย somkiat.cc](http://www.somkiat.cc/summary-10-things-a-serious-javascript-developer-should-learn/)
 
 ## Callback
 ```javascript
