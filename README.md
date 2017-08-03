@@ -1,6 +1,13 @@
 ## Javascript 101
 
 ## สารบัญ
+- [Basic Javascript](#basic-javascript)
+  - if/else
+  - การจัดการ error handling ด้วย try/catch/throw
+  - การจัดการ array ทั้ง push/map/reduce/filter
+  - การจัดการ string ทั้ง replace/slice/split
+  - การจัดการข้อมูลในรูปแบบ JSON
+
 - [Airbnb JavaScript Style Guide](#airbnb)
 - [JavaScript Standard Style](#standard)
 - [Callback](#callback)
