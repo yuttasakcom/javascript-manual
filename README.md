@@ -2,11 +2,9 @@
 
 ## สารบัญ
 - Beginner
-  - if/else
-  - การจัดการ error handling ด้วย try/catch/throw
-  - การจัดการ array ทั้ง push/map/reduce/filter
-  - การจัดการ string ทั้ง replace/slice/split
-  - การจัดการข้อมูลในรูปแบบ JSON
+  - ประวัติความเป็นมา
+  - ทบทวนเรื่องพื้นฐาน
+  - ทบทวนประโยคคำสั่ง
 - Intermediate
   - [Callback](#callback)
     - [Recursive Function](#recursive-function)
