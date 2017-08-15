@@ -14,6 +14,10 @@
     - [Const/Let](#const-let)
     - [Template Strings](#template-strings)
     - [Arrow Function](#arrow-function)
+    - [Enhanced Object Literals](#enhanced_object_literals)
+    - [Default Function Argument](#default_function_argument)
+    - Rest and Spred Operator
+      - [Capturing Arguments with Rest and Spred](#capturing_arguments)
   - ทบทวนประโยคคำสั่ง
 - Intermediate
   - [Callback](#callback)
@@ -534,6 +538,99 @@ const profile = {
 
 console.log(profile.getName())
 
+```
+
+## Enhanced Object Literals
+```javascript
+function createBookShop(inventory) {
+  return {
+    inventory, // inventory: inventory
+    inventoryValue() { // inventoryValue: function()
+      return this.inventory.reduce((total, book) => total + book.price, 0)
+    },
+    priceForTitle(title){ // priceForTitle: function(title)
+      return this.inventory.find(book => book.title === title).price
+    }
+  }
+}
+
+const inventory = [
+  {title: 'Harry Potter', price: 10},
+  {title: 'Eloquent Javascript', price: 15}
+]
+
+const bookShop = createBookShop(inventory)
+console.log(bookShop.inventoryValue())
+console.log(bookShop.priceForTitle('Harry Potter'))
+```
+
+## Default Function Argument
+```javascript
+function makeAjaxRequest(url, method = 'GET') {
+  return method
+}
+console.log(makeAjaxRequest('google.com')) // null != undefined
+console.log(makeAjaxRequest('google.com', 'POST'))
+
+function User(id) {
+  this.id = id
+}
+
+function generateId() {
+  return Math.random() * 9999999
+}
+
+function createAdminUser(user = new User(generateId())) {
+  user.admin = true
+  return user
+}
+
+console.log(createAdminUser())
+```
+
+## Capturing Arguments
+```javascript
+console.log('=== capturing ===')
+function addNumbers(...numbers) {
+  return numbers.reduce((sum, number) => sum + number, 0)
+}
+console.log(addNumbers(1,2,3,4,5))
+
+const defaultColors = ['red', 'green']
+const userFavoriteColors = ['orange', 'yellow']
+
+console.log('=== concat ===')
+console.log(defaultColors.concat(userFavoriteColors))
+
+console.log('=== rest ===')
+console.log([...defaultColors, ...userFavoriteColors])
+
+console.log('=== spread ===')
+function validateShoppingList(...items) {
+  if (items.indexOf('milk') < 0) {
+    return [ 'milk', ...items]
+  }
+  return items
+}
+console.log(validateShoppingList('oranges', 'bread', 'eggs'))
+
+console.log('=== Exercise 1 ===')
+var array = [1, 2]
+var array2 = [3, 4, 5]
+
+console.log('=== normal ===')
+function unshift(array, a, b, c, d, e) {
+  return [a, b, c, d, e].concat(array);
+}
+
+console.log(unshift(array, 3,4,5,6,7))
+
+// Refactor
+console.log('=== rest ===')
+function unshiftRefactor(array, ...array2) {
+  return [...array, ...array2];
+}
+console.log(unshiftRefactor(array, 3,4,5,6,7))
 ```
 
 ## Callback
