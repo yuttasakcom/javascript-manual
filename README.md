@@ -14,10 +14,10 @@
     - [Const/Let](#const-let)
     - [Template Strings](#template-strings)
     - [Arrow Function](#arrow-function)
-    - [Enhanced Object Literals](#enhanced_object_literals)
-    - [Default Function Argument](#default_function_argument)
+    - [Enhanced Object Literals](#enhanced-object-literals)
+    - [Default Function Argument](#default-function-argument)
     - Rest and Spread Operator
-      - [Capturing Arguments with Rest and Spread](#capturing_arguments)
+      - [Capturing Arguments with Rest and Spread](#capturing-arguments)
   - ทบทวนประโยคคำสั่ง
 - Intermediate
   - [Callback](#callback)
