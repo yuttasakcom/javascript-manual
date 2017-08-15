@@ -16,8 +16,8 @@
     - [Arrow Function](#arrow-function)
     - [Enhanced Object Literals](#enhanced_object_literals)
     - [Default Function Argument](#default_function_argument)
-    - Rest and Spred Operator
-      - [Capturing Arguments with Rest and Spred](#capturing_arguments)
+    - Rest and Spread Operator
+      - [Capturing Arguments with Rest and Spread](#capturing_arguments)
   - ทบทวนประโยคคำสั่ง
 - Intermediate
   - [Callback](#callback)
