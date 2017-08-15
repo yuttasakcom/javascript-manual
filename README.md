@@ -8,10 +8,11 @@
       - [forEach](#foreach)
       - [map](#map)
       - [filter](#filter)
-      - find
-      - every
-      - some
-      - reduce
+      - [find](#find)
+      - [every and some](#every-and-some)
+      - [reduce](#reduce)
+    - [Const/Let](#const-let)
+    - [Template Strings](#template-strings)
   - ทบทวนประโยคคำสั่ง
 - Intermediate
   - [Callback](#callback)
@@ -203,6 +204,295 @@ function reject(array, iteratorFunction) {
   return array.filter(number => ! iteratorFunction(number))
 }
 console.log(lessThanFifteen)
+```
+
+## find
+```javascript
+var users = [
+  {name: 'Jill'},
+  {name: 'Alex', id: 4},
+  {name: 'Bill'},
+  {name: 'Alex'},
+]
+
+var user
+console.log('=== for ===')
+for (var i = 0; i < users.length; i++) {
+  if (users[i].name === 'Alex') {
+    user = users[i]
+    break
+  }
+}
+console.log(user)
+
+console.log('=== find ===')
+var findUser = users.find(user => user.name === 'Alex')
+console.log(findUser)
+
+console.log('=== find Continued 1 ===')
+function Car(model) {
+  this.model = model
+}
+var cars = [
+  new Car('Buick'),
+  new Car('Camaro'),
+  new Car('Focus'),
+]
+
+var findCar = cars.find(car => car.model === 'Focus')
+console.log(findCar)
+
+console.log('=== find Continued 2 ===')
+var posts = [
+  {id: 1, title: 'New Post'},
+  {id: 2, title: 'Old Post'}
+]
+var comment = {postId: 1, content: 'Great Post'}
+function postForComment(posts, comment) {
+  return posts.find(post => post.id === comment.postId)
+}
+
+var findPost = postForComment(posts, comment)
+console.log(findPost)
+
+// Exercise 1 find admin
+console.log('=== Execrcise 1 ===')
+var users = [
+  { id: 1, admin: false },
+  { id: 2, admin: false },
+  { id: 3, admin: true }
+];
+
+var admin = users.find(user => user.admin)
+console.log(admin)
+
+// Exercise 2 balance of 12
+console.log('=== Execrcise 2 ===')
+var accounts = [
+  { balance: -10 },
+  { balance: 12 },
+  { balance: 0 }
+];
+
+var account = accounts.find(account => account.balance === 12)
+console.log(account)
+
+// Exercise 3 find by property
+console.log('=== Execrcise 3 ===')
+var ladders = [
+  { id: 1, height: 20 },
+  { id: 3, height: 25 }
+]
+
+function findWhere(array, criteria) {
+  var property = Object.keys(criteria)[0]
+  return array.find(ladder => {
+    return ladder[property] === criteria[property]
+  })
+}
+
+var res = findWhere(ladders, { height: 25 })
+console.log(res)
+```
+
+## every and some
+```javascript
+var computers = [
+  {name: 'Apple', ram: 24},
+  {name: 'Compaq', ram: 4},
+  {name: 'Acer', ram: 32}
+]
+
+var allComputersCanRunProgram = true
+var onlySomeComputersCanRunProgram = false
+
+console.log('=== for ===')
+for (var i = 0; i < computers.length; i++) {
+  var computer = computers[i]
+  if (computer.ram < 16) {
+    allComputersCanRunProgram = false
+  } else {
+    onlySomeComputersCanRunProgram = true
+  }
+}
+
+console.log(allComputersCanRunProgram)
+console.log(onlySomeComputersCanRunProgram)
+
+console.log('=== every ===')
+var everyComputers = computers.every(computer => computer.ram > 16)
+console.log(everyComputers)
+
+console.log('=== some ===')
+var someComputers = computers.some(computer => computer.ram > 16)
+console.log(someComputers)
+
+// Every and Some in Practice
+console.log('=== Practice ===')
+function Field(value) {
+  this.value = value
+}
+Field.prototype.validate = function() {
+  return this.value.length > 0
+}
+var username = new Field("2cool")
+var password = new Field("my_password")
+var birthdate = new Field("10/10/2010")
+
+var fields = [username, password, birthdate]
+var formIsValid = fields.every(field => field.validate())
+
+if (formIsValid) {
+  // allow user to submit!
+  console.log('formIsValid', formIsValid)
+} else {
+  // show an error message!
+  console.log('formIsValid', formIsValid)
+}
+
+// Exercise 1 validate hasSubmitted
+console.log('=== Execrcise 1 ===')
+var users = [
+  { id: 21, hasSubmitted: true },
+  { id: 62, hasSubmitted: false },
+  { id: 4, hasSubmitted: true }
+];
+
+var hasSubmitted = users.every(user => user.hasSubmitted)
+console.log(hasSubmitted)
+
+// Exercise 2 assign the boolean 'true' to the variable 'inProgress'
+console.log('=== Execrcise 2 ===')
+var requests = [
+  { url: '/photos', status: 'complete' },
+  { url: '/albums', status: 'pending' },
+  { url: '/users', status: 'failed' }
+];
+
+var inProgress = requests.some(request => request.status === 'complete')
+console.log(inProgress)
+```
+
+## reduce
+```javascript
+var numbers = [10, 20, 30]
+var sum = 0
+
+console.log('=== for ===')
+for (var i = 0; i < numbers.length; i++) {
+  sum += numbers[i]
+}
+console.log(sum)
+
+console.log('=== reduce ===')
+var r = numbers.reduce((previous, number) => previous + number, 0)
+console.log(r)
+
+// A touch More of Reduce
+var primaryColors = [
+  {color: 'red'},
+  {color: 'green'},
+  {color: 'blue'},
+]
+
+console.log('=== reduce Continued ===')
+var p = primaryColors.reduce(function(previos, primaryColor){
+  previos.push(primaryColor.color)
+  return previos
+}, [])
+
+console.log(p)
+
+console.log('=== reduce Continued 2 ===')
+function balancedParens(string) {
+  return string.split("").reduce((previous, char) => {
+    if (previous <= 0) { return previous }
+    if (char === "(") { return ++previous }
+    if (char === ")") { return --previous }
+    return previous
+  }, 0)
+}
+var b= balancedParens(")))))")
+console.log(b)
+
+// Exercise 1 reduce sum distance
+console.log('=== Excercise 1 ===')
+var trips = [{ distance: 34 }, { distance: 12 } , { distance: 1 }];
+var totalDistance = trips.reduce((previos, trip) => previos + trip.distance, 0)
+console.log(totalDistance)
+
+// Exercise 2 ต้องการผลลัพธ์ = { sitting: 3, standing: 2 }
+console.log('=== Excercise 2 ===')
+var desks = [
+  { type: 'sitting' },
+  { type: 'standing' },
+  { type: 'sitting' },
+  { type: 'sitting' },
+  { type: 'standing' }
+];
+
+var deskTypes = desks.reduce(function(previos, desk) {
+    if (desk.type === 'sitting') { ++previos.sitting }
+    if (desk.type === 'standing') { ++previos.standing }
+    return previos
+}, { sitting: 0, standing: 0 });
+console.log(deskTypes)
+
+// Exercise 3 unique value by reduc & find
+console.log('=== Excercise 3 ===')
+var numbers = [1, 1, 2, 3, 4, 4]
+
+function unique(array) {
+  return array.reduce(function(previos, arr){
+    if (previos.find(p => p === arr)) {
+      return previos
+    }
+    previos.push(arr)
+    return previos
+  }, [])
+}
+console.log(unique(numbers))
+```
+
+## Const Let
+```javascript
+// ES5
+// var name = 'Jane'
+// var title = 'Software Engineer'
+// var hourlyWage = 40
+
+// ES6
+const name = 'Jane'
+// name = 'Yo' const เป็นค่าคงที่ไม่สามารถเปลี่ยนแปลงได้
+let title = 'Software Engineer'
+title = 'Senior Software Engineer'
+
+console.log('=== Const/Let ===')
+const statuses = [ 
+  { code: 'OK', response: 'Request successful' },
+  { code: 'FAILED', response: 'There was an error with your request' },
+  { code: 'PENDING', response: 'Your reqeust is still pending' }
+];
+let message = '';
+let currentCode = 'OK';
+
+for (let i = 0; i < statuses.length; i++) {
+  if (statuses[i].code === currentCode) {
+    message = statuses[i].response;
+  }
+}
+
+console.log('const ที่เป็น object สามารถเปลี่ยนแปลงค่าภายใน object ได้')
+```
+
+## Template Strings
+```javascript
+function getMessage() {
+  const year = new Date().getFullYear()
+  return `The year is ${year}`
+}
+
+console.log(getMessage())
 ```
 
 ## Callback
