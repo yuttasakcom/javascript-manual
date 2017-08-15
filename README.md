@@ -5,7 +5,7 @@
   - ประวัติความเป็นมา
   - ทบทวนเรื่องพื้นฐาน
     - Array Helper Methods
-      - [forEach](#forEach)
+      - [forEach](#foreach)
       - [map](#map)
       - [filter](#filter)
       - find
