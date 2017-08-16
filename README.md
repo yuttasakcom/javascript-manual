@@ -35,6 +35,7 @@
       - [Prototypal Inheritance](#prototypal-inheritance)
       - [Refactoring with Classes](#refactoring-with-classes)
   - ทบทวนเรื่องออบเจ็กต์
+    - this
     - [call() apply() และ bind()](#call-apply-bind)
   - ทบทวนเรื่องการแสดงความผิดพลาด Error
 - Intermediate
