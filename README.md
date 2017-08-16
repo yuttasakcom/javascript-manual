@@ -18,6 +18,11 @@
     - [Default Function Argument](#default-function-argument)
     - Rest and Spread Operator
       - [Capturing Arguments with Rest and Spread](#capturing-arguments)
+    - [Destructuring](#destructuring)
+    - [Classed](#classes)
+      - [Introduction](#introduction)
+      - [Prototypal Inheritance](#prototypal-inheritance)
+      - [Refactoring with Classes](#refactoring-with-classes)
   - ทบทวนประโยคคำสั่ง
 - Intermediate
   - [Callback](#callback)
@@ -30,6 +35,7 @@
       - [Mocha](https://mochajs.org/)
       - [Expect](https://github.com/mjackson/expect)
       - [Super Test](https://github.com/visionmedia/supertest)
+  - Lodash
 - Advance
 - Links
   - [Airbnb JavaScript Style Guide](#airbnb)
@@ -633,6 +639,237 @@ function unshiftRefactor(array, ...array2) {
   return [...array, ...array2];
 }
 console.log(unshiftRefactor(array, 3,4,5,6,7))
+```
+
+## Destructuring
+```javascript
+var expense = {
+  type: 'Business',
+  amount: '$45 USD'
+}
+
+// ES5
+// var type = expense.type
+// var amount = expense.amount
+
+// ES6
+const { type, amount } = expense
+console.log(type, amount) // output: Business $45 USD
+
+var savedFiled = {
+  extension: 'jpg',
+  name: 'repost',
+  size: 14040
+}
+
+function fileSummary({name, extension, size}, {color}) {
+  return `The file ${name}.${extension} is of size ${size} color ${color}`
+}
+console.log(fileSummary(savedFiled, {color: 'red'}))
+// output: The file repost.jpg is of size 14040 color red
+
+const companies = [
+  'Google',
+  'Facebook',
+  'Uber'
+]
+
+console.log('=== destructuring array ===')
+const [name, name2, name3] = companies
+console.log(name, name2, name3)
+const [...rest] = companies
+console.log(rest)
+
+console.log('=== destructuring object ===')
+const companies2 = [
+  {name: 'Google', location: 'Mountain View'},
+  {name: 'Facebook', location: 'Menlo Park'},
+  {name: 'Uber', location: 'San Francisco'},
+]
+const [{location}] = companies2
+console.log(location)
+
+const Google = {
+  locations: ['Mountain View', 'New York']
+}
+
+const {locations: [fLocation]} = Google
+console.log(fLocation)
+
+console.log('=== destructuring Continued ===')
+function signup({username, password, email, dateOfBirth, city}) {
+  return username
+}
+const user = {
+  username: 'myname',
+  password: 'mypassword',
+  email: 'myemail@example.com',
+  dateOfBirth: '1/1/1900',
+  city: 'New York'
+}
+console.log(signup(user))
+
+console.log('=== destructuring Continued 2 ===')
+const points = [
+  [4, 5],
+  [10, 1],
+  [0, 40],
+]
+
+console.log(points.map(([x, y]) => ({x, y})))
+// output [ { x: 4, y: 5 }, { x: 10, y: 1 }, { x: 0, y: 40 } ]
+
+console.log('=== Exercies 1 ===')
+// ต้องการผลลัพธ์
+// [ { subject: 'Chemistry', time: '9AM', teacher: 'Mr. Darnick' },
+//   { subject: 'Physics', time: '10:15AM', teacher: 'Mrs. Lithun' },
+//   { subject: 'Math', time: '11:30AM', teacher: 'Mrs. Vitalis' } ]
+const classes = [
+  [ 'Chemistry', '9AM', 'Mr. Darnick' ],
+  [ 'Physics', '10:15AM', 'Mrs. Lithun'],
+  [ 'Math', '11:30AM', 'Mrs. Vitalis' ]
+];
+
+const classesAsObject = classes.map(([subject, time, teacher]) => ({
+  subject, time, teacher
+}))
+console.log(classesAsObject)
+
+console.log('=== Exercies 2 ===')
+// ต้องการ output [2,4,6] โดยห้ามใช้ helper array เช่น map, forEach, reduce
+const numbers = [1, 2, 3];
+
+function double([...array]) {
+  var newArray = []
+  for (var i = 0; i < array.length; i++) {
+    newArray[i] = array[i] * 2
+  }
+  return newArray
+}
+console.log(double(numbers))
+```
+
+## Classes
+## Introduction
+```javascript
+console.log('=== classes introduction ===')
+function Car(options) {
+  this.title = options.title
+}
+
+Car.prototype.drive = function() {
+  return 'vroom'
+}
+
+const car = new Car({title: 'Focus'})
+
+console.log(car.drive())
+console.log(car.title)
+```
+
+## Prototypal Inheritance
+```javascript
+console.log('=== prototypal inheritance ===')
+function Car(options) {
+  this.title = options.title
+}
+
+Car.prototype.drive = function() {
+  return 'vroom'
+}
+
+function Toyota(options) {
+  Car.call(this, options)
+  this.color = options.color
+}
+
+Toyota.prototype = Object.create(Car.prototype)
+Toyota.prototype.constructor = Toyota
+
+Toyota.prototype.honk = function() {
+  return 'beep'
+}
+
+const toyota = new Toyota({color: 'red', title: 'Daily Driver'})
+console.log(toyota.drive())
+console.log(toyota.color)
+console.log(toyota.title)
+console.log(toyota.honk())
+```
+
+## Refactoring with Classes
+```javascript
+console.log('=== refactoring classes ===')
+
+class Car {
+  constructor(options) {
+    this.title = options.title
+  }
+
+  drive() {
+    return 'vroom'
+  }
+}
+
+const car = new Car({title: 'Honda'})
+console.log(car)
+console.log(car.drive())
+console.log(car.title)
+
+class Toyota extends Car {
+  constructor(options) {
+    super(options)
+    this.color = options.color
+  }
+  honk() {
+    return 'beep'
+  }
+}
+const toyota = new Toyota({title: 'Toyota', color: 'red'})
+console.log(toyota)
+console.log(toyota.drive())
+console.log(toyota.title)
+console.log(toyota.honk())
+console.log(toyota.color)
+
+console.log('=== Exercise 1 ===')
+// Game Classes
+
+// You are a game developer tasked with setting up some basic classes for a new game you are working on.  Create a class called 'Monster'.  In the constructor, you'll need to do some basic setup for Monster whenever they are created. 
+
+// Initialize the Monster's health to 100.
+// The constructor will be called with an 'options' object that has a 'name' property.  Assign the 'name' to the Monster
+class Monster {
+  constructor(options) {
+    this.name = options.name
+    this.health= 100
+  }
+}
+
+console.log('=== Exercise 2 ===')
+// Now that you have a monster created, create a subclass of the Monster called Snake.  
+
+// The Snake should have a 'bite' method.  The only argument to this method is another instance of a Snake.
+// The instance of Snake that is passed in should have their health deducated by 10
+class Monster2 {
+  constructor(options) {
+    this.health = 100;
+    this.name = options.name;
+  }
+}
+
+class Snake extends Monster2{
+  constructor(options){
+    super(options)
+  }
+  bite() {
+    this.health -= 10
+  }
+}
+
+const snake = new Snake({name: 'Snake'})
+snake.bite()
+console.log(snake.health)
 ```
 
 ## Callback
