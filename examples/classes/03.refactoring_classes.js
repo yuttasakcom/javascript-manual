@@ -57,15 +57,20 @@ class Monster2 {
   }
 }
 
-class Snake extends Monster2{
+class Snake extends Monster2 {
   constructor(options){
-    super(options)
+    super(options);
   }
-  bite() {
-    this.health -= 10
+  
+  bite(options){
+    return options.health -= 10;
   }
 }
+console.log('=== Monster2 ===')
+const monster2 = new Monster2({name: 'Monster2'})
+console.log(monster2)
 
+console.log('=== Snake ===')
 const snake = new Snake({name: 'Snake'})
-snake.bite()
-console.log(snake.health)
+console.log(snake.bite({health: 100}))
+console.log(snake)

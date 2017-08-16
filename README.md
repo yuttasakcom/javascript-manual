@@ -3,6 +3,17 @@
 ## สารบัญ
 - Beginner
   - [ประวัติความเป็นมา](#ประวัติความเป็นมา)
+  - ทบทวนประโยคคำสั่ง
+    - while
+    - do while
+    - for
+    - other loop
+    - continue
+    - break
+    - label
+    - if
+    - switch
+    - operator condition
   - ทบทวนเรื่องพื้นฐาน
     - Array Helper Methods
       - [forEach](#foreach)
@@ -23,7 +34,9 @@
       - [Introduction](#introduction)
       - [Prototypal Inheritance](#prototypal-inheritance)
       - [Refactoring with Classes](#refactoring-with-classes)
-  - ทบทวนประโยคคำสั่ง
+  - ทบทวนเรื่องออบเจ็กต์
+    - [call() apply() และ bind()](#call-apply-bind)
+  - ทบทวนเรื่องการแสดงความผิดพลาด Error
 - Intermediate
   - [Callback](#callback)
     - [Recursive Function](#recursive-function)
