@@ -920,9 +920,9 @@ getUser(1, (user) => {
 
 console.log('End')
 
-=====
-ผลลัพธ์
-=====
+======
+Output
+======
 Start
 { id: 1, name: 'Yo' }
 End
@@ -946,6 +946,14 @@ getUser(1, (user) => {
 })
 
 console.log('End')
+
+======
+Output
+======
+Start
+End
+---------------------- delay 2000ms
+{ id: 1, name: 'Yo' }
 ```
 
 
