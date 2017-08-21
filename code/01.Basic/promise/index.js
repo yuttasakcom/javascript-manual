@@ -41,38 +41,38 @@ const Exit = new Promise((resolve, reject) => {
 })
 
 function Rand() {
-  return (Math.floor(Math.random() * 5) + 1) * 1000
+  return (Math.floor(Math.random() * 1) + 1) * 1000
 }
 
 Open
 .then(res => {
   console.log(res)
   return
-}).then(res => {
+}).then(() => {
   Order
   .then(res => {
     console.log(res)
     return
   })
-}).then(res => {
+}).then(() => {
   Sit
   .then(res => {
     console.log(res)
     return
   })
-}).then(res => {
+}).then(() => {
   Drink
   .then(res => {
     console.log(res)
     return
   })
-}).then(res => {
+}).then(() => {
   Pay
   .then(res => {
     console.log(res)
     return
   })
-}).then(res => {
+}).then(() => {
   Exit
   .then(res => {
     console.log(res)

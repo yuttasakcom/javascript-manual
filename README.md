@@ -1160,7 +1160,7 @@ const Exit = new Promise((resolve, reject) => {
 })
 
 function Rand() {
-  return (Math.floor(Math.random() * 5) + 1) * 1000
+  return (Math.floor(Math.random() * 1) + 1) * 1000
 }
 
 // ไม่เรียงลำดับ, non blocking io
@@ -1176,36 +1176,31 @@ Open
 .then(res => {
   console.log(res)
   return
-})
-.then(res => {
+}).then(() => {
   Order
   .then(res => {
     console.log(res)
     return
   })
-})
-.then(res => {
+}).then(() => {
   Sit
   .then(res => {
     console.log(res)
     return
   })
-})
-.then(res => {
+}).then(() => {
   Drink
   .then(res => {
     console.log(res)
     return
   })
-})
-.then(res => {
+}).then(() => {
   Pay
   .then(res => {
     console.log(res)
     return
   })
-})
-.then(res => {
+}).then(() => {
   Exit
   .then(res => {
     console.log(res)
@@ -1216,12 +1211,12 @@ Open
 ======
 Output
 ======
-1. เปิดประตู 4000ms
+1. เปิดประตู 1000ms
 2. สั่งกาแฟ 1000ms
 3. หาที่นั่ง 1000ms
-4. ดื่มกาแฟ 3000ms
+4. ดื่มกาแฟ 1000ms
 5. จ่ายตังค์ 1000ms
-6. ออกจากร้าน 4000m
+6. ออกจากร้าน 1000m
 ```
 
 ## Async Await
