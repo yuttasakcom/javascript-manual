@@ -903,6 +903,46 @@ console.log(snake.health)
 ```
 
 ## Callback
+ตัวอย่างการใช้งาน callback synchronous
+```javascript
+console.log('Start')
+var getUser = (id, cb) => {
+  var user = {
+    id: id,
+    name: 'Yo'
+  }
+  cb(user)
+}
+
+getUser(1, (user) => {
+  console.log(user)
+})
+
+console.log('End')
+```
+
+ตัวอย่างการใช้งาน callback Asynchronous
+```javascript
+console.log('Start')
+var getUser = (id, cb) => {
+  var user = {
+    id: id,
+    name: 'Yo'
+  }
+  setTimeout(() => {
+    cb(user)
+  }, 2000)
+}
+
+getUser(1, (user) => {
+  console.log(user)
+})
+
+console.log('End')
+```
+
+
+ตัวอย่างการใช้งาน callback
 ```javascript
 function Open(cb) {
   let rand = Rand()
