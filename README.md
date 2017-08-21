@@ -1268,26 +1268,6 @@ function Rand() {
 }
 
 // เรียงตามลำดับ, non blocking io
-// Open.then(res => {
-//   console.log(res)
-//   Order.then(res => {
-//     console.log(res)
-//     Sit.then(res => {
-//       console.log(res)
-//       Drink.then(res => {
-//         console.log(res)
-//         Pay.then(res => {
-//           console.log(res)
-//           Exit.then(res => {
-//             console.log(res)
-//           })
-//         })
-//       })
-//     })
-//   })
-// })
-
-// เรียงตามลำดับ, non blocking io
 const step = async () => {
   const open = await Open
   console.log(open)
