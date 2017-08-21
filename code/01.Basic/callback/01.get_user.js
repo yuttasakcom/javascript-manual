@@ -5,11 +5,11 @@ var getUser = (id, cb) => {
     name: 'Yo'
   }
   
-  // cb(user)
+  cb(user)
 
-  setTimeout(() => {
-    cb(user)
-  }, 2000)
+  // setTimeout(() => {
+  //   cb(user)
+  // }, 2000)
 }
 
 getUser(1, (user) => {

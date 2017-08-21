@@ -919,6 +919,13 @@ getUser(1, (user) => {
 })
 
 console.log('End')
+
+=====
+ผลลัพธ์
+=====
+Start
+{ id: 1, name: 'Yo' }
+End
 ```
 
 ตัวอย่างการใช้งาน callback Asynchronous
