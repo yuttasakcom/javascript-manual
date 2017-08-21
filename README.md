@@ -65,6 +65,8 @@
 
 ## About JavaScript
 
+## Variables
+
 ## forEach
 ```javascript
 var colors = ['red', 'green', 'blue']
