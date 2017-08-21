@@ -41,7 +41,7 @@ const Exit = new Promise((resolve, reject) => {
 })
 
 function Rand() {
-  return (Math.floor(Math.random() * 1) + 1) * 1000
+  return (Math.floor(Math.random() * 5) + 1) * 1000
 }
 
 Open
