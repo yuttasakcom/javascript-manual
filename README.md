@@ -80,7 +80,7 @@ Ecosystem<br>
 1. Inline HTML
 ```html
 <body>
-  <script>console.log('Hlloe there!)</script>
+  <script>console.log("Hlloe there!")</script>
 </body>
 ```
 2. HTML Import
