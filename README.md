@@ -1176,31 +1176,36 @@ Open
 .then(res => {
   console.log(res)
   return
-}).then(res => {
+})
+.then(res => {
   Order
   .then(res => {
     console.log(res)
     return
   })
-}).then(res => {
+})
+.then(res => {
   Sit
   .then(res => {
     console.log(res)
     return
   })
-}).then(res => {
+})
+.then(res => {
   Drink
   .then(res => {
     console.log(res)
     return
   })
-}).then(res => {
+})
+.then(res => {
   Pay
   .then(res => {
     console.log(res)
     return
   })
-}).then(res => {
+})
+.then(res => {
   Exit
   .then(res => {
     console.log(res)
