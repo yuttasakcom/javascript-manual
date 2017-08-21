@@ -942,7 +942,7 @@ console.log('End')
 ```
 
 
-ตัวอย่างการใช้งาน callback
+ตัวอย่างการใช้งาน callback Asynchronous และต้องการเรียงลำดับความถูกต้อง
 ```javascript
 function Open(cb) {
   let rand = Rand()
@@ -998,7 +998,7 @@ function Rand() {
 // Pay(res => console.log(res))
 // Exit(res => console.log(res))
 
-//เรียงลำดับถูกต้อง, blocking io
+//เรียงลำดับถูกต้อง, blocking io เกิดสิ่งที่เรียกว่า callback hell
 Open(res => {
   console.log(res)
   Order(res => {
