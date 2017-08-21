@@ -1172,24 +1172,51 @@ function Rand() {
 // Exit.then(res => console.log(res))
 
 // เรียงตามลำดับ, non blocking io
-Open.then(res => {
+Open
+.then(res => {
   console.log(res)
-  Order.then(res => {
+  return
+}).then(res => {
+  Order
+  .then(res => {
     console.log(res)
-    Sit.then(res => {
-      console.log(res)
-      Drink.then(res => {
-        console.log(res)
-        Pay.then(res => {
-          console.log(res)
-          Exit.then(res => {
-            console.log(res)
-          })
-        })
-      })
-    })
+    return
+  })
+}).then(res => {
+  Sit
+  .then(res => {
+    console.log(res)
+    return
+  })
+}).then(res => {
+  Drink
+  .then(res => {
+    console.log(res)
+    return
+  })
+}).then(res => {
+  Pay
+  .then(res => {
+    console.log(res)
+    return
+  })
+}).then(res => {
+  Exit
+  .then(res => {
+    console.log(res)
+    return
   })
 })
+
+======
+Output
+======
+1. เปิดประตู 1000ms
+2. สั่งกาแฟ 1000ms
+3. หาที่นั่ง 1000ms
+4. ดื่มกาแฟ 1000ms
+5. จ่ายตังค์ 1000ms
+6. ออกจากร้าน 1000ms
 ```
 
 ## Async Await
