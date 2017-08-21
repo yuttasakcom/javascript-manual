@@ -4,6 +4,7 @@
 ## Table of Contents
 - [About JavaScript](#about-javascript)
 - Basic
+  - [Using JavaScript](#using-javascript)
   - [Variables](#variables)
   - while
   - do while
@@ -64,16 +65,55 @@
   - [หนังสือ พัฒนาเว็บแอปพลิเคชั่นด้วย JavaScript](https://www.se-ed.com/product/%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B9%87%E0%B8%9A%E0%B9%81%E0%B8%AD%E0%B8%9B%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-JavaScript.aspx?no=9786160825394)
 
 ## About JavaScript
+กำลังหาข้อมูล...
 สิ่งที่ควรรู้เกี่ยวกับ JavaScript<br>
-ผู้สร้าง : ...<br>
-องค์กรที่ใช้ JavaScript : ...<br>
+ผู้สร้าง, นักพัฒนา JavaScript : ...<br>
+ใครใช้ JavaScript บ้าง: ...<br>
 นักพัฒนาที่น่าติดตาม : ...<br>
 JavasScript ทำอะไรได้บ้าง : ...<br>
 เครื่องมือในการพัฒนา<br>
 Ecosystem<br>
 ...
 
+## Using JavaScript
+การเรียกใช้งาน JavaScript
+1. Inline HTML
+```html
+<body>
+  <script>console.log('Hlloe there!)</script>
+</body>
+```
+2. HTML Import
+```html
+<body>
+  <script src="./app.js"></script>
+</body>
+```
+
 ## Variables
+Type of Valiables
+```javascript
+var un
+console.log(typeof un) // undefined
+
+var num = 1
+console.log(typeof num) // number
+
+var str = 'Yo'
+console.log(typeof str) // string
+
+var bool = true
+console.log(typeof bool) // boolean
+
+var arr = [1, 2, 3]
+console.log(typeof arr) // object
+
+var obj = {}
+console.log(typeof obj) // object
+
+var f = function(){}
+console.log(typeof f) // function
+```
 
 ## forEach
 ```javascript
