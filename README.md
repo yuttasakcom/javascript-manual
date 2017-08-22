@@ -1327,7 +1327,6 @@ const step = async () => {
   const exit = await Exit
   console.log(exit)
 }
-
 step()
 ```
 
