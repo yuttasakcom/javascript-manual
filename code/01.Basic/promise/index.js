@@ -41,33 +41,41 @@ const Exit = new Promise((resolve, reject) => {
 })
 
 function Rand() {
-  return (Math.floor(Math.random() * 5) + 1) * 1000
+  return (Math.floor(Math.random() * 1) + 1) * 1000
 }
 
-// ไม่เรียงลำดับ, non blocking io
-// Open.then(res => console.log(res))
-// Order.then(res => console.log(res))
-// Sit.then(res => console.log(res))
-// Drink.then(res => console.log(res))
-// Pay.then(res => console.log(res))
-// Exit.then(res => console.log(res))
-
-// เรียงตามลำดับ, non blocking io
-Open.then(res => {
+Open
+.then(res => {
   console.log(res)
-  Order.then(res => {
+  return
+}).then(() => {
+  Order
+  .then(res => {
     console.log(res)
-    Sit.then(res => {
-      console.log(res)
-      Drink.then(res => {
-        console.log(res)
-        Pay.then(res => {
-          console.log(res)
-          Exit.then(res => {
-            console.log(res)
-          })
-        })
-      })
-    })
+    return
+  })
+}).then(() => {
+  Sit
+  .then(res => {
+    console.log(res)
+    return
+  })
+}).then(() => {
+  Drink
+  .then(res => {
+    console.log(res)
+    return
+  })
+}).then(() => {
+  Pay
+  .then(res => {
+    console.log(res)
+    return
+  })
+}).then(() => {
+  Exit
+  .then(res => {
+    console.log(res)
+    return
   })
 })

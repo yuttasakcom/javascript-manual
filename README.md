@@ -76,17 +76,48 @@
 - Book
   - [หนังสือ พัฒนาเว็บแอปพลิเคชั่นด้วย JavaScript](https://www.se-ed.com/product/%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B9%87%E0%B8%9A%E0%B9%81%E0%B8%AD%E0%B8%9B%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-JavaScript.aspx?no=9786160825394)
 
-## About JavaScript
-สิ่งที่ควรรู้เกี่ยวกับ JavaScript<br>
-ผู้สร้าง : ...<br>
-องค์กรที่ใช้ JavaScript : ...<br>
-นักพัฒนาที่น่าติดตาม : ...<br>
-JavasScript ทำอะไรได้บ้าง : ...<br>
-เครื่องมือในการพัฒนา<br>
-Ecosystem<br>
+## Intruduction
 ...
 
+## Using JavaScript
+การเรียกใช้งาน JavaScript
+1. Inline HTML
+```html
+<body>
+  <script>console.log("Hlloe there!")</script>
+</body>
+```
+2. HTML Import
+```html
+<body>
+  <script src="./app.js"></script>
+</body>
+```
+
 ## Variables
+Type of Valiables
+```javascript
+var un
+console.log(typeof un) // undefined
+
+var num = 1
+console.log(typeof num) // number
+
+var str = 'Yo'
+console.log(typeof str) // string
+
+var bool = true
+console.log(typeof bool) // boolean
+
+var arr = [1, 2, 3]
+console.log(typeof arr) // object
+
+var obj = {}
+console.log(typeof obj) // object
+
+var f = function(){}
+console.log(typeof f) // function
+```
 
 ## forEach
 ```javascript
@@ -916,6 +947,61 @@ console.log(snake.health)
 ```
 
 ## Callback
+ตัวอย่างการใช้งาน callback synchronous
+```javascript
+console.log('Start')
+var getUser = (id, cb) => {
+  var user = {
+    id: id,
+    name: 'Yo'
+  }
+  cb(user)
+}
+
+getUser(1, (user) => {
+  console.log(user)
+})
+
+console.log('End')
+
+======
+Output
+======
+Start
+{ id: 1, name: 'Yo' }
+End
+```
+
+ตัวอย่างการใช้งาน callback Asynchronous
+```javascript
+console.log('Start')
+var getUser = (id, cb) => {
+  var user = {
+    id: id,
+    name: 'Yo'
+  }
+  setTimeout(() => {
+    cb(user)
+  }, 2000)
+}
+
+getUser(1, (user) => {
+  console.log(user)
+})
+
+console.log('End')
+
+======
+Output
+======
+Start
+End
+---------------------- delay 2000ms
+{ id: 1, name: 'Yo' }
+```
+
+
+ตัวอย่างการใช้งาน callback Asynchronous และต้องการเรียงลำดับความถูกต้อง
 ```javascript
 function Open(cb) {
   let rand = Rand()
@@ -971,7 +1057,7 @@ function Rand() {
 // Pay(res => console.log(res))
 // Exit(res => console.log(res))
 
-//เรียงลำดับถูกต้อง, blocking io
+//เรียงลำดับถูกต้อง, blocking io เกิดสิ่งที่เรียกว่า callback hell
 Open(res => {
   console.log(res)
   Order(res => {
@@ -1118,7 +1204,7 @@ const Exit = new Promise((resolve, reject) => {
 })
 
 function Rand() {
-  return (Math.floor(Math.random() * 5) + 1) * 1000
+  return (Math.floor(Math.random() * 1) + 1) * 1000
 }
 
 // ไม่เรียงลำดับ, non blocking io
@@ -1130,24 +1216,51 @@ function Rand() {
 // Exit.then(res => console.log(res))
 
 // เรียงตามลำดับ, non blocking io
-Open.then(res => {
+Open
+.then(res => {
   console.log(res)
-  Order.then(res => {
+  return
+}).then(() => {
+  Order
+  .then(res => {
     console.log(res)
-    Sit.then(res => {
-      console.log(res)
-      Drink.then(res => {
-        console.log(res)
-        Pay.then(res => {
-          console.log(res)
-          Exit.then(res => {
-            console.log(res)
-          })
-        })
-      })
-    })
+    return
+  })
+}).then(() => {
+  Sit
+  .then(res => {
+    console.log(res)
+    return
+  })
+}).then(() => {
+  Drink
+  .then(res => {
+    console.log(res)
+    return
+  })
+}).then(() => {
+  Pay
+  .then(res => {
+    console.log(res)
+    return
+  })
+}).then(() => {
+  Exit
+  .then(res => {
+    console.log(res)
+    return
   })
 })
+
+======
+Output
+======
+1. เปิดประตู 1000ms
+2. สั่งกาแฟ 1000ms
+3. หาที่นั่ง 1000ms
+4. ดื่มกาแฟ 1000ms
+5. จ่ายตังค์ 1000ms
+6. ออกจากร้าน 1000m
 ```
 
 ## Async Await
@@ -1199,26 +1312,6 @@ function Rand() {
 }
 
 // เรียงตามลำดับ, non blocking io
-// Open.then(res => {
-//   console.log(res)
-//   Order.then(res => {
-//     console.log(res)
-//     Sit.then(res => {
-//       console.log(res)
-//       Drink.then(res => {
-//         console.log(res)
-//         Pay.then(res => {
-//           console.log(res)
-//           Exit.then(res => {
-//             console.log(res)
-//           })
-//         })
-//       })
-//     })
-//   })
-// })
-
-// เรียงตามลำดับ, non blocking io
 const step = async () => {
   const open = await Open
   console.log(open)
@@ -1238,7 +1331,6 @@ const step = async () => {
   const exit = await Exit
   console.log(exit)
 }
-
 step()
 ```
 
