@@ -2,9 +2,19 @@
 > ทบทวน JavaScript
 
 ## Table of Contents
-- [About JavaScript](#about-javascript)
 - Basic
+  - [Intriduction](#introduction)
+  - [Using JavaScript](#using-javascript)
   - [Variables](#variables)
+    - Basics
+    - null, undefined and NaN
+    - Objects
+  - Strict Mode
+  - Dynamic Typing
+  - Hoisting
+  - Functions
+    - Creating and Calling Them
+    - Arguments & Returning Data
   - while
   - do while
   - for
@@ -14,6 +24,9 @@
   - if
   - switch
   - operator condition
+  - Types & Scope
+    - Primitive vs Reference Types
+    - Global vs Local Scope
   - Array Helper Methods
     - [forEach](#foreach)
     - [map](#map)
