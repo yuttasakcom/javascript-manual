@@ -15,15 +15,25 @@
   - Functions
     - Creating and Calling Them
     - Arguments & Returning Data
-  - while
-  - do while
-  - for
-  - continue
-  - break
-  - label
-  - if
-  - switch
-  - operator condition
+  - Control Structures
+    - If statement
+    - Switch & Break
+    - For Loop
+    - Nested Loops
+    - controlling Loops with break & continue
+    - For Loop varintions
+    - Looping through Arrays
+    - While Loop
+  - Operators
+    - Addition
+    - Subtraction
+    - Multiplication & Floating Point Problems
+    - Division & Modules
+    - Comparing Values
+    - Important Rules
+    - Boolean
+    - Ternary Operator
+    - Precedence
   - Types & Scope
     - Primitive vs Reference Types
     - Global vs Local Scope
@@ -81,14 +91,15 @@
 
 ## Using JavaScript
 การเรียกใช้งาน JavaScript
-1. Inline HTML
 ```html
+1. Inline HTML
 <body>
   <script>console.log("Hlloe there!")</script>
 </body>
 ```
-2. HTML Import
+
 ```html
+2. HTML Import
 <body>
   <script src="./app.js"></script>
 </body>
