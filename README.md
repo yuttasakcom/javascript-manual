@@ -1,5 +1,5 @@
-## JavaScript Review
-> ทบทวน JavaScript
+## JavaScript Manual
+> คู่มือการใช้งาน JavaScript ฉบับ YoProgrammer
 
 ## Table of Contents
 - Basic
