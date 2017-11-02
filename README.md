@@ -38,6 +38,15 @@
     - Primitive vs Reference Types
     - Global vs Local Scope
   - Array Helper Methods
+    - [join](#join)
+    - [concat](#concat)
+    - [push](#push)
+    - [pop](#pop)
+    - [shift](#shift)
+    - [unshift](#unshift)
+    - [splice](#splice)
+    - [slice](#slice)
+    - [split](#split)
     - [forEach](#foreach)
     - [map](#map)
     - [filter](#filter)
@@ -89,7 +98,7 @@
   - [หนังสือ พัฒนาเว็บแอปพลิเคชั่นด้วย JavaScript](https://www.se-ed.com/product/%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B9%87%E0%B8%9A%E0%B9%81%E0%B8%AD%E0%B8%9B%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-JavaScript.aspx?no=9786160825394)
 
 ## Introduction
-...
+Javascript เป็นภาษาคอมพิวเตอร์ที่ใช้ในการเขียนโปรแกรมฝั่ง Client โดยมี Javacript Engine เป็นตัวแปลภาษา
 
 ## Using JavaScript
 การเรียกใช้งาน JavaScript
@@ -130,6 +139,134 @@ console.log(typeof obj) // object
 
 var f = function(){}
 console.log(typeof f) // function
+```
+
+## Join
+```javascript
+let arr = [1, 2, 3, 4, 5];
+console.log(arr.join(''));
+console.log(arr.join(','));
+console.log(arr.join('-'));
+//output
+// 12345
+// 1,2,3,4,5
+// 1-2-3-4-5
+```
+
+## Concat
+```javascript
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
+let sum = arr1.concat(arr2);
+console.log(sum);
+//output
+//[ 1, 2, 3, 4, 5, 6 ]
+```
+
+## Push
+```javascript
+let color = ['red', 'green'];
+let mutate = color.push('blue');
+console.log(color);
+console.log(mutate);
+//output
+// [ 'red', 'green', 'blue' ]
+// 3
+```
+
+## Pop
+```javascript
+let color = ['red', 'green', 'blue'];
+let mutate = color.pop('blue');
+console.log(color);
+console.log(mutate);
+//output
+// [ 'red', 'green' ]
+// blue
+```
+
+## Shift
+```javascript
+let color = ['red', 'green', 'blue'];
+let mutate = color.shift();
+console.log(color);
+console.log(mutate);
+//output
+// [ 'green', 'blue' ]
+// red
+```
+
+## Unshift
+```javascript
+let color = ['red', 'green', 'blue'];
+let mutate = color.unshift('ogrange');
+console.log(color);
+console.log(mutate);
+//output
+// [ 'ogrange', 'red', 'green', 'blue' ]
+// 4
+```
+
+## Splice
+```javascript
+let color = ['ogrange', 'red', 'green', 'blue'];
+
+//ตัวอย่างที่ 1
+// let mutate = color.splice(1); //ลบตั้งแต่ตำแหน่งที่ 1 เป็นต้นไป
+
+//ตัวอย่างที่ 2
+// let mutate = color.splice(1, 1); //ลบตั้งแต่ตำแหน่งที่ 1 ไป 1 ตัว
+
+//ตัวอย่างที่ 3
+let mutate = color.splice(1, 1, 'white', 'black'); // ลบตั้งแต่ตำแหน่งที่ 1 ไป 1 ตัว และเพิ่ม element เข้าไปตำแหน่งที่ 1
+
+console.log(color);
+console.log(mutate);
+
+//output
+//ตัวอย่างที่ 1
+// [ 'ogrange' ]
+// [ 'red', 'green', 'blue' ]
+
+//ตัวอย่างที่ 2
+// [ 'ogrange', 'green', 'blue' ]
+// [ 'red' ]
+
+//ตัวอย่างที่ 3
+// [ 'ogrange', 'white', 'black', 'green', 'blue' ]
+// [ 'red' ]
+```
+
+## Slice
+```javascript
+let color = ['red', 'green', 'blue'];
+
+//ตัวอย่างที่ 1
+// let slice = color.slice(1);
+
+//ตัวอย่างที่ 2
+let slice = color.slice(1, 2); //เลือก element ตั้งแต่ตำแหน่งที่ 1 จนถึง 2 แต่ไม่รวม 2
+
+console.log(color);
+console.log(slice);
+
+//output
+//ตัวอย่างที่ 1
+// [ 'red', 'green', 'blue' ]
+// [ 'green', 'blue' ]
+
+//ตัวอย่างที่ 2
+// [ 'red', 'green', 'blue' ]
+// [ 'green' ]
+```
+
+## Split
+```javascript
+let number = 12345;
+console.log(number.toString().split(""))
+
+//output
+// [ '1', '2', '3', '4', '5' ]
 ```
 
 ## forEach
