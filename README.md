@@ -1,5 +1,5 @@
 ## JavaScript Manual
-> คู่มือการใช้งาน JavaScript ฉบับ YoProgrammer
+> คู่มือการใช้งาน JavaScript
 
 ## Table of Contents
 - Basic
