@@ -51,6 +51,8 @@
     - [map](#map)
     - [filter](#filter)
     - [find](#find)
+    - [findIndex](#find-index)
+    - [indexOf](#index-of)
     - [every and some](#every-and-some)
     - [reduce](#reduce)
     - [sort](#sort)
@@ -530,6 +532,19 @@ function findWhere(array, criteria) {
 
 var res = findWhere(ladders, { height: 25 })
 console.log(res)
+```
+
+## find index
+```javascript
+const arr = ['apple', 'banana', 'orange']
+console.log(arr.findIndex(e => e === 'banana')) // output = 1
+```
+
+## index of
+```javascript
+const arr = ['apple', 'banana', 'orange']
+console.log(arr.indexOf('banana')) // output = 1
+console.log(arr.indexOf('no')) // output = -1
 ```
 
 ## every and some
