@@ -120,6 +120,7 @@
   - [Accelerated ES6 JavaScript Training](https://www.udemy.com/es6-bootcamp-next-generation-javascript)
   - [Beginner's ES6 Programming. Code for the Web in JavaScript](https://www.udemy.com/beginners-es6-programming-code-for-the-web-in-javascript)
   - [ฟรี! เตรียมพื้นฐาน ES2015 และ Node.js ก่อนไปลุย React](https://www.skilllane.com/courses/basic-es2015-nodejs-before-react)
+  - [ฟรี! Javascript คืออะไร - วีดีโอสอน Javascript](https://www.youtube.com/watch?v=BAG5BP5exmA&list=PL9uXbYsezM7mkf4w5tmillxVq9fHyslwT&index=1)
 - Book
   - [หนังสือ พัฒนาเว็บแอปพลิเคชั่นด้วย JavaScript](https://www.se-ed.com/product/%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B9%87%E0%B8%9A%E0%B9%81%E0%B8%AD%E0%B8%9B%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-JavaScript.aspx?no=9786160825394)
 
