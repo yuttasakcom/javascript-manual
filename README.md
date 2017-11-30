@@ -83,8 +83,25 @@
       - [Mocha](https://mochajs.org/)
       - [Expect](https://github.com/mjackson/expect)
       - [Super Test](https://github.com/visionmedia/supertest)
-  - Lodash
+      - [Chai](http://chaijs.com/)
+      - [Jest](https://facebook.github.io/jest/)
 - Advance
+- Learning More
+  - Lodash
+  - Moment
+  - Axios
+  - RxJS
+  - React
+  - React-Native
+  - Vue
+  - Angular
+  - Webpack
+  - TypeScript
+  - Meteor
+  - Electron
+  - GraphQL
+  - Elixir
+  - Next.JS
 - Reference
   - [Airbnb JavaScript Style Guide](#airbnb)
   - [JavaScript Standard Style](#standard)
