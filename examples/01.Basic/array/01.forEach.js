@@ -12,9 +12,9 @@ colors.forEach(color => console.log(color))
 
 // forEach Continued
 console.log('=== forEach Continued ===')
-var numbers = [1,2,3,4,5]
+var numbers = [1, 2, 3, 4, 5]
 var sum = 0
-numbers.forEach(number => sum += number)
+numbers.forEach(number => (sum += number))
 console.log(sum)
 
 // Exercise
@@ -23,8 +23,8 @@ var images = [
   { height: 10, width: 30 },
   { height: 20, width: 90 },
   { height: 54, width: 32 }
-];
-var areas = [];
+]
+var areas = []
 
 images.forEach(function(image) {
   areas.push(image.height * image.width)

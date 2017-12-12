@@ -440,7 +440,7 @@ console.log(filteredNumbers)
 // Exercise 2 filter user admin = true
 console.log('=== Execrcise 2 ===')
 var users = [
-  { id: 1, admin: true },  
+  { id: 1, admin: true },
   { id: 2, admin: false },
   { id: 3, admin: false },
   { id: 4, admin: false },
