@@ -1211,6 +1211,14 @@ const app = express()
 app.use('/api', (error, req, res, next) => {
   console.log(error, req, res, next)
 })
+
+// output
+[object Object] { ... }
+[object Object] {
+  path: "/api"
+}
+[object Object] { ... }
+[object Object] { ... }
 ```
 
 ตัวอย่างการใช้งาน callback synchronous
