@@ -1190,6 +1190,29 @@ console.log(snake.health)
 ```
 
 ## Callback
+ตัวอย่างการใช้ callback ใน express.js
+```javascript
+const express = () => {
+  return {
+    use: (path, cb) => {
+      const error = {}
+      const req = {
+        path: path
+      }
+      const res = {}
+      const next = {}
+      cb(error, req, res, next)
+    }
+  }
+}
+
+const app = express()
+
+app.use('/api', (error, req, res, next) => {
+  console.log(error, req, res, next)
+})
+```
+
 ตัวอย่างการใช้งาน callback synchronous
 ```javascript
 console.log('Start')
