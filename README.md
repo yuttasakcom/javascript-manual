@@ -1,14 +1,13 @@
-## JavaScript Manual
-> คู่มือการใช้งาน JavaScript
+# JavaScript Manual
 
 ## Table of Contents
 - Basic
   - [Intriduction](#introduction)
+  - [Visual Studuio Code](#visual-studio-code)
   - [Using JavaScript](#using-javascript)
+  - [Console Log](#console-log)
   - [Variables](#variables)
-    - Basics
-    - null, undefined and NaN
-    - Objects
+  - [Const/Let](#const-let)
   - Strict Mode
   - Dynamic Typing
   - Hoisting
@@ -56,7 +55,6 @@
     - [every and some](#every-and-some)
     - [reduce](#reduce)
     - [sort](#sort)
-  - [Const/Let](#const-let)
   - [Template Strings](#template-strings)
   - [Arrow Function](#arrow-function)
   - [Enhanced Object Literals](#enhanced-object-literals)
@@ -127,6 +125,13 @@
 ## Introduction
 Javascript "learn once, write anywhere" => Web, Server, Destop, Mobile, Embedded, Machine Learning, IOT ... เป็นภาษาที่คุ้มที่จะลงทุนศึกษามาก
 
+## Visual Studio Code
+* use Javascript Standard <sudo npm i -g standard>
+* Extensions
+  * JavaScript (ES6) code snippets
+  * JavaScript Standard Style
+  * Live Server
+
 ## Using JavaScript
 การเรียกใช้งาน JavaScript
 ```html
@@ -143,8 +148,27 @@ Javascript "learn once, write anywhere" => Web, Server, Destop, Mobile, Embedded
 </body>
 ```
 
+## Console Log
+```javascript
+console.log('Hello')
+console.log(1)
+console.log(true)
+let greeting = 'Hello'
+console.log(greeting)
+console.log([1, 2, 3, 4])
+console.log({a: 1, b: 2, c: '3'})
+console.error('This is some error')
+console.clear()
+console.warn('this is a warning')
+console.time('Hello')
+  console.log('a')
+  console.log('b')
+  console.log('c')
+console.timeEnd('Hello')
+
+```
+
 ## Variables
-Type of Valiables
 ```javascript
 var un
 console.log(typeof un) // undefined
@@ -164,8 +188,46 @@ console.log(typeof arr) // object
 var obj = {}
 console.log(typeof obj) // object
 
-var f = function(){}
+var f = function () {}
 console.log(typeof f) // function
+
+// การประกาศตัวแปรสามารถขึ้นต้นด้วย _, $ ได้
+
+// variable style
+var firstName = 'Yo' // Camel case
+console.log(firstName)
+
+```
+
+## Const Let
+```javascript
+// ES5
+// var name = 'Jane'
+// var title = 'Software Engineer'
+// var hourlyWage = 40
+
+// ES6
+const name = 'Jane'
+// name = 'Yo' const เป็นค่าคงที่ไม่สามารถเปลี่ยนแปลงได้
+let title = 'Software Engineer'
+title = 'Senior Software Engineer'
+
+console.log('=== Const/Let ===')
+const statuses = [ 
+  { code: 'OK', response: 'Request successful' },
+  { code: 'FAILED', response: 'There was an error with your request' },
+  { code: 'PENDING', response: 'Your reqeust is still pending' }
+];
+let message = '';
+let currentCode = 'OK';
+
+for (let i = 0; i < statuses.length; i++) {
+  if (statuses[i].code === currentCode) {
+    message = statuses[i].response;
+  }
+}
+
+console.log('const ที่เป็น object สามารถเปลี่ยนแปลงค่าภายใน object ได้')
 ```
 
 ## Join
@@ -793,37 +855,6 @@ console.log(items);
 // { name: 'Sharpe', value: 37 },
 // { name: 'The', value: -12 },
 // { name: 'Zeros', value: 37 } ]
-```
-
-## Const Let
-```javascript
-// ES5
-// var name = 'Jane'
-// var title = 'Software Engineer'
-// var hourlyWage = 40
-
-// ES6
-const name = 'Jane'
-// name = 'Yo' const เป็นค่าคงที่ไม่สามารถเปลี่ยนแปลงได้
-let title = 'Software Engineer'
-title = 'Senior Software Engineer'
-
-console.log('=== Const/Let ===')
-const statuses = [ 
-  { code: 'OK', response: 'Request successful' },
-  { code: 'FAILED', response: 'There was an error with your request' },
-  { code: 'PENDING', response: 'Your reqeust is still pending' }
-];
-let message = '';
-let currentCode = 'OK';
-
-for (let i = 0; i < statuses.length; i++) {
-  if (statuses[i].code === currentCode) {
-    message = statuses[i].response;
-  }
-}
-
-console.log('const ที่เป็น object สามารถเปลี่ยนแปลงค่าภายใน object ได้')
 ```
 
 ## Template Strings

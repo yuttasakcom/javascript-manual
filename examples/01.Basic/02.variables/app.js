@@ -16,5 +16,11 @@ console.log(typeof arr) // object
 var obj = {}
 console.log(typeof obj) // object
 
-var f = function(){}
+var f = function () {}
 console.log(typeof f) // function
+
+// การประกาศตัวแปรสามารถขึ้นต้นด้วย _, $ ได้
+
+// variable style
+var firstName = 'Yo' // Camel case
+console.log(firstName)
