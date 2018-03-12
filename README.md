@@ -374,6 +374,7 @@ JavaScript Arithmetic Operators
 </tbody></table>
 
 JavaScript Assignment Operators
+> Given that x = 10 and y = 5, the table below explains the assignment operators:
 <table>
 <tbody><tr>
 <th style="width:12%">Operator</th>
@@ -420,6 +421,7 @@ JavaScript Assignment Operators
 </tbody></table>
 
 Comparison Operators
+> Comparison operators are used in logical statements to determine equality or difference between variables or values. Given that x = 5, the table below explains the comparison operators:
 <table>
 <tbody><tr>
 <th style="width:12%">Operator</th>
@@ -486,6 +488,91 @@ Comparison Operators
 <td>less than or equal to</td>
 <td>x &lt;= 8</td>
 <td><em>true</em></td>
+</tr>
+</tbody></table>
+
+Logical Operators
+> Given that x = 6 and y = 3, the table below explains the logical operators:
+<table>
+<tbody><tr>
+<th style="width:12%">Operator</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+<tr>
+<td>&amp;&amp;</td>
+<td>and</td>
+<td> (x &lt; 10 &amp;&amp; y &gt; 1) is true</td>
+</tr>
+<tr>
+<td>||</td>
+<td>or</td>
+<td>(x === 5 || y === 5) is false</td>
+</tr>
+<tr>
+<td>!</td>
+<td>not</td>
+<td> !(x === y) is true</td>
+</tr>
+</tbody></table>
+
+JavaScript Bitwise Operators
+<table>
+<tbody><tr>
+<th style="width:12%">Operator</th>
+<th style="width:25%">Description</th>
+<th>Example</th>
+<th>Same as</th>
+<th>Result</th>
+<th style="width:15%">Decimal</th>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>AND</td>
+<td>x = 5 &amp; 1</td>
+<td>0101 &amp; 0001</td>
+<td>0001</td>
+<td>&nbsp;1</td>
+</tr>
+<tr>
+<td>|</td>
+<td>OR</td>
+<td>x = 5 | 1</td>
+<td>0101 | 0001</td>
+<td>0101</td>
+<td>&nbsp;5</td>
+</tr>
+<tr>
+<td>~</td>
+<td>NOT</td>
+<td>x = ~ 5</td>
+<td>&nbsp;~0101</td>
+<td>1010</td>
+<td>&nbsp;10</td>
+</tr>
+<tr>
+<td>^</td>
+<td>XOR</td>
+<td>x = 5 ^ 1</td>
+<td>0101 ^ 0001</td>
+<td>0100</td>
+<td>&nbsp;4</td>
+</tr>
+<tr>
+<td>&lt;&lt;</td>
+<td>Left shift</td>
+<td>x = 5 &lt;&lt; 1</td>
+<td>0101 &lt;&lt; 1</td>
+<td>1010</td>
+<td>&nbsp;10</td>
+</tr>
+<tr>
+<td>&gt;&gt;</td>
+<td>Right shift</td>
+<td>x = 5 &gt;&gt; 1</td>
+<td>0101 &gt;&gt; 1</td>
+<td>0010</td>
+<td>&nbsp; 2</td>
 </tr>
 </tbody></table>
 
