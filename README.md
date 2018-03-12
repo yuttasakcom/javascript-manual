@@ -9,6 +9,18 @@
   - [Variables](#variables)
   - [Const/Let](#const-let)
   - [Data Types in JavaScript](#data-types-in-javascript)
+  - [Type Conversion](#type-conversion)
+  - [Math](#math)
+  - Operators
+    - Addition
+    - Subtraction
+    - Multiplication & Floating Point Problems
+    - Division & Modules
+    - Comparing Values
+    - Important Rules
+    - Boolean
+    - Ternary Operator
+    - Precedence
   - Strict Mode
   - Dynamic Typing
   - Hoisting
@@ -24,16 +36,6 @@
     - For Loop varintions
     - Looping through Arrays
     - While Loop
-  - Operators
-    - Addition
-    - Subtraction
-    - Multiplication & Floating Point Problems
-    - Division & Modules
-    - Comparing Values
-    - Important Rules
-    - Boolean
-    - Ternary Operator
-    - Precedence
   - Types & Scope
     - Primitive vs Reference Types
     - Global vs Local Scope
@@ -277,6 +279,51 @@ Symbols(ES6)
 
   const sym = Symbol()
   console.log(typeof sym) // symbol
+```
+## Type Conversion
+```javascript
+// Number to String
+// case 1
+let val = String(1)
+console.log(val) // "1"
+
+// case 2
+let val = 1
+console.log(val.toString()) // "1"
+
+// case 3
+let val1 = 1
+let val2 = String('1')
+console.log(val1 + val2) // "11"
+
+// String to Number
+// case 1
+let val = Number('1')
+console.log(val) // 1
+
+// case 2
+let val = parseInt('1')
+console.log(val) // 1
+
+// case 3
+let val = parseFloat('100.33333')
+console.log(val.toFixed(2)) // "100.33"
+```
+
+## Math
+```javascript
+console.log(Math.PI) // 3.141592653589793
+console.log(Math.E) // 2.718281828459045
+console.log(Math.round(2.4)) // 2
+console.log(Math.ceil(2.4)) // 3
+console.log(Math.floor(2.4)) // 2
+console.log(Math.sqrt(64)) // 8
+console.log(Math.abs(-3)) // 3
+console.log(Math.pow(8, 2)) // 64
+console.log(Math.min(1, 2, 3)) // 1
+console.log(Math.max(1, 2, 3)) // 3
+console.log(Math.random())
+console.log(Math.floor(Math.random() * 20 + 1))
 ```
 
 ## Join
