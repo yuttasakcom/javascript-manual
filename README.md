@@ -1350,6 +1350,11 @@ for(let x of user){
 ```
 
 ## DOM Manipulation & Events
+```
+02.dom manipulation and events
+ - app.js
+ - index.html
+```
 
 ## Arrow Function
 ```javascript
