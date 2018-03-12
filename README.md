@@ -135,6 +135,7 @@
 ```json
   // ตั้งค่า vs code ให้จัด format style อัตโนมัติตอนกด save
   {
+    "editor.wordWrap": "on",
     "editor.formatOnSave": true,
     "standard.autoFixOnSave": true
   }
