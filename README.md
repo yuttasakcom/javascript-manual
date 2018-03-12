@@ -339,6 +339,19 @@ console.log(name.toUpperCase()) // "YOPROGRAMMER"
 
 let name = 'YoProgrammer'
 console.log(name.toLowerCase()) // "yoprogrammer"
+
+let name = "YoProgrammer"
+console.log(name.charAt(2)) // "P"
+
+let name = "YoProgrammer"
+console.log(name.substring(0, 4)) // "YoPr"
+
+let name = "YoProgrammer"
+console.log(name.replace("Programmer", "Developer")) // "YoDeveloper"
+
+let name = "YoProgrammer"
+console.log(name.includes("Yo")) // true
+console.log(name.includes("Yea")) // false
 ```
 
 ## index of
