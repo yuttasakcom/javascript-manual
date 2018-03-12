@@ -1,7 +1,7 @@
 # JavaScript Manual
 
 ## Table of Contents
-- Basic
+- Fundamentals
   - [Introduction](#introduction)
   - [Editor for JavaScript](#editor-for-javascript)
   - [Using JavaScript](#using-javascript)
@@ -38,15 +38,10 @@
     - [sort](#sort)
   - [Object Literals](#object-literals)
   - [Date & Time](#date-time)
-  - Strict Mode
-  - Dynamic Typing
-  - Hoisting
-  - Functions
-    - Creating and Calling Them
-    - Arguments & Returning Data
-  - Control Structures
+  - [Control Structures](#control-structures)
     - If statement
     - Switch & Break
+    - Function Declarations & Expressions
     - For Loop
     - Nested Loops
     - controlling Loops with break & continue
@@ -1300,6 +1295,31 @@ today.setDate(12)
 console.log(today) // Mon Mar 12 2018 17:30:01 GMT+0700 (+07)
 today.setFullYear(2018)
 console.log(today) // Mon Mar 12 2018 17:30:01 GMT+0700 (+07)
+```
+
+## Control Structures 
+## If Statement
+## Switch & Break
+## Function Declarations & Expressions
+## For Loop
+```javascript
+// For in
+const user = {
+  name: 'YoProgrammer'
+}
+
+for(let x in user){
+  console.log(x) // name
+}
+
+// For of
+const user = [{
+  name: 'YoProgrammer'
+}]
+
+for(let x of user){
+  console.log(x) // { name: "YoProgrammer" }
+}
 ```
 
 ## Arrow Function
