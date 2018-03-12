@@ -24,7 +24,25 @@
   - [String Method](#string-method)
     - [indexOf](#index-of)
     - [lastIndexOf](#last-index-of)
-  - [concat](#concat)
+    - [concat](#concat)
+  - [Template Strings](#template-strings)
+  - Array Helper Methods
+    - [join](#join)
+    - [push](#push)
+    - [pop](#pop)
+    - [shift](#shift)
+    - [unshift](#unshift)
+    - [splice](#splice)
+    - [slice](#slice)
+    - [split](#split)
+    - [forEach](#foreach)
+    - [map](#map)
+    - [filter](#filter)
+    - [find](#find)
+    - [findIndex](#find-index)
+    - [every and some](#every-and-some)
+    - [reduce](#reduce)
+    - [sort](#sort)
   - Strict Mode
   - Dynamic Typing
   - Hoisting
@@ -43,24 +61,6 @@
   - Types & Scope
     - Primitive vs Reference Types
     - Global vs Local Scope
-  - Array Helper Methods
-    - [join](#join)
-    - [push](#push)
-    - [pop](#pop)
-    - [shift](#shift)
-    - [unshift](#unshift)
-    - [splice](#splice)
-    - [slice](#slice)
-    - [split](#split)
-    - [forEach](#foreach)
-    - [map](#map)
-    - [filter](#filter)
-    - [find](#find)
-    - [findIndex](#find-index)
-    - [every and some](#every-and-some)
-    - [reduce](#reduce)
-    - [sort](#sort)
-  - [Template Strings](#template-strings)
   - [Arrow Function](#arrow-function)
   - [Enhanced Object Literals](#enhanced-object-literals)
   - [Default Function Argument](#default-function-argument)
@@ -376,6 +376,16 @@ let sum = arr1.concat(arr2);
 console.log(sum);
 //output
 //[ 1, 2, 3, 4, 5, 6 ]
+```
+
+## Template Strings
+```javascript
+function getMessage() {
+  const year = new Date().getFullYear()
+  return `The year is ${year}`
+}
+
+console.log(getMessage())
 ```
 
 ## Join
@@ -986,16 +996,6 @@ console.log(items);
 // { name: 'Sharpe', value: 37 },
 // { name: 'The', value: -12 },
 // { name: 'Zeros', value: 37 } ]
-```
-
-## Template Strings
-```javascript
-function getMessage() {
-  const year = new Date().getFullYear()
-  return `The year is ${year}`
-}
-
-console.log(getMessage())
 ```
 
 ## Arrow Function
