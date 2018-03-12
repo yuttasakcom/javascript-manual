@@ -36,6 +36,8 @@
     - [every and some](#every-and-some)
     - [reduce](#reduce)
     - [sort](#sort)
+  - [Object Literals](#object-literals)
+  - [Date & Time](#date-time)
   - Strict Mode
   - Dynamic Typing
   - Hoisting
@@ -1257,6 +1259,47 @@ console.log(items)
 // { name: 'Sharpe', value: 37 },
 // { name: 'The', value: -12 },
 // { name: 'Zeros', value: 37 } ]
+```
+
+## Object Literals
+```javascript
+const person = {
+  name: 'YoProgrammer',
+  birthYear: 1983,
+  getAddress(){
+    return { province: 'Bangkok' }
+  },
+  getAge() { 
+    return new Date().getFullYear() - this.birthYear
+  }
+}
+
+console.log(person.name) // "YoProgrammer"
+console.log(person.getAddress()) // { province: "Bangkok" }
+console.log(person.getAge()) // 35
+```
+
+## Date & Time
+```javascript
+const today = new Date()
+console.log(today) // Mon Mar 12 2018 17:20:38 GMT+0700 (+07)
+console.log(typeof today) // "object"
+console.log(today.getMonth()) // 2
+console.log(today.getDate()) // 12
+console.log(today.getDay()) // 1 # 1 = monday
+console.log(today.getFullYear()) // 2018
+console.log(today.getHours()) // 17
+console.log(today.getMinutes()) // 26
+console.log(today.getSeconds()) // 39
+console.log(today.getMilliseconds()) // 879
+console.log(today.getTime()) // 1520850448879
+
+today.setMonth(2)
+console.log(today) // Mon Mar 12 2018 17:30:01 GMT+0700 (+07)
+today.setDate(12)
+console.log(today) // Mon Mar 12 2018 17:30:01 GMT+0700 (+07)
+today.setFullYear(2018)
+console.log(today) // Mon Mar 12 2018 17:30:01 GMT+0700 (+07)
 ```
 
 ## Arrow Function
