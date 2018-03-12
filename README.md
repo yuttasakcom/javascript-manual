@@ -10,7 +10,6 @@
   - [Const/Let](#const-let)
   - [Data Types in JavaScript](#data-types-in-javascript)
   - [Type Conversion](#type-conversion)
-  - [Math](#math)
   - Operators
     - Addition
     - Subtraction
@@ -21,6 +20,11 @@
     - Boolean
     - Ternary Operator
     - Precedence
+  - [Math](#math)
+  - [String Method](#string-method)
+    - [indexOf](#index-of)
+    - [lastIndexOf](#last-index-of)
+  - [concat](#concat)
   - Strict Mode
   - Dynamic Typing
   - Hoisting
@@ -41,7 +45,6 @@
     - Global vs Local Scope
   - Array Helper Methods
     - [join](#join)
-    - [concat](#concat)
     - [push](#push)
     - [pop](#pop)
     - [shift](#shift)
@@ -54,7 +57,6 @@
     - [filter](#filter)
     - [find](#find)
     - [findIndex](#find-index)
-    - [indexOf](#index-of)
     - [every and some](#every-and-some)
     - [reduce](#reduce)
     - [sort](#sort)
@@ -309,6 +311,7 @@ console.log(val) // 1
 let val = parseFloat('100.33333')
 console.log(val.toFixed(2)) // "100.33"
 ```
+## Operators
 
 ## Math
 ```javascript
@@ -326,16 +329,30 @@ console.log(Math.random())
 console.log(Math.floor(Math.random() * 20 + 1))
 ```
 
-## Join
+## String Method
 ```javascript
-let arr = [1, 2, 3, 4, 5];
-console.log(arr.join(''));
-console.log(arr.join(','));
-console.log(arr.join('-'));
-//output
-// 12345
-// 1,2,3,4,5
-// 1-2-3-4-5
+let name = 'YoProgrammer'
+console.log(name.length) // 12
+
+let name = 'YoProgrammer'
+console.log(name.toUpperCase()) // "YOPROGRAMMER"
+
+let name = 'YoProgrammer'
+console.log(name.toLowerCase()) // "yoprogrammer"
+```
+
+## index of
+```javascript
+const arr = ['apple', 'banana', 'orange']
+console.log(arr.indexOf('banana')) // 1 นับจากซ้ายไปขวา -> 0, 1
+console.log(arr.indexOf('no')) // -1
+```
+
+## last index of
+```javascript
+const arr = ['apple', 'banana', 'orange']
+console.log(arr.lastIndexOf('banana')) // 1 นับจากขวาไปซ้าย  1, 0 <-
+console.log(arr.lastIndexOf('no')) // -1
 ```
 
 ## Concat
@@ -346,6 +363,18 @@ let sum = arr1.concat(arr2);
 console.log(sum);
 //output
 //[ 1, 2, 3, 4, 5, 6 ]
+```
+
+## Join
+```javascript
+let arr = [1, 2, 3, 4, 5];
+console.log(arr.join(''));
+console.log(arr.join(','));
+console.log(arr.join('-'));
+//output
+// 12345
+// 1,2,3,4,5
+// 1-2-3-4-5
 ```
 
 ## Push
@@ -721,13 +750,6 @@ console.log(res)
 ```javascript
 const arr = ['apple', 'banana', 'orange']
 console.log(arr.findIndex(e => e === 'banana')) // output = 1
-```
-
-## index of
-```javascript
-const arr = ['apple', 'banana', 'orange']
-console.log(arr.indexOf('banana')) // output = 1
-console.log(arr.indexOf('no')) // output = -1
 ```
 
 ## every and some
