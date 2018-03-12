@@ -959,11 +959,11 @@ for (var i = 0; i < users.length; i++) {
     break
   }
 }
-console.log(user)
+console.log(user) // { id: 4, name: "Alex" }
 
 console.log('=== find ===')
 var findUser = users.find(user => user.name === 'Alex')
-console.log(findUser)
+console.log(findUser) // { id: 4, name: "Alex" }
 
 console.log('=== find Continued 1 ===')
 function Car(model) {
@@ -976,7 +976,7 @@ var cars = [
 ]
 
 var findCar = cars.find(car => car.model === 'Focus')
-console.log(findCar)
+console.log(findCar) // { model: "Focus" }
 
 console.log('=== find Continued 2 ===')
 var posts = [
@@ -989,7 +989,7 @@ function postForComment(posts, comment) {
 }
 
 var findPost = postForComment(posts, comment)
-console.log(findPost)
+console.log(findPost) // { id: 1, title: "New Post" }
 
 // Exercise 1 find admin
 console.log('=== Execrcise 1 ===')
