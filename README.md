@@ -3,7 +3,7 @@
 ## Table of Contents
 - Basic
   - [Introduction](#introduction)
-  - [Visual Studuio Code](#visual-studio-code)
+  - [Editor for JavaScript](#editor-for-javascript)
   - [Using JavaScript](#using-javascript)
   - [Console Log](#console-log)
   - [Variables](#variables)
@@ -125,8 +125,8 @@
 ## Introduction
 ณ ชั่วโมงนี้ ภาษา **Javascript** อาจจะไม่ใช่ภาษาที่ ดี และ เร็วที่สุด แต่ "Learn once, Write anywhere" => Web, Server, Destop, Mobile, Embedded, Machine Learning, IOT และ งานอื่นๆอีกมากมาย เป็นภาษาที่คุ้มที่จะลงทุนศึกษามากที่สุดภาษาหนึ่งเลยครับ
 
-## Visual Studio Code
-Editor ที่แนะนำคือ vs-code
+## Editor for JavaScript
+สำหรับ Editor ที่แนะนำให้ใช้ คือ [Visual Studio Code](https://code.visualstudio.com/)
 * ใช้ Javascript Standard ในการกำหนด format style วิธีติดตั้ง `sudo npm i -g standard`
 ```json
   // การตั้งค่าให้ vs-code จัดการ format style ให้อัตโนมัติ
@@ -142,17 +142,25 @@ Editor ที่แนะนำคือ vs-code
 
 ## Using JavaScript
 การเรียกใช้งาน JavaScript
+
 ```html
-1. Inline HTML
+1. External
+<body>
+  <script src="./app.js"></script>
+</body>
+```
+
+```html
+2. Internal
 <body>
   <script>console.log("Hlloe there!")</script>
 </body>
 ```
 
 ```html
-2. HTML Import
+3. Inline HTML
 <body>
-  <script src="./app.js"></script>
+   <a href="#" onclick="alert('Hi');">Click Me</a>
 </body>
 ```
 
