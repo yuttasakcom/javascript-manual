@@ -11,22 +11,13 @@
   - [Data Types in JavaScript](#data-types-in-javascript)
   - [Type Conversion](#type-conversion)
   - [Operators](#operators)
-    - Addition
-    - Subtraction
-    - Multiplication & Floating Point Problems
-    - Division & Modules
-    - Comparing Values
-    - Important Rules
-    - Boolean
-    - Ternary Operator
-    - Precedence
   - [Math](#math)
   - [String Method](#string-method)
     - [indexOf](#index-of)
     - [lastIndexOf](#last-index-of)
     - [concat](#concat)
   - [Template Strings](#template-strings)
-  - Array Helper Methods
+  - [Array Helper Methods](#array-helper-methods)
     - [join](#join)
     - [push](#push)
     - [pop](#pop)
@@ -312,6 +303,7 @@ let val = parseFloat('100.33333')
 console.log(val.toFixed(2)) // "100.33"
 ```
 ## Operators
+JavaScript Arithmetic Operators
 <table>
 <tbody><tr>
 <th style="width:12%">Operator</th>
@@ -458,6 +450,7 @@ function getMessage() {
 console.log(getMessage())
 ```
 
+## Array Helper Methods
 ## Join
 ```javascript
 let arr = [1, 2, 3, 4, 5];
