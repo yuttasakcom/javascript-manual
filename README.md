@@ -312,9 +312,75 @@ let val = parseFloat('100.33333')
 console.log(val.toFixed(2)) // "100.33"
 ```
 ## Operators
-| Operator | Description | Example | Result in y | Result in x |
-| ---------- | --------- | ----- | ----- | ----- |
-| + |	Addition | x = y + 2 | y = 5 |	x = 7
+<table>
+<tbody><tr>
+<th style="width:12%">Operator</th>
+<th style="width:25%">Description</th>
+<th>Example</th>
+<th>Result in y</th>
+<th>Result in x</th>
+</tr>
+<tr>
+<td>+</td>
+<td>Addition</td>
+<td>x = y + 2</td>
+<td>y = 5</td>
+<td>x = 7</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Subtraction</td>
+<td>x = y - 2</td>
+<td>y = 5</td>
+<td>x = 3</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Multiplication</td>
+<td>x = y * 2</td>
+<td>y = 5</td>
+<td>x = 10</td>
+</tr>
+<tr>
+<td>/</td>
+<td>Division</td>
+<td>x = y / 2</td>
+<td>y = 5</td>
+<td>x = 2.5</td>
+</tr>
+<tr>
+<td>%</td>
+<td>Modulus (division remainder)</td>
+<td>x = y % 2</td>
+<td>y = 5</td>
+<td>x = 1</td>
+</tr>
+<tr>
+<td rowspan="2">++</td>
+<td rowspan="2">Increment</td>
+<td>x = ++y</td>
+<td>y = 6</td>
+<td>x = 6</td>
+</tr>
+<tr style="background-color:#ffffff;">
+<td>x = y++</td>
+<td>y = 6</td>
+<td>x = 5</td>
+</tr>
+<tr style="background-color:#f1f1f1;">
+<td rowspan="2">--</td>
+<td rowspan="2">Decrement</td>
+<td>x = --y</td>
+<td>y = 4</td>
+<td>x = 4</td>
+</tr>
+<tr>
+<td>x = y--</td>
+<td>y = 4</td>
+<td>x = 5</td>
+</tr>
+</tbody></table>
+
 
 
 ## Math
