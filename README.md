@@ -579,7 +579,7 @@ JavaScript Bitwise Operators
 ```javascript
 console.log(Math.PI) // 3.141592653589793
 console.log(Math.E) // 2.718281828459045
-console.log(Math.round(2.4)) // 2
+console.log(Math.round(2.4)) // 2 # ต่ำกว่า .49 ปัดลง ตั้งแต่ .5 ปัดขึ้น
 console.log(Math.ceil(2.4)) // 3
 console.log(Math.floor(2.4)) // 2
 console.log(Math.sqrt(64)) // 8
