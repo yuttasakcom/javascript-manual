@@ -18,14 +18,16 @@
     - [concat](#concat)
   - [Template Strings](#template-strings)
   - [Array Helper Methods](#array-helper-methods)
-    - [join](#join)
+    - [Array Methods](#array-methods)
     - [push](#push)
+    - [unshift](#unshift)
     - [pop](#pop)
     - [shift](#shift)
-    - [unshift](#unshift)
+    - [join](#join)
     - [splice](#splice)
     - [slice](#slice)
     - [split](#split)
+    - [reverse](#reverse)
     - [forEach](#foreach)
     - [map](#map)
     - [filter](#filter)
@@ -633,12 +635,10 @@ console.log(arr.lastIndexOf('no')) // -1
 
 ## Concat
 ```javascript
-let arr1 = [1, 2, 3];
-let arr2 = [4, 5, 6];
-let sum = arr1.concat(arr2);
-console.log(sum);
-//output
-//[ 1, 2, 3, 4, 5, 6 ]
+let arr1 = [1, 2, 3]
+let arr2 = [4, 5, 6]
+let sum = arr1.concat(arr2)
+console.log(sum) // [1, 2, 3, 4, 5, 6]
 ```
 
 ## Template Strings
@@ -648,64 +648,56 @@ function getMessage() {
   return `The year is ${year}`
 }
 
-console.log(getMessage())
+console.log(getMessage()) // "The year is 2018"
 ```
 
 ## Array Helper Methods
-## Join
+
+## Array Methods
 ```javascript
-let arr = [1, 2, 3, 4, 5];
-console.log(arr.join(''));
-console.log(arr.join(','));
-console.log(arr.join('-'));
-//output
-// 12345
-// 1,2,3,4,5
-// 1-2-3-4-5
+console.log(Array.isArray([1, 2, 3])) // true
+console.log(Array.isArray("Yo")) // false
+console.log(Array(2)) // [undefined, undefined]
 ```
 
 ## Push
 ```javascript
-let color = ['red', 'green'];
-let mutate = color.push('blue');
-console.log(color);
-console.log(mutate);
-//output
-// [ 'red', 'green', 'blue' ]
-// 3
-```
-
-## Pop
-```javascript
-let color = ['red', 'green', 'blue'];
-let mutate = color.pop('blue');
-console.log(color);
-console.log(mutate);
-//output
-// [ 'red', 'green' ]
-// blue
-```
-
-## Shift
-```javascript
-let color = ['red', 'green', 'blue'];
-let mutate = color.shift();
-console.log(color);
-console.log(mutate);
-//output
-// [ 'green', 'blue' ]
-// red
+let color = ['red', 'green']
+let mutate = color.push('blue')
+console.log(color) // ["red", "green", "blue"]
+console.log(mutate) // 3
 ```
 
 ## Unshift
 ```javascript
-let color = ['red', 'green', 'blue'];
-let mutate = color.unshift('ogrange');
-console.log(color);
-console.log(mutate);
-//output
-// [ 'ogrange', 'red', 'green', 'blue' ]
-// 4
+let color = ['red', 'green', 'blue']
+let mutate = color.unshift('ogrange')
+console.log(color) // ["ogrange", "red", "green", "blue"]
+console.log(mutate) // 4
+```
+
+## Pop
+```javascript
+let color = ['red', 'green', 'blue']
+let mutate = color.pop('blue')
+console.log(color) // ["red", "green"]
+console.log(mutate) // "blue"
+```
+
+## Shift
+```javascript
+let color = ['red', 'green', 'blue']
+let mutate = color.shift()
+console.log(color) // ["green", "blue"]
+console.log(mutate) // "red"
+```
+
+## Join
+```javascript
+let arr = [1, 2, 3, 4, 5]
+console.log(arr.join('')) // 12345
+console.log(arr.join(',')) // 1,2,3,4,5
+console.log(arr.join('-')) // 1-2-3-4-5
 ```
 
 ## Splice
@@ -768,6 +760,12 @@ console.log(number.toString().split(""))
 
 //output
 // [ '1', '2', '3', '4', '5' ]
+```
+
+## Reverse
+```javascript
+let name = 'YoProgrammer'
+console.log(name.split('').reverse().join('')) // "remmargorPoY"
 ```
 
 ## forEach
@@ -1156,7 +1154,7 @@ function balancedParens(string) {
     return previous
   }, 0)
 }
-var b= balancedParens(")))))")
+var b = balancedParens(")))))")
 console.log(b)
 
 // Exercise 1 reduce sum distance
@@ -1201,18 +1199,18 @@ console.log(unique(numbers))
 ## sort
 ```javascript
 // Sort String
-let fruit = ['cherries', 'apples', 'bannas'];
-console.log(fruit.sort()); // [ 'apples', 'bannas', 'cherries' ]
+let fruit = ['cherries', 'apples', 'bannas']
+console.log(fruit.sort()) // [ 'apples', 'bannas', 'cherries' ]
 
 // Sort Number
-let scores = [1, 10, 21, 2];
-console.log(scores.sort()); //[1, 10, 21, 2];
+let scores = [1, 10, 21, 2]
+console.log(scores.sort()) //[1, 10, 21, 2]
 
-let numbers = [4, 2, 10, 5, 1, 3];
-numbers.sort(function(a, b) {
-  return a - b;
-});
-console.log(numbers); //[ 1, 2, 3, 4, 5, 10]
+let numbers = [4, 2, 10, 5, 1, 3]
+numbers.sort((a, b) => {
+  return a - b
+})
+console.log(numbers) //[ 1, 2, 3, 4, 5, 10]
 
 // Sort Object
 let items = [
@@ -1222,38 +1220,37 @@ let items = [
   { name: 'The', value: -12 },
   { name: 'Magnetic', value: 13 },
   { name: 'Zeros', value: 37 }
-];
+]
 
 // sort object by value
-items.sort(function (a, b) {
-  return a.value - b.value;
-});
-console.log(items);
-//output
-// [ { name: 'The', value: -12 },
-// { name: 'Magnetic', value: 13 },
-// { name: 'Edward', value: 21 },
-// { name: 'Sharpe', value: 37 },
-// { name: 'Zeros', value: 37 },
-// { name: 'And', value: 45 } ]
-
+items.sort((a, b) => {
+  return a.value - b.value
+})
+console.log(items)
+// [ 
+//   { name: 'The', value: -12 },
+//   { name: 'Magnetic', value: 13 },
+//   { name: 'Edward', value: 21 },
+//   { name: 'Sharpe', value: 37 },
+//   { name: 'Zeros', value: 37 },
+//   { name: 'And', value: 45 }
+// ]
 
 // sort object by name
 items.sort(function(a, b) {
-  let nameA = a.name.toUpperCase(); // ignore upper and lowercase
-  let nameB = b.name.toUpperCase(); // ignore upper and lowercase
+  let nameA = a.name.toUpperCase()
+  let nameB = b.name.toUpperCase()
   if (nameA < nameB) {
-    return -1;
+    return -1
   }
   if (nameA > nameB) {
-    return 1;
+    return 1
   }
-
   // names must be equal
-  return 0;
-});
-console.log(items);
-//output
+  return 0
+})
+
+console.log(items)
 // [ { name: 'And', value: 45 },
 // { name: 'Edward', value: 21 },
 // { name: 'Magnetic', value: 13 },
