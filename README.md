@@ -10,7 +10,7 @@
   - [Const/Let](#const-let)
   - [Data Types in JavaScript](#data-types-in-javascript)
   - [Type Conversion](#type-conversion)
-  - Operators
+  - [Operators](#operators)
     - Addition
     - Subtraction
     - Multiplication & Floating Point Problems
@@ -312,6 +312,11 @@ let val = parseFloat('100.33333')
 console.log(val.toFixed(2)) // "100.33"
 ```
 ## Operators
+| Operator | Description | Example | Result in y | Result in x |
+| ---------- | --------- | ----- | ----- |
+| + |	Addition | x = y + 2 | y = 5 |	x = 7
+|
+
 
 ## Math
 ```javascript
