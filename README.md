@@ -130,8 +130,6 @@
 ```json
   // ตั้งค่า vs code ให้จัด format style อัตโนมัติตอนกด save
   {
-    "editor.wordWrap": "on",
-    "editor.formatOnSave": true,
     "standard.autoFixOnSave": true
   }
 ```
@@ -1327,6 +1325,8 @@ for(let x of user){
   console.log(x) // { name: "YoProgrammer" }
 }
 ```
+
+## DOM Manipulation & Events
 
 ## Arrow Function
 ```javascript
