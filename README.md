@@ -8,6 +8,7 @@
   - [Console Log](#console-log)
   - [Variables](#variables)
   - [Const/Let](#const-let)
+  - [Data Types in JavaScript](#data-types-in-javascript)
   - Strict Mode
   - Dynamic Typing
   - Hoisting
@@ -241,6 +242,41 @@ const name = 'Jane'
 
 let title = 'Software Engineer'
 title = 'Senior Software Engineer'
+```
+
+## Data Types in JavaScript
+```
+String          Arrays
+Number          Object Literals
+Boolean         Functions
+Null            Dates
+Undefined       Anything Else...
+Symbols(ES6)
+```
+```javascript
+  let un
+  console.log(typeof un) // undefined
+
+  let num = 1
+  console.log(typeof num) // number
+
+  let str = 'Yo'
+  console.log(typeof str) // string
+
+  let bool = true
+  console.log(typeof bool) // boolean
+
+  const arr = [1, 2, 3]
+  console.log(typeof arr) // object
+
+  const obj = {}
+  console.log(typeof obj) // object
+
+  const f = function () {}
+  console.log(typeof f) // function
+
+  const sym = Symbol()
+  console.log(typeof sym) // symbol
 ```
 
 ## Join
