@@ -315,7 +315,6 @@ console.log(val.toFixed(2)) // "100.33"
 | Operator | Description | Example | Result in y | Result in x |
 | ---------- | --------- | ----- | ----- | ----- |
 | + |	Addition | x = y + 2 | y = 5 |	x = 7
-|
 
 
 ## Math
