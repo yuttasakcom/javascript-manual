@@ -127,15 +127,15 @@
 
 ## Editor for JavaScript
 สำหรับ Editor ที่แนะนำให้ใช้ คือ [Visual Studio Code](https://code.visualstudio.com/)
-* ใช้ Javascript Standard ในการกำหนด format style วิธีติดตั้ง `sudo npm i -g standard`
+* หากต้องการใช้ Javascript Standard ในการกำหนด format style ให้ติดตั้ง `sudo npm i -g standard`
 ```json
-  // การตั้งค่าให้ vs-code จัดการ format style ให้อัตโนมัติ
+  // ตั้งค่า vs code ให้จัด format style อัตโนมัติตอนกด save
   {
     "editor.formatOnSave": true,
     "standard.autoFixOnSave": true
   }
 ```
-* Extensions
+* ติดตั้ง Extensions เพิ่มเติม
   * JavaScript (ES6) code snippets
   * JavaScript Standard Style
   * Live Server
