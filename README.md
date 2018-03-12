@@ -373,7 +373,51 @@ JavaScript Arithmetic Operators
 </tr>
 </tbody></table>
 
-
+JavaScript Assignment Operators
+<table>
+<tbody><tr>
+<th style="width:12%">Operator</th>
+<th style="width:25%">Example</th>
+<th>Same As</th>
+<th>Result in x</th>
+</tr>
+<tr>
+<td>=</td>
+<td>x = y</td>
+<td>x = y</td>
+<td>x = 5</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>x += y</td>
+<td>x = x + y</td>
+<td>x = 15</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>x -= y</td>
+<td>x = x - y</td>
+<td>x = 5</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>x *= y</td>
+<td>x = x * y</td>
+<td>x = 50</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>x /= y</td>
+<td>x = x / y</td>
+<td>x = 2</td>
+</tr>
+<tr>
+<td>%=</td>
+<td>x %= y</td>
+<td>x = x % y</td>
+<td>x = 0</td>
+</tr>
+</tbody></table>
 
 ## Math
 ```javascript
