@@ -119,7 +119,7 @@
   - [หนังสือ พัฒนาเว็บแอปพลิเคชั่นด้วย JavaScript](https://www.se-ed.com/product/%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B9%87%E0%B8%9A%E0%B9%81%E0%B8%AD%E0%B8%9B%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-JavaScript.aspx?no=9786160825394)
 
 ## Introduction
-ณ ชั่วโมงนี้ ภาษา **Javascript** อาจจะไม่ใช่ภาษาที่ ~~เร็วที่สุด~~ แต่การเรียนรู้ภาษา JavaScript แค่ภาษาเดียวสามารถที่สร้างสรรค์ผลงานได้อย่างมากมาย เช่น Web Site, Server Site, Destop App, Mobile App, Embedded, Machine Learning, IOT, Game2d/3d และ งานอื่นๆอีกมากมาย เป็นภาษาที่คุ้มที่จะลงทุนศึกษามากที่สุดภาษาหนึ่งเลยครับ
+ณ ชั่วโมงนี้ ภาษา **Javascript** อาจจะไม่ใช่ภาษาที่ ~~เร็วที่สุด~~ แต่การเรียนรู้ภาษา JavaScript แค่ภาษาเดียวสามารถที่สร้างสรรค์ผลงานได้อย่างมากมาย เช่น Web Site, Server Site, Destop App, Mobile App, Embedded, Machine Learning, IOT, Game2d/3d และ งานอื่นๆอีกมากมาย เป็นภาษาที่คุ้มที่จะลงทุนศึกษามากที่สุดภาษาหนึ่ง
 
 ## Editor for JavaScript
 สำหรับ Editor ที่แนะนำให้ใช้ คือ [Visual Studio Code](https://code.visualstudio.com/)
