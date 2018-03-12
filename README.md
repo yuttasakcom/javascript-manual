@@ -419,6 +419,76 @@ JavaScript Assignment Operators
 </tr>
 </tbody></table>
 
+Comparison Operators
+<table>
+<tbody><tr>
+<th style="width:12%">Operator</th>
+<th>Description</th>
+<th>Comparing</th>
+<th>Returns</th>
+</tr>
+<tr style="background-color:#f5f5f5;">
+<td rowspan="2">==</td>
+<td rowspan="2">equal to</td>
+<td>x == 8</td>
+<td>false</td>
+</tr>
+<tr style="background-color:#f5f5f5;">
+<td>x == 5</td>
+<td>true</td>
+</tr>
+<tr style="background-color:#ffffff;">
+<td rowspan="2">===</td>
+<td rowspan="2">equal value and equal type</td>
+<td>x === "5"</td>
+<td>false</td>
+</tr>
+<tr style="background-color:#ffffff;">
+<td>x === 5</td>
+<td>true</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>not equal</td>
+<td>x != 8</td>
+<td>true</td>
+</tr>
+<tr>
+<td rowspan="2">!==</td>
+<td rowspan="2">not equal value or not equal type</td>
+<td>x !== "5"</td>
+<td>true</td>
+</tr>
+<tr style="background-color:#ffffff;">
+<td>x !== 5</td>
+<td>false</td>
+</tr>
+<tr style="background-color:#f5f5f5;">
+<td>&gt;</td>
+<td>greater than</td>
+<td>x &gt; 8</td>
+<td>false</td>
+</tr>
+<tr style="background-color:#ffffff;">
+<td>&lt;</td>
+<td>less than</td>
+<td>x &lt; 8</td>
+<td>true</td>
+</tr>
+<tr style="background-color:#f5f5f5;">
+<td>&gt;=</td>
+<td>greater than or equal to</td>
+<td>x &gt;= 8</td>
+<td>false</td>
+</tr>
+<tr style="background-color:#ffffff;">
+<td>&lt;=</td>
+<td>less than or equal to</td>
+<td>x &lt;= 8</td>
+<td><em>true</em></td>
+</tr>
+</tbody></table>
+
 ## Math
 ```javascript
 console.log(Math.PI) // 3.141592653589793
