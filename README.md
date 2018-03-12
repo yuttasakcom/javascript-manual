@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - Basic
-  - [Intriduction](#introduction)
+  - [Introduction](#introduction)
   - [Visual Studuio Code](#visual-studio-code)
   - [Using JavaScript](#using-javascript)
   - [Console Log](#console-log)
@@ -123,10 +123,18 @@
   - [หนังสือ พัฒนาเว็บแอปพลิเคชั่นด้วย JavaScript](https://www.se-ed.com/product/%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B9%87%E0%B8%9A%E0%B9%81%E0%B8%AD%E0%B8%9B%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-JavaScript.aspx?no=9786160825394)
 
 ## Introduction
-Javascript "learn once, write anywhere" => Web, Server, Destop, Mobile, Embedded, Machine Learning, IOT ... เป็นภาษาที่คุ้มที่จะลงทุนศึกษามาก
+ณ ชั่วโมงนี้ ภาษา **Javascript** อาจจะไม่ใช่ภาษาที่ ดี และ เร็วที่สุด แต่ "Learn once, Write anywhere" => Web, Server, Destop, Mobile, Embedded, Machine Learning, IOT และ งานอื่นๆอีกมากมาย เป็นภาษาที่คุ้มที่จะลงทุนศึกษามากที่สุดภาษาหนึ่งเลยครับ
 
 ## Visual Studio Code
-* use Javascript Standard <sudo npm i -g standard>
+Editor ที่แนะนำคือ vs-code
+* ใช้ Javascript Standard ในการกำหนด format style วิธีติดตั้ง `sudo npm i -g standard`
+```json
+  // การตั้งค่าให้ vs-code จัดการ format style ให้อัตโนมัติ
+  {
+    "editor.formatOnSave": true,
+    "standard.autoFixOnSave": true
+  }
+```
 * Extensions
   * JavaScript (ES6) code snippets
   * JavaScript Standard Style
