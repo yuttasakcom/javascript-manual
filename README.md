@@ -589,6 +589,12 @@ console.log(Math.min(1, 2, 3)) // 1
 console.log(Math.max(1, 2, 3)) // 3
 console.log(Math.random())
 console.log(Math.floor(Math.random() * 20 + 1))
+
+function randomBetween(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
+const random = randomBetween(5, 25)
+console.log(random) // 5 ~ 25
 ```
 
 ## String Method
