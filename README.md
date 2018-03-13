@@ -67,9 +67,13 @@
   * [Async Await](#async-await)
   * [Arrow Function](#arrow-function)
   * [Github Finder](#github-finder)
+  * [Iterators & Generators](#iterators-and-generators)
+  * [Symbols](#symbols)
+  * [Destructuring](#destructuring)
+  * [Maps](#maps)
+  * [Sets](#sets)
   * [Default Function Argument](#default-function-argument)
   * [Rest and Spread](#capturing-arguments)
-  * [Destructuring](#destructuring)
   * ทบทวนเรื่องออบเจ็กต์
     * this
     * [call() apply() และ bind()](#call-apply-bind)
@@ -2047,75 +2051,99 @@ console.log(profile.getName())
 07.githubfinder
 ```
 
-## Default Function Argument
+## Iterators and Generators
 
 ```javascript
-function makeAjaxRequest(url, method = 'GET') {
-  return method
-}
-console.log(makeAjaxRequest('google.com')) // null != undefined
-console.log(makeAjaxRequest('google.com', 'POST'))
+// Iterator Example
+// function nameIterator(names) {
+//   let nextIndex = 0
 
-function User(id) {
-  this.id = id
+//   return {
+//     next: function() {
+//       return nextIndex < names.length ?
+//       { value: names[nextIndex++], done: false } :
+//       { done: true }
+//     }
+//   }
+// }
+
+// // Create an array of names
+// const namesArr = ['Jack', 'Jill', 'John']
+// // Init iterator and pass in the names array
+// const names = nameIterator(namesArr)
+
+// console.log(names.next().value)
+// console.log(names.next().value)
+// console.log(names.next().value)
+// console.log(names.next().value)
+
+// Generator Example
+// function* sayNames() {
+//   yield 'Jack'
+//   yield 'Jill'
+//   yield 'John'
+// }
+
+// const name = sayNames()
+
+// console.log(name.next().value)
+// console.log(name.next().value)
+// console.log(name.next().value)
+// console.log(name.next().value)
+
+// ID Creator
+function* createIds() {
+  let index = 1
+
+  while (true) {
+    yield index++
+  }
 }
 
-function generateId() {
-  return Math.random() * 9999999
-}
+const gen = createIds()
 
-function createAdminUser(user = new User(generateId())) {
-  user.admin = true
-  return user
-}
-
-console.log(createAdminUser())
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
 ```
 
-## Capturing Arguments
+## Symbols
 
 ```javascript
-console.log('=== capturing ===')
-function addNumbers(...numbers) {
-  return numbers.reduce((sum, number) => sum + number, 0)
-}
-console.log(addNumbers(1, 2, 3, 4, 5))
+// Create a symbol
+// const sym1 = Symbol()
+// const sym2 = Symbol('sym2')
 
-const defaultColors = ['red', 'green']
-const userFavoriteColors = ['orange', 'yellow']
+// console.log(typeof sym2)
 
-console.log('=== concat ===')
-console.log(defaultColors.concat(userFavoriteColors))
+// console.log(Symbol('123') === Symbol('123'))
+// console.log(`Hello ${sym1.toString()}`)
 
-console.log('=== rest ===')
-console.log([...defaultColors, ...userFavoriteColors])
+// Unique Object Keys
+const KEY1 = Symbol()
+const KEY2 = Symbol('sym2')
 
-console.log('=== spread ===')
-function validateShoppingList(...items) {
-  if (items.indexOf('milk') < 0) {
-    return ['milk', ...items]
-  }
-  return items
-}
-console.log(validateShoppingList('oranges', 'bread', 'eggs'))
+const myObj = {}
 
-console.log('=== Exercise 1 ===')
-var array = [1, 2]
-var array2 = [3, 4, 5]
+myObj[KEY1] = 'Prop1'
+myObj[KEY2] = 'Prop2'
+myObj.key3 = 'Prop3'
+myObj.key4 = 'Prop4'
 
-console.log('=== normal ===')
-function unshift(array, a, b, c, d, e) {
-  return [a, b, c, d, e].concat(array)
-}
+// console.log(myObj[KEY1])
+// console.log(myObj[KEY2])
 
-console.log(unshift(array, 3, 4, 5, 6, 7))
+// Symbols are not enumerable in for...in
+// for(let i in myObj) {
+//   console.log(`${i}: ${myObj[i]}`)
+// }
 
-// Refactor
-console.log('=== rest ===')
-function unshiftRefactor(array, ...array2) {
-  return [...array, ...array2]
-}
-console.log(unshiftRefactor(array, 3, 4, 5, 6, 7))
+// Symbols are ignored by JSON.stringify
+console.log(JSON.stringify({ key: 'prop' }))
+console.log(JSON.stringify({ [Symbol('sym1')]: 'prop' }))
 ```
 
 ## Destructuring
@@ -2219,6 +2247,186 @@ function double([...array]) {
   return newArray
 }
 console.log(double(numbers))
+```
+
+## Maps
+
+```javascript
+// MAPS = key-value pairs - can use ANY type as a key or value
+
+const map1 = new Map()
+
+// Set Keys
+const key1 = 'some string',
+  key2 = {},
+  key3 = function() {}
+
+// Set map values by key
+map1.set(key1, 'Value of key1')
+map1.set(key2, 'Value of key2')
+map1.set(key3, 'Value of key3')
+
+// Get values by key
+// console.log(map1.get(key1), map1.get(key2), map1.get(key3))
+
+// Count values
+// console.log(map1.size)
+
+// ITERATING MAPS
+
+// Loop using for...of to get keys and values
+// for(let [key, value] of map1) {
+//   console.log(`${key} = ${value}`)
+// }
+
+// Iterate keys only
+// for(let key of map1.keys()) {
+//   console.log(key)
+// }
+
+// Iterate values only
+// for(let value of map1.values()) {
+//   console.log(value)
+// }
+
+// Loop with forEach
+// map1.forEach(function(value, key){
+//   console.log(`${key} = ${value}`)
+// })
+
+// CONVERT TO ARRAYS
+
+// Create an array of the key value pairs
+const keyValArr = Array.from(map1)
+console.log(keyValArr)
+
+// Create an array of the values
+const valArr = Array.from(map1.values())
+console.log(valArr)
+
+// Create an array of the keys
+const keyArr = Array.from(map1.keys())
+console.log(keyArr)
+```
+
+## Sets
+
+```javascript
+// SETS - Store unique values of any type
+
+const set1 = new Set()
+
+// Add values to set
+set1.add(100)
+set1.add('A string')
+set1.add({ name: 'John' })
+set1.add(true)
+set1.add(100)
+
+// const set2 = new Set([1, true, 'string'])
+// console.log(set2)
+
+// console.log(set1)
+
+// Get count
+// console.log(set1.size)
+
+// Check for values
+// console.log(set1.has(100))
+// console.log(set1.has(50 + 50))
+// console.log(set1.has({name: 'John'}))
+
+// Delete from set
+// set1.delete(100)
+
+// console.log(set1)
+
+// ITERATING THROUGH SETS
+
+// For..of
+// for(let item of set1) {
+//   console.log(item)
+// }
+
+// ForEach Loop
+// set1.forEach((value) => {
+//   console.log(value)
+// })
+
+// CONVERT SET TO ARRAY
+const setArr = Array.from(set1)
+console.log(setArr)
+```
+
+## Default Function Argument
+
+```javascript
+function makeAjaxRequest(url, method = 'GET') {
+  return method
+}
+console.log(makeAjaxRequest('google.com')) // null != undefined
+console.log(makeAjaxRequest('google.com', 'POST'))
+
+function User(id) {
+  this.id = id
+}
+
+function generateId() {
+  return Math.random() * 9999999
+}
+
+function createAdminUser(user = new User(generateId())) {
+  user.admin = true
+  return user
+}
+
+console.log(createAdminUser())
+```
+
+## Capturing Arguments
+
+```javascript
+console.log('=== capturing ===')
+function addNumbers(...numbers) {
+  return numbers.reduce((sum, number) => sum + number, 0)
+}
+console.log(addNumbers(1, 2, 3, 4, 5))
+
+const defaultColors = ['red', 'green']
+const userFavoriteColors = ['orange', 'yellow']
+
+console.log('=== concat ===')
+console.log(defaultColors.concat(userFavoriteColors))
+
+console.log('=== rest ===')
+console.log([...defaultColors, ...userFavoriteColors])
+
+console.log('=== spread ===')
+function validateShoppingList(...items) {
+  if (items.indexOf('milk') < 0) {
+    return ['milk', ...items]
+  }
+  return items
+}
+console.log(validateShoppingList('oranges', 'bread', 'eggs'))
+
+console.log('=== Exercise 1 ===')
+var array = [1, 2]
+var array2 = [3, 4, 5]
+
+console.log('=== normal ===')
+function unshift(array, a, b, c, d, e) {
+  return [a, b, c, d, e].concat(array)
+}
+
+console.log(unshift(array, 3, 4, 5, 6, 7))
+
+// Refactor
+console.log('=== rest ===')
+function unshiftRefactor(array, ...array2) {
+  return [...array, ...array2]
+}
+console.log(unshiftRefactor(array, 3, 4, 5, 6, 7))
 ```
 
 ## Reactive
