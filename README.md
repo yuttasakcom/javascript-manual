@@ -90,43 +90,6 @@
       * [Super Test](https://github.com/visionmedia/supertest)
       * [Chai](http://chaijs.com/)
       * [Jest](https://facebook.github.io/jest/)
-* Learning More
-  * Lodash
-  * Moment
-  * Axios
-  * RxJS
-  * React
-  * React-Native
-  * Vue
-  * Angular
-  * Webpack
-  * TypeScript
-  * Meteor
-  * Electron
-  * GraphQL
-  * Elixir
-  * Next.JS
-* Reference
-  * [Airbnb JavaScript Style Guide](#airbnb)
-  * [JavaScript Standard Style](#standard)
-  * [ES2015+ cheatsheet](https://devhints.io/es6)
-* Blog
-  * [แปลและสรุปเรื่อง Ten Things A _Serious_ JavaScript Developer Should Learn by somkiat.cc](http://www.somkiat.cc/summary-10-things-a-serious-javascript-developer-should-learn/)
-  * [การใช้งาน array พื้นฐาน by CamPus](https://medium.com/@camp191/javascript-%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%81%E0%B8%B2%E0%B8%A3-array-%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%87%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B9%86-%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-map-filter-reduce-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9C%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%99-bfc84e59ebae)
-  * [ความรู้สึกเมื่ออยากเขียน JavaScript ในปี 2016](https://medium.com/@noomerzx/%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%B6%E0%B8%81%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%AD%E0%B8%A2%E0%B8%B2%E0%B8%81%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99-javascript-%E0%B9%83%E0%B8%99%E0%B8%9B%E0%B8%B5-2016-92711cf3987)
-  * [javascript 101 by noomerZx](https://stories.sellsuki.co.th/js-101-%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88-%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%B2%E0%B8%A1-%E0%B8%9E%E0%B8%A5%E0%B8%B2%E0%B8%94-bac5de6f9900)
-  * [javascript 102 by noomerZx](https://stories.sellsuki.co.th/js-102-%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%90%E0%B8%B2%E0%B8%99-javascript-%E0%B8%97%E0%B8%B5%E0%B9%88-%E0%B8%84%E0%B8%B8%E0%B8%93-%E0%B8%AD%E0%B8%B2%E0%B8%88%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%80%E0%B8%84%E0%B8%A2%E0%B8%A3%E0%B8%B9%E0%B9%89-19e87fc6b452)
-  * [javascript 103 by noomerZx](https://stories.sellsuki.co.th/js-103-%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%90%E0%B8%B2%E0%B8%99-javascript-%E0%B8%97%E0%B8%B5%E0%B9%88-%E0%B8%A5%E0%B8%B6%E0%B8%81-%E0%B8%8B%E0%B8%B6%E0%B9%89%E0%B8%87-832de08f824)
-* E-Learning
-  * [The Coding Interview Bootcamp: Algorithms + Data Structure](https://www.udemy.com/coding-interview-bootcamp-algorithms-and-data-structure)
-  * [ES6 Javascript: The Complete Developer's Guide](https://www.udemy.com/javascript-es6-tutorial/)
-  * [Accelerated JavaScript Training](https://www.udemy.com/javascript-bootcamp-2016)
-  * [Accelerated ES6 JavaScript Training](https://www.udemy.com/es6-bootcamp-next-generation-javascript)
-  * [Beginner's ES6 Programming. Code for the Web in JavaScript](https://www.udemy.com/beginners-es6-programming-code-for-the-web-in-javascript)
-  * [ฟรี! เตรียมพื้นฐาน ES2015 และ Node.js ก่อนไปลุย React](https://www.skilllane.com/courses/basic-es2015-nodejs-before-react)
-  * [ฟรี! Javascript คืออะไร - วีดีโอสอน Javascript](https://www.youtube.com/watch?v=BAG5BP5exmA&list=PL9uXbYsezM7mkf4w5tmillxVq9fHyslwT&index=1)
-* Book
-  * [หนังสือ พัฒนาเว็บแอปพลิเคชั่นด้วย JavaScript](https://www.se-ed.com/product/%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B9%87%E0%B8%9A%E0%B9%81%E0%B8%AD%E0%B8%9B%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-JavaScript.aspx?no=9786160825394)
 
 ## Introduction
 
