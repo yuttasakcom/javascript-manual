@@ -74,11 +74,14 @@
   * [Sets](#sets)
   * [Default Function Argument](#default-function-argument)
   * [Rest and Spread](#capturing-arguments)
-  * ทบทวนเรื่องออบเจ็กต์
-    * this
-    * [call() apply() และ bind()](#call-apply-bind)
-  * ทบทวนเรื่องการแสดงความผิดพลาด Error
-  * Event loop
+  * [Error Handling](#error-handling)
+  * [Regular Expressions](#regular-expressions)
+    * [Evaluation Functions](#evaluation-functions)
+    * [Metacharacter Symbols](#metacharacter-symbols)
+    * [Character Sets & Quantifiers](#character-sets-and-quantifiers)
+    * [Shorthand Character Classes](#shorthand-character-classes)
+    * [Form Validation Project](#form-validation-project)
+  * [Javascript Patterns](#javascript-patterns)
   * [Reactive](#reactive)
   * Testing
     * Reference
@@ -2428,6 +2431,291 @@ function unshiftRefactor(array, ...array2) {
 }
 console.log(unshiftRefactor(array, 3, 4, 5, 6, 7))
 ```
+
+## Error Handling
+
+```javascript
+const user = { email: 'jdoe@gmail.com' }
+
+try {
+  // Produce a ReferenceError
+  // myFunction()
+
+  // Produce a TypeError
+  // null.myFunction()
+
+  // Will produce SyntaxError
+  // eval('Hello World')
+
+  // Will produce a URIError
+  // decodeURIComponent('%')
+
+  if (!user.name) {
+    //throw 'User has no name'
+    throw new SyntaxError('User has no name')
+  }
+} catch (e) {
+  console.log(`User Error: ${e.message}`)
+  // console.log(e)
+  // console.log(e.message)
+  // console.log(e.name)
+  // console.log(e instanceof TypeError)
+} finally {
+  console.log('Finally runs reguardless of result...')
+}
+
+console.log('Program continues...')
+```
+
+## Regular Expressions
+
+## Evaluation Functions
+
+```javascript
+let re
+re = /hello/
+re = /hello/i // i =  case insensitive
+// re = /hello/g // Global search
+
+// console.log(re)
+// console.log(re.source)
+
+// exec() - Return result in an array or null
+// const result = re.exec('hello world')
+// console.log(result)
+// console.log(result[0])
+// console.log(result.index)
+// console.log(result.input)
+
+// test() - Returns true or false
+// const result = re.test('Hello')
+// console.log(result)
+
+// match() - Return result array or null
+// const str = 'Hello There'
+// const result = str.match(re)
+// console.log(result)
+
+// search() - Returns index of the first match if not found retuns -1
+// const str = 'Brad Hello There'
+// const result = str.search(re)
+// console.log(result)
+
+// replace() - Return new string with some or all matches of a pattern
+// const str = 'Hello There'
+// const newStr = str.replace(re, 'Hi')
+// console.log(newStr)
+```
+
+## Metacharacter Symbols
+
+```javascript
+let re
+// Literal Characters
+re = /hello/
+re = /hello/i
+
+// Metacharacter Symbols
+re = /^h/i // Must start with
+re = / world$/i // Must ends with
+re = /^hello$/i // Must begin and end with
+re = /h.llo/i // Matches any ONE character
+re = /h*llo/i // Matches any character 0 or more times
+re = /gre?a?y/i // Optional character
+re = /gre?a?y\?/i // Escape character
+
+// String to match
+const str = 'Gray?'
+
+// Log Results
+const result = re.exec(str)
+console.log(result)
+
+function reTest(re, str) {
+  if (re.test(str)) {
+    console.log(`${str} matches ${re.source}`)
+  } else {
+    console.log(`${str} does NOT match ${re.source}`)
+  }
+}
+
+reTest(re, str)
+```
+
+## Character Sets and Quantifiers
+
+```javascript
+let re
+// Literal Characters
+re = /hello/
+re = /hello/i
+
+// Metacharacter Symbols
+re = /^h/i // Must start with
+re = / world$/i // Must ends with
+re = /^hello$/i // Must begin and end with
+re = /h.llo/i // Matches any ONE character
+re = /h*llo/i // Matches any character 0 or more times
+re = /gre?a?y/i // Optional character
+re = /gre?a?y\?/i // Escape character
+
+// Brackets [] - Character Sets
+re = /gr[ae]y/i // Must be an a or e
+re = /[GF]ray/i // Must be a G or F
+re = /[^GF]ray/i // Match anything except a G or F
+re = /[A-Z]ray/ // Match any uppercase letter
+re = /[a-z]ray/ // Match any lowercase letter
+re = /[A-Za-z]ray/ // Match any  letter
+re = /[0-9][0-9]ray/ // Match any digit
+
+// Braces {} - Quantifiers
+re = /Hel{2}o/i // Must occur exactly {m} amount of times
+re = /Hel{2,4}o/i // Must occur exactly {m} amount of times
+re = /Hel{2,}o/i // Must occur at least {m} times
+
+// Paretheses () - Grouping
+re = /^([0-9]x){3}$/
+
+// String to match
+const str = '3x3x3x'
+
+// Log Results
+const result = re.exec(str)
+console.log(result)
+
+function reTest(re, str) {
+  if (re.test(str)) {
+    console.log(`${str} matches ${re.source}`)
+  } else {
+    console.log(`${str} does NOT match ${re.source}`)
+  }
+}
+
+reTest(re, str)
+```
+
+## Shorthand Character Classes
+
+```javascript
+let re
+// Literal Characters
+re = /hello/
+re = /hello/i
+
+// Metacharacter Symbols
+re = /^h/i // Must start with
+re = / world$/i // Must ends with
+re = /^hello$/i // Must begin and end with
+re = /h.llo/i // Matches any ONE character
+re = /h*llo/i // Matches any character 0 or more times
+re = /gre?a?y/i // Optional character
+re = /gre?a?y\?/i // Escape character
+
+// Brackets [] - Character Sets
+re = /gr[ae]y/i // Must be an a or e
+re = /[GF]ray/i // Must be a G or F
+re = /[^GF]ray/i // Match anything except a G or F
+re = /[A-Z]ray/ // Match any uppercase letter
+re = /[a-z]ray/ // Match any lowercase letter
+re = /[A-Za-z]ray/ // Match any  letter
+re = /[0-9][0-9]ray/ // Match any digit
+
+// Braces {} - Quantifiers
+re = /Hel{2}o/i // Must occur exactly {m} amount of times
+re = /Hel{2,4}o/i // Must occur exactly {m} amount of times
+re = /Hel{2,}o/i // Must occur at least {m} times
+
+// Paretheses () - Grouping
+re = /^([0-9]x){3}$/
+
+// Shorthand Character Classes
+re = /\w/ // Word character - alphanumeric or _
+re = /\w+/ // + = one or more
+re = /\W/ // Non-Word character
+re = /\d/ // Match any digit
+re = /\d+/ // Match any digit 0 or more times
+re = /\D/ // Match any Non-digit
+re = /\s/ // Match whitespace char
+re = /\S/ // Match non-whitespace char
+re = /Hell\b/i // Word boundary
+
+// Assertions
+re = /x(?=y)/ // Match x only if followed by y
+re = /x(?!y)/ // Match x only if NOT followed by y
+
+// String to match
+const str = 'dkjekdxydjekdj'
+
+// Log Results
+const result = re.exec(str)
+console.log(result)
+
+function reTest(re, str) {
+  if (re.test(str)) {
+    console.log(`${str} matches ${re.source}`)
+  } else {
+    console.log(`${str} does NOT match ${re.source}`)
+  }
+}
+
+reTest(re, str)
+```
+
+## Form Validation Project
+
+```javascript
+// Form Blur Event Listeners
+document.getElementById('name').addEventListener('blur', validateName)
+document.getElementById('zip').addEventListener('blur', validateZip)
+document.getElementById('email').addEventListener('blur', validateEmail)
+document.getElementById('phone').addEventListener('blur', validatePhone)
+
+function validateName() {
+  const name = document.getElementById('name')
+  const re = /^[a-zA-Z]{2,10}$/
+
+  if (!re.test(name.value)) {
+    name.classList.add('is-invalid')
+  } else {
+    name.classList.remove('is-invalid')
+  }
+}
+
+function validateZip() {
+  const zip = document.getElementById('zip')
+  const re = /^[0-9]{5}(-[0-9]{4})?$/
+
+  if (!re.test(zip.value)) {
+    zip.classList.add('is-invalid')
+  } else {
+    zip.classList.remove('is-invalid')
+  }
+}
+
+function validateEmail() {
+  const email = document.getElementById('email')
+  const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/
+
+  if (!re.test(email.value)) {
+    email.classList.add('is-invalid')
+  } else {
+    email.classList.remove('is-invalid')
+  }
+}
+
+function validatePhone() {
+  const phone = document.getElementById('phone')
+  const re = /^\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}$/
+
+  if (!re.test(phone.value)) {
+    phone.classList.add('is-invalid')
+  } else {
+    phone.classList.remove('is-invalid')
+  }
+}
+```
+
+## Javascript Patterns
 
 ## Reactive
 
