@@ -66,6 +66,7 @@
   * [Promise](#promise)
   * [Async Await](#async-await)
   * [Arrow Function](#arrow-function)
+  * [Github Finder](#github-finder)
   * [Default Function Argument](#default-function-argument)
   * [Rest and Spread](#capturing-arguments)
   * [Destructuring](#destructuring)
@@ -2038,6 +2039,12 @@ const profile = {
 }
 
 console.log(profile.getName())
+```
+
+## Github Finder
+
+```
+07.githubfinder
 ```
 
 ## Default Function Argument
