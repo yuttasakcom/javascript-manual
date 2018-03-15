@@ -158,7 +158,8 @@
   },
   "[json]": {
     "editor.formatOnSave": true
-  }
+  },
+  "editor.tabSize": 2
 }
 ```
 
