@@ -40,18 +40,13 @@
   * [Object Literals](#object-literals)
   * [Date & Time](#date-time)
   * [Control Structures](#control-structures)
-    * If statement
-    * Switch & Break
-    * Function Declarations & Expressions
-    * For Loop
-    * Nested Loops
-    * controlling Loops with break & continue
-    * For Loop varintions
-    * Looping through Arrays
-    * While Loop
-  * Types & Scope
-    * Primitive vs Reference Types
-    * Global vs Local Scope
+    * [If/Else If/Else](#if-else-if-else)
+    * [Switch](#switch)
+    * [For](#for)
+    * [While](#while)
+  * [Scope](#scope)
+    * [Global Scope](#global-scope)
+    * [Local Scope](#local-scope)
   * [Arrow Function](#arrow-function)
   * [Enhanced Object Literals](#enhanced-object-literals)
   * [Default Function Argument](#default-function-argument)
@@ -1385,16 +1380,14 @@ console.log(today); // Mon Mar 12 2018 17:30:01 GMT+0700 (+07)
 
 ## Control Structures
 
-## If Statement
+### If Else If Else
 
-## Switch & Break
+### Switch
 
-## Function Declarations & Expressions
+### For
 
-## For Loop
-
+#### for in
 ```javascript
-// For in
 const user = {
   name: "YoProgrammer"
 };
@@ -1403,7 +1396,11 @@ for (let x in user) {
   console.log(x); // name
 }
 
-// For of
+```
+
+#### for of
+
+```javascript
 const user = [
   {
     name: "YoProgrammer"
@@ -1414,6 +1411,17 @@ for (let x of user) {
   console.log(x); // { name: "YoProgrammer" }
 }
 ```
+
+### While
+
+## Scope
+
+### Global Scope
+
+### Local Scope
+
+
+
 
 ## DOM Manipulation and Events
 
