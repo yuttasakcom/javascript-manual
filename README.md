@@ -40,7 +40,7 @@
   * [Object Literals](#object-literals)
   * [Date & Time](#date-time)
   * [Control Structures](#control-structures)
-    * [If/Else If/Else](#if-else-if-else)
+    * [If / Else-If/ Else](#if-else-if-else)
     * [Switch](#switch)
     * [For](#for)
     * [While](#while)
