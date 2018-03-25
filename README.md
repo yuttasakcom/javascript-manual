@@ -172,21 +172,21 @@
 ## Console Log
 
 ```javascript
-console.log("Hello");
-console.log(1);
-console.log(true);
-let greeting = "Hello";
-console.log(greeting);
-console.log([1, 2, 3, 4]);
-console.log({ a: 1, b: 2, c: "3" });
-console.error("This is some error");
-console.clear();
-console.warn("this is a warning");
-console.time("Hello");
-console.log("a");
-console.log("b");
-console.log("c");
-console.timeEnd("Hello");
+console.log('Hello')
+console.log(1)
+console.log(true)
+let greeting = 'Hello'
+console.log(greeting)
+console.log([1, 2, 3, 4])
+console.log({ a: 1, b: 2, c: '3' })
+console.error('This is some error')
+console.clear()
+console.warn('this is a warning')
+console.time('Hello')
+console.log('a')
+console.log('b')
+console.log('c')
+console.timeEnd('Hello')
 ```
 
 ## Variables
@@ -237,15 +237,15 @@ console.log(firstName)
 
 ```javascript
 // ES5
-var name = "Jane";
-var title = "Software Engineer";
-var hourlyWage = 40;
+var name = 'Jane'
+var title = 'Software Engineer'
+var hourlyWage = 40
 
 // ES6
-const name = "Jane";
+const name = 'Jane'
 
-let title = "Software Engineer";
-title = "Senior Software Engineer";
+let title = 'Software Engineer'
+title = 'Senior Software Engineer'
 ```
 
 ## Data Types in JavaScript
@@ -260,29 +260,29 @@ Symbols(ES6)
 ```
 
 ```javascript
-let un;
-console.log(typeof un); // undefined
+let un
+console.log(typeof un) // undefined
 
-let num = 1;
-console.log(typeof num); // number
+let num = 1
+console.log(typeof num) // number
 
-let str = "Yo";
-console.log(typeof str); // string
+let str = 'Yo'
+console.log(typeof str) // string
 
-let bool = true;
-console.log(typeof bool); // boolean
+let bool = true
+console.log(typeof bool) // boolean
 
-const arr = [1, 2, 3];
-console.log(typeof arr); // object
+const arr = [1, 2, 3]
+console.log(typeof arr) // object
 
-const obj = {};
-console.log(typeof obj); // object
+const obj = {}
+console.log(typeof obj) // object
 
-const f = function() {};
-console.log(typeof f); // function
+const f = function() {}
+console.log(typeof f) // function
 
-const sym = Symbol();
-console.log(typeof sym); // symbol
+const sym = Symbol()
+console.log(typeof sym) // symbol
 ```
 
 ## Type Conversion
@@ -290,30 +290,30 @@ console.log(typeof sym); // symbol
 ```javascript
 // Number to String
 // case 1
-let val = String(1);
-console.log(val); // "1"
+let val = String(1)
+console.log(val) // "1"
 
 // case 2
-let val = 1;
-console.log(val.toString()); // "1"
+let val = 1
+console.log(val.toString()) // "1"
 
 // case 3
-let val1 = 1;
-let val2 = String("1");
-console.log(val1 + val2); // "11"
+let val1 = 1
+let val2 = String('1')
+console.log(val1 + val2) // "11"
 
 // String to Number
 // case 1
-let val = Number("1");
-console.log(val); // 1
+let val = Number('1')
+console.log(val) // 1
 
 // case 2
-let val = parseInt("1");
-console.log(val); // 1
+let val = parseInt('1')
+console.log(val) // 1
 
 // case 3
-let val = parseFloat("100.33333");
-console.log(val.toFixed(2)); // "100.33"
+let val = parseFloat('100.33333')
+console.log(val.toFixed(2)) // "100.33"
 ```
 
 ## Operators
@@ -602,86 +602,86 @@ JavaScript Bitwise Operators
 ## Math
 
 ```javascript
-console.log(Math.PI); // 3.141592653589793
-console.log(Math.E); // 2.718281828459045
-console.log(Math.round(2.4)); // 2 # ต่ำกว่า .49 ปัดลง ตั้งแต่ .5 ปัดขึ้น
-console.log(Math.ceil(2.4)); // 3
-console.log(Math.floor(2.4)); // 2
-console.log(Math.sqrt(64)); // 8
-console.log(Math.abs(-3)); // 3
-console.log(Math.pow(8, 2)); // 64
-console.log(Math.min(1, 2, 3)); // 1
-console.log(Math.max(1, 2, 3)); // 3
-console.log(Math.random());
-console.log(Math.floor(Math.random() * 20 + 1));
+console.log(Math.PI) // 3.141592653589793
+console.log(Math.E) // 2.718281828459045
+console.log(Math.round(2.4)) // 2 # ต่ำกว่า .49 ปัดลง ตั้งแต่ .5 ปัดขึ้น
+console.log(Math.ceil(2.4)) // 3
+console.log(Math.floor(2.4)) // 2
+console.log(Math.sqrt(64)) // 8
+console.log(Math.abs(-3)) // 3
+console.log(Math.pow(8, 2)) // 64
+console.log(Math.min(1, 2, 3)) // 1
+console.log(Math.max(1, 2, 3)) // 3
+console.log(Math.random())
+console.log(Math.floor(Math.random() * 20 + 1))
 
 function randomBetween(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min
 }
-const random = randomBetween(5, 25);
-console.log(random); // 5 ~ 25
+const random = randomBetween(5, 25)
+console.log(random) // 5 ~ 25
 ```
 
 ## String Method
 
 ```javascript
-let name = "YoProgrammer";
-console.log(name.length); // 12
+let name = 'YoProgrammer'
+console.log(name.length) // 12
 
-let name = "YoProgrammer";
-console.log(name.toUpperCase()); // "YOPROGRAMMER"
+let name = 'YoProgrammer'
+console.log(name.toUpperCase()) // "YOPROGRAMMER"
 
-let name = "YoProgrammer";
-console.log(name.toLowerCase()); // "yoprogrammer"
+let name = 'YoProgrammer'
+console.log(name.toLowerCase()) // "yoprogrammer"
 
-let name = "YoProgrammer";
-console.log(name.charAt(2)); // "P"
+let name = 'YoProgrammer'
+console.log(name.charAt(2)) // "P"
 
-let name = "YoProgrammer";
-console.log(name.substring(0, 4)); // "YoPr"
+let name = 'YoProgrammer'
+console.log(name.substring(0, 4)) // "YoPr"
 
-let name = "YoProgrammer";
-console.log(name.replace("Programmer", "Developer")); // "YoDeveloper"
+let name = 'YoProgrammer'
+console.log(name.replace('Programmer', 'Developer')) // "YoDeveloper"
 
-let name = "YoProgrammer";
-console.log(name.includes("Yo")); // true
-console.log(name.includes("Yea")); // false
+let name = 'YoProgrammer'
+console.log(name.includes('Yo')) // true
+console.log(name.includes('Yea')) // false
 ```
 
 ## index of
 
 ```javascript
-const arr = ["apple", "banana", "orange"];
-console.log(arr.indexOf("banana")); // 1 นับจากซ้ายไปขวา -> 0, 1
-console.log(arr.indexOf("no")); // -1
+const arr = ['apple', 'banana', 'orange']
+console.log(arr.indexOf('banana')) // 1 นับจากซ้ายไปขวา -> 0, 1
+console.log(arr.indexOf('no')) // -1
 ```
 
 ## last index of
 
 ```javascript
-const arr = ["apple", "banana", "orange"];
-console.log(arr.lastIndexOf("banana")); // 1 นับจากขวาไปซ้าย  1, 0 <-
-console.log(arr.lastIndexOf("no")); // -1
+const arr = ['apple', 'banana', 'orange']
+console.log(arr.lastIndexOf('banana')) // 1 นับจากขวาไปซ้าย  1, 0 <-
+console.log(arr.lastIndexOf('no')) // -1
 ```
 
 ## Concat
 
 ```javascript
-let arr1 = [1, 2, 3];
-let arr2 = [4, 5, 6];
-let sum = arr1.concat(arr2);
-console.log(sum); // [1, 2, 3, 4, 5, 6]
+let arr1 = [1, 2, 3]
+let arr2 = [4, 5, 6]
+let sum = arr1.concat(arr2)
+console.log(sum) // [1, 2, 3, 4, 5, 6]
 ```
 
 ## Template Strings
 
 ```javascript
 function getMessage() {
-  const year = new Date().getFullYear();
-  return `The year is ${year}`;
+  const year = new Date().getFullYear()
+  return `The year is ${year}`
 }
 
-console.log(getMessage()); // "The year is 2018"
+console.log(getMessage()) // "The year is 2018"
 ```
 
 ## Array Helper Methods
@@ -689,60 +689,60 @@ console.log(getMessage()); // "The year is 2018"
 ## Array Methods
 
 ```javascript
-console.log(Array.isArray([1, 2, 3])); // true
-console.log(Array.isArray("Yo")); // false
-console.log(Array(2)); // [undefined, undefined]
+console.log(Array.isArray([1, 2, 3])) // true
+console.log(Array.isArray('Yo')) // false
+console.log(Array(2)) // [undefined, undefined]
 ```
 
 ## Push
 
 ```javascript
-let color = ["red", "green"];
-let mutate = color.push("blue");
-console.log(color); // ["red", "green", "blue"]
-console.log(mutate); // 3
+let color = ['red', 'green']
+let mutate = color.push('blue')
+console.log(color) // ["red", "green", "blue"]
+console.log(mutate) // 3
 ```
 
 ## Unshift
 
 ```javascript
-let color = ["red", "green", "blue"];
-let mutate = color.unshift("ogrange");
-console.log(color); // ["ogrange", "red", "green", "blue"]
-console.log(mutate); // 4
+let color = ['red', 'green', 'blue']
+let mutate = color.unshift('ogrange')
+console.log(color) // ["ogrange", "red", "green", "blue"]
+console.log(mutate) // 4
 ```
 
 ## Pop
 
 ```javascript
-let color = ["red", "green", "blue"];
-let mutate = color.pop("blue");
-console.log(color); // ["red", "green"]
-console.log(mutate); // "blue"
+let color = ['red', 'green', 'blue']
+let mutate = color.pop('blue')
+console.log(color) // ["red", "green"]
+console.log(mutate) // "blue"
 ```
 
 ## Shift
 
 ```javascript
-let color = ["red", "green", "blue"];
-let mutate = color.shift();
-console.log(color); // ["green", "blue"]
-console.log(mutate); // "red"
+let color = ['red', 'green', 'blue']
+let mutate = color.shift()
+console.log(color) // ["green", "blue"]
+console.log(mutate) // "red"
 ```
 
 ## Join
 
 ```javascript
-let arr = [1, 2, 3, 4, 5];
-console.log(arr.join("")); // 12345
-console.log(arr.join(",")); // 1,2,3,4,5
-console.log(arr.join("-")); // 1-2-3-4-5
+let arr = [1, 2, 3, 4, 5]
+console.log(arr.join('')) // 12345
+console.log(arr.join(',')) // 1,2,3,4,5
+console.log(arr.join('-')) // 1-2-3-4-5
 ```
 
 ## Splice
 
 ```javascript
-let color = ["ogrange", "red", "green", "blue"];
+let color = ['ogrange', 'red', 'green', 'blue']
 
 //ตัวอย่างที่ 1
 // let mutate = color.splice(1) //ลบตั้งแต่ตำแหน่งที่ 1 เป็นต้นไป
@@ -751,10 +751,10 @@ let color = ["ogrange", "red", "green", "blue"];
 // let mutate = color.splice(1, 1) //ลบตั้งแต่ตำแหน่งที่ 1 ไป 1 ตัว
 
 //ตัวอย่างที่ 3
-let mutate = color.splice(1, 1, "white", "black"); // ลบตั้งแต่ตำแหน่งที่ 1 ไป 1 ตัว และเพิ่ม element เข้าไปตำแหน่งที่ 1
+let mutate = color.splice(1, 1, 'white', 'black') // ลบตั้งแต่ตำแหน่งที่ 1 ไป 1 ตัว และเพิ่ม element เข้าไปตำแหน่งที่ 1
 
-console.log(color);
-console.log(mutate);
+console.log(color)
+console.log(mutate)
 
 //output
 //ตัวอย่างที่ 1
@@ -773,16 +773,16 @@ console.log(mutate);
 ## Slice
 
 ```javascript
-let color = ["red", "green", "blue"];
+let color = ['red', 'green', 'blue']
 
 //ตัวอย่างที่ 1
 // let slice = color.slice(1)
 
 //ตัวอย่างที่ 2
-let slice = color.slice(1, 2); //เลือก element ตั้งแต่ตำแหน่งที่ 1 จนถึง 2 แต่ไม่รวม 2
+let slice = color.slice(1, 2) //เลือก element ตั้งแต่ตำแหน่งที่ 1 จนถึง 2 แต่ไม่รวม 2
 
-console.log(color);
-console.log(slice);
+console.log(color)
+console.log(slice)
 
 //output
 //ตัวอย่างที่ 1
@@ -797,8 +797,8 @@ console.log(slice);
 ## Split
 
 ```javascript
-let number = 12345;
-console.log(number.toString().split(""));
+let number = 12345
+console.log(number.toString().split(''))
 
 //output
 // [ '1', '2', '3', '4', '5' ]
@@ -807,13 +807,13 @@ console.log(number.toString().split(""));
 ## Reverse
 
 ```javascript
-let name = "YoProgrammer";
+let name = 'YoProgrammer'
 console.log(
   name
-    .split("")
+    .split('')
     .reverse()
-    .join("")
-); // "remmargorPoY"
+    .join('')
+) // "remmargorPoY"
 ```
 
 ## forEach
@@ -1072,8 +1072,8 @@ console.log(res);
 ## find index
 
 ```javascript
-const arr = ["apple", "banana", "orange"];
-console.log(arr.findIndex(e => e === "banana")); // output = 1
+const arr = ['apple', 'banana', 'orange']
+console.log(arr.findIndex(e => e === 'banana')) // output = 1
 ```
 
 ## every and some
@@ -1250,34 +1250,34 @@ console.log(unique(numbers));
 
 ```javascript
 // Sort String
-let fruit = ["cherries", "apples", "bannas"];
-console.log(fruit.sort()); // [ 'apples', 'bannas', 'cherries' ]
+let fruit = ['cherries', 'apples', 'bannas']
+console.log(fruit.sort()) // [ 'apples', 'bannas', 'cherries' ]
 
 // Sort Number
-let scores = [1, 10, 21, 2];
-console.log(scores.sort()); //[1, 10, 21, 2]
+let scores = [1, 10, 21, 2]
+console.log(scores.sort()) //[1, 10, 21, 2]
 
-let numbers = [4, 2, 10, 5, 1, 3];
+let numbers = [4, 2, 10, 5, 1, 3]
 numbers.sort((a, b) => {
-  return a - b;
-});
-console.log(numbers); //[ 1, 2, 3, 4, 5, 10]
+  return a - b
+})
+console.log(numbers) //[ 1, 2, 3, 4, 5, 10]
 
 // Sort Object
 let items = [
-  { name: "Edward", value: 21 },
-  { name: "Sharpe", value: 37 },
-  { name: "And", value: 45 },
-  { name: "The", value: -12 },
-  { name: "Magnetic", value: 13 },
-  { name: "Zeros", value: 37 }
-];
+  { name: 'Edward', value: 21 },
+  { name: 'Sharpe', value: 37 },
+  { name: 'And', value: 45 },
+  { name: 'The', value: -12 },
+  { name: 'Magnetic', value: 13 },
+  { name: 'Zeros', value: 37 }
+]
 
 // sort object by value
 items.sort((a, b) => {
-  return a.value - b.value;
-});
-console.log(items);
+  return a.value - b.value
+})
+console.log(items)
 // [
 //   { name: 'The', value: -12 },
 //   { name: 'Magnetic', value: 13 },
@@ -1289,19 +1289,19 @@ console.log(items);
 
 // sort object by name
 items.sort(function(a, b) {
-  let nameA = a.name.toUpperCase();
-  let nameB = b.name.toUpperCase();
+  let nameA = a.name.toUpperCase()
+  let nameB = b.name.toUpperCase()
   if (nameA < nameB) {
-    return -1;
+    return -1
   }
   if (nameA > nameB) {
-    return 1;
+    return 1
   }
   // names must be equal
-  return 0;
-});
+  return 0
+})
 
-console.log(items);
+console.log(items)
 // [ { name: 'And', value: 45 },
 // { name: 'Edward', value: 21 },
 // { name: 'Magnetic', value: 13 },
@@ -1314,19 +1314,19 @@ console.log(items);
 
 ```javascript
 const person = {
-  name: "YoProgrammer",
+  name: 'YoProgrammer',
   birthYear: 1983,
   getAddress() {
-    return { province: "Bangkok" };
+    return { province: 'Bangkok' }
   },
   getAge() {
-    return new Date().getFullYear() - this.birthYear;
+    return new Date().getFullYear() - this.birthYear
   }
-};
+}
 
-console.log(person.name); // "YoProgrammer"
-console.log(person.getAddress()); // { province: "Bangkok" }
-console.log(person.getAge()); // 35
+console.log(person.name) // "YoProgrammer"
+console.log(person.getAddress()) // { province: "Bangkok" }
+console.log(person.getAge()) // 35
 ```
 
 ```javascript
@@ -1335,67 +1335,140 @@ function createBookShop(inventory) {
     inventory, // inventory: inventory
     inventoryValue() {
       // inventoryValue: function()
-      return this.inventory.reduce((total, book) => total + book.price, 0);
+      return this.inventory.reduce((total, book) => total + book.price, 0)
     },
     priceForTitle(title) {
       // priceForTitle: function(title)
-      return this.inventory.find(book => book.title === title).price;
+      return this.inventory.find(book => book.title === title).price
     }
-  };
+  }
 }
 
 const inventory = [
-  { title: "Harry Potter", price: 10 },
-  { title: "Eloquent Javascript", price: 15 }
-];
+  { title: 'Harry Potter', price: 10 },
+  { title: 'Eloquent Javascript', price: 15 }
+]
 
-const bookShop = createBookShop(inventory);
-console.log(bookShop.inventoryValue());
-console.log(bookShop.priceForTitle("Harry Potter"));
+const bookShop = createBookShop(inventory)
+console.log(bookShop.inventoryValue())
+console.log(bookShop.priceForTitle('Harry Potter'))
 ```
 
 ## Date & Time
 
 ```javascript
-const today = new Date();
-console.log(today); // Mon Mar 12 2018 17:20:38 GMT+0700 (+07)
-console.log(typeof today); // "object"
-console.log(today.getMonth()); // 2
-console.log(today.getDate()); // 12
-console.log(today.getDay()); // 1 # 1 = monday
-console.log(today.getFullYear()); // 2018
-console.log(today.getHours()); // 17
-console.log(today.getMinutes()); // 26
-console.log(today.getSeconds()); // 39
-console.log(today.getMilliseconds()); // 879
-console.log(today.getTime()); // 1520850448879
+const today = new Date()
+console.log(today) // Mon Mar 12 2018 17:20:38 GMT+0700 (+07)
+console.log(typeof today) // "object"
+console.log(today.getMonth()) // 2
+console.log(today.getDate()) // 12
+console.log(today.getDay()) // 1 # 1 = monday
+console.log(today.getFullYear()) // 2018
+console.log(today.getHours()) // 17
+console.log(today.getMinutes()) // 26
+console.log(today.getSeconds()) // 39
+console.log(today.getMilliseconds()) // 879
+console.log(today.getTime()) // 1520850448879
 
-today.setMonth(2);
-console.log(today); // Mon Mar 12 2018 17:30:01 GMT+0700 (+07)
-today.setDate(12);
-console.log(today); // Mon Mar 12 2018 17:30:01 GMT+0700 (+07)
-today.setFullYear(2018);
-console.log(today); // Mon Mar 12 2018 17:30:01 GMT+0700 (+07)
+today.setMonth(2)
+console.log(today) // Mon Mar 12 2018 17:30:01 GMT+0700 (+07)
+today.setDate(12)
+console.log(today) // Mon Mar 12 2018 17:30:01 GMT+0700 (+07)
+today.setFullYear(2018)
+console.log(today) // Mon Mar 12 2018 17:30:01 GMT+0700 (+07)
 ```
 
 ## Control Structures
 
 ### If Else If Else
 
+```javascript
+// if
+if (true) {
+  console.log('it worked!')
+}
+
+// if-else
+if (walkSignal === 'Walk') {
+  console.log('Walk!')
+} else {
+  console.log('Do Not Walk!')
+}
+
+// if-else if-else
+if (walkSignal === 'Walk') {
+  console.log('Walk!')
+} else if (walkSignal === 'Run') {
+  console.log('Run!')
+} else {
+  console.log('Do Not Walk!')
+}
+```
+
 ### Switch
+
+```
+# syntax
+
+switch (expression) {
+  case value1:
+    //Statements executed when the
+    //result of expression matches value1
+    [break;]
+  case value2:
+    //Statements executed when the
+    //result of expression matches value2
+    [break;]
+  ...
+  case valueN:
+    //Statements executed when the
+    //result of expression matches valueN
+    [break;]
+  [default:
+    //Statements executed when none of
+    //the values match the value of the expression
+    [break;]]
+}
+```
+
+```javascript
+switch (walkSignal) {
+  case 'Walk':
+    console.log('Walk!')
+    break
+  case 'Run':
+    console.log('Run!')
+    break
+  default:
+    console.log('Do Not Walk!')
+}
+```
 
 ### For
 
+```
+# syntax
+
+for ([initialization]; [condition]; [final-expression])
+   statement
+```
+
+```javascript
+for (let i = 1; i <= 10; i++) {
+  console.log(i)
+}
+```
+
 #### for in
+
 ```javascript
 const user = {
-  name: "YoProgrammer"
-};
-
-for (let x in user) {
-  console.log(x); // name
+  name: 'YoProgrammer'
 }
 
+for (let x in user) {
+  console.log(x) // name
+}
 ```
 
 #### for of
@@ -1403,25 +1476,74 @@ for (let x in user) {
 ```javascript
 const user = [
   {
-    name: "YoProgrammer"
+    name: 'YoProgrammer'
   }
-];
+]
 
 for (let x of user) {
-  console.log(x); // { name: "YoProgrammer" }
+  console.log(x) // { name: "YoProgrammer" }
 }
 ```
 
 ### While
 
+```
+  # syntax
+  while (condition)
+    statement
+```
+
+```javascript
+let n = 0
+
+while (n < 3) {
+  n++
+}
+
+console.log(n) // expected output: 3
+```
+
 ## Scope
 
 ### Global Scope
 
+```javascript
+const SECRET = 'secret'
+
+function sample() {
+  console.log(SECRET)
+}
+
+sample() // const SECRET = 'secret'
+
+function sample() {
+  console.log(SECRET)
+}
+
+sample() // 'secret'
+```
+
 ### Local Scope
 
+```javascript
+# ext 1
+var local = 'local'
 
+{
+   var local = 'changed'
+}
 
+console.log(local) // "changed"
+
+# ext 2
+let local = 'local'
+
+{
+   let local = 'changed'
+}
+
+console.log(local) // "local"
+```
 
 ## DOM Manipulation and Events
 
@@ -1435,116 +1557,116 @@ for (let x of user) {
 ## Classes
 
 ```javascript
-console.log("=== classes introduction ===");
+console.log('=== classes introduction ===')
 function Car(options) {
-  this.title = options.title;
+  this.title = options.title
 }
 
 Car.prototype.drive = function() {
-  return "vroom";
-};
+  return 'vroom'
+}
 
-const car = new Car({ title: "Focus" });
+const car = new Car({ title: 'Focus' })
 
-console.log(car.drive());
-console.log(car.title);
+console.log(car.drive())
+console.log(car.title)
 ```
 
 ## Prototypal Inheritance
 
 ```javascript
-console.log("=== prototypal inheritance ===");
+console.log('=== prototypal inheritance ===')
 function Car(options) {
-  this.title = options.title;
+  this.title = options.title
 }
 
 Car.prototype.drive = function() {
-  return "vroom";
-};
-
-function Toyota(options) {
-  Car.call(this, options);
-  this.color = options.color;
+  return 'vroom'
 }
 
-Toyota.prototype = Object.create(Car.prototype);
-Toyota.prototype.constructor = Toyota;
+function Toyota(options) {
+  Car.call(this, options)
+  this.color = options.color
+}
+
+Toyota.prototype = Object.create(Car.prototype)
+Toyota.prototype.constructor = Toyota
 
 Toyota.prototype.honk = function() {
-  return "beep";
-};
+  return 'beep'
+}
 
-const toyota = new Toyota({ color: "red", title: "Daily Driver" });
-console.log(toyota.drive());
-console.log(toyota.color);
-console.log(toyota.title);
-console.log(toyota.honk());
+const toyota = new Toyota({ color: 'red', title: 'Daily Driver' })
+console.log(toyota.drive())
+console.log(toyota.color)
+console.log(toyota.title)
+console.log(toyota.honk())
 ```
 
 ## Refactoring with Classes
 
 ```javascript
-console.log("=== refactoring classes ===");
+console.log('=== refactoring classes ===')
 
 class Car {
   constructor(options) {
-    this.title = options.title;
+    this.title = options.title
   }
 
   drive() {
-    return "vroom";
+    return 'vroom'
   }
 }
 
-const car = new Car({ title: "Honda" });
-console.log(car);
-console.log(car.drive());
-console.log(car.title);
+const car = new Car({ title: 'Honda' })
+console.log(car)
+console.log(car.drive())
+console.log(car.title)
 
 class Toyota extends Car {
   constructor(options) {
-    super(options);
-    this.color = options.color;
+    super(options)
+    this.color = options.color
   }
   honk() {
-    return "beep";
+    return 'beep'
   }
 }
-const toyota = new Toyota({ title: "Toyota", color: "red" });
-console.log(toyota);
-console.log(toyota.drive());
-console.log(toyota.title);
-console.log(toyota.honk());
-console.log(toyota.color);
+const toyota = new Toyota({ title: 'Toyota', color: 'red' })
+console.log(toyota)
+console.log(toyota.drive())
+console.log(toyota.title)
+console.log(toyota.honk())
+console.log(toyota.color)
 
-console.log("=== Exercise 1 ===");
+console.log('=== Exercise 1 ===')
 class Monster {
   constructor(options) {
-    this.name = options.name;
-    this.health = 100;
+    this.name = options.name
+    this.health = 100
   }
 }
 
-console.log("=== Exercise 2 ===");
+console.log('=== Exercise 2 ===')
 class Monster2 {
   constructor(options) {
-    this.health = 100;
-    this.name = options.name;
+    this.health = 100
+    this.name = options.name
   }
 }
 
 class Snake extends Monster2 {
   constructor(options) {
-    super(options);
+    super(options)
   }
   bite() {
-    this.health -= 10;
+    this.health -= 10
   }
 }
 
-const snake = new Snake({ name: "Snake" });
-snake.bite();
-console.log(snake.health);
+const snake = new Snake({ name: 'Snake' })
+snake.bite()
+console.log(snake.health)
 ```
 
 ```
@@ -1679,49 +1801,49 @@ End
 
 ```javascript
 function Open(cb) {
-  let rand = Rand();
+  let rand = Rand()
   setTimeout(() => {
-    cb(`1. เปิดประตู ${rand}ms`);
-  }, rand);
+    cb(`1. เปิดประตู ${rand}ms`)
+  }, rand)
 }
 
 function Order(cb) {
-  let rand = Rand();
+  let rand = Rand()
   setTimeout(() => {
-    cb(`2. สั่งกาแฟ ${rand}ms`);
-  }, rand);
+    cb(`2. สั่งกาแฟ ${rand}ms`)
+  }, rand)
 }
 
 function Sit(cb) {
-  let rand = Rand();
+  let rand = Rand()
   setTimeout(() => {
-    cb(`3. หาที่นั่ง ${rand}ms`);
-  }, rand);
+    cb(`3. หาที่นั่ง ${rand}ms`)
+  }, rand)
 }
 
 function Drink(cb) {
-  let rand = Rand();
+  let rand = Rand()
   setTimeout(() => {
-    cb(`4. ดื่มกาแฟ ${rand}ms`);
-  }, rand);
+    cb(`4. ดื่มกาแฟ ${rand}ms`)
+  }, rand)
 }
 
 function Pay(cb) {
-  let rand = Rand();
+  let rand = Rand()
   setTimeout(() => {
-    cb(`5. จ่ายเงิน ${rand}ms`);
-  }, rand);
+    cb(`5. จ่ายเงิน ${rand}ms`)
+  }, rand)
 }
 
 function Exit(cb) {
-  let rand = Rand();
+  let rand = Rand()
   setTimeout(() => {
-    cb(`6. ออกจากร้าน ${rand}ms`);
-  }, rand);
+    cb(`6. ออกจากร้าน ${rand}ms`)
+  }, rand)
 }
 
 function Rand() {
-  return (Math.floor(Math.random() * 5) + 1) * 1000;
+  return (Math.floor(Math.random() * 5) + 1) * 1000
 }
 
 // ไม่เรียงตามลำดับ, blocking io
@@ -1734,108 +1856,108 @@ function Rand() {
 
 //เรียงลำดับถูกต้อง, blocking io เกิดสิ่งที่เรียกว่า callback hell
 Open(res => {
-  console.log(res);
+  console.log(res)
   Order(res => {
-    console.log(res);
+    console.log(res)
     Sit(res => {
-      console.log(res);
+      console.log(res)
       Drink(res => {
-        console.log(res);
+        console.log(res)
         Pay(res => {
-          console.log(res);
+          console.log(res)
           Exit(res => {
-            console.log(res);
-          });
-        });
-      });
-    });
-  });
-});
+            console.log(res)
+          })
+        })
+      })
+    })
+  })
+})
 ```
 
 ## Recursive Function
 
 ```javascript
 function Open(cb) {
-  let rand = Rand();
+  let rand = Rand()
   setTimeout(() => {
-    cb(`1. Open the Door ${rand}ms`);
-  }, rand);
+    cb(`1. Open the Door ${rand}ms`)
+  }, rand)
 }
 
 function Order(cb) {
-  let rand = Rand();
+  let rand = Rand()
   setTimeout(() => {
-    cb(`2. Order a Coffee ${rand}ms`);
-  }, rand);
+    cb(`2. Order a Coffee ${rand}ms`)
+  }, rand)
 }
 
 function Sit(cb) {
-  let rand = Rand();
+  let rand = Rand()
   setTimeout(() => {
-    cb(`3. Sitdown ${rand}ms`);
-  }, rand);
+    cb(`3. Sitdown ${rand}ms`)
+  }, rand)
 }
 
 function Drink(cup, cb) {
-  let rand = Rand();
+  let rand = Rand()
   setTimeout(() => {
-    cb(`${cup} ${rand}ms`);
-  }, rand);
+    cb(`${cup} ${rand}ms`)
+  }, rand)
 }
 
 function Pay(cb) {
-  let rand = Rand();
+  let rand = Rand()
   setTimeout(() => {
-    cb(`5. Pay Money ${rand}ms`);
-  }, rand);
+    cb(`5. Pay Money ${rand}ms`)
+  }, rand)
 }
 
 function Exit(cb) {
-  let rand = Rand();
+  let rand = Rand()
   setTimeout(() => {
-    cb(`6. Exit Shop ${rand}ms`);
-  }, rand);
+    cb(`6. Exit Shop ${rand}ms`)
+  }, rand)
 }
 
 function Rand() {
-  return (Math.floor(Math.random() * 3) + 1) * 1000;
+  return (Math.floor(Math.random() * 3) + 1) * 1000
 }
 
 function RecursiveDrink(arrCoffee, cb) {
   if (arrCoffee.length > 0) {
-    let cup = arrCoffee.shift();
+    let cup = arrCoffee.shift()
     Drink(cup, res => {
-      console.log(res);
-      RecursiveDrink(arrCoffee, cb);
-    });
+      console.log(res)
+      RecursiveDrink(arrCoffee, cb)
+    })
   } else {
-    cb("Drink Success");
+    cb('Drink Success')
   }
 }
 
 Open(res => {
-  console.log(res);
+  console.log(res)
   Order(res => {
-    console.log(res);
+    console.log(res)
     Sit(res => {
-      console.log(res);
-      console.log("4. Drink Coffee");
+      console.log(res)
+      console.log('4. Drink Coffee')
       RecursiveDrink(
-        ["4.1. Espresso", "4.2. Late", "4.3. Back Coffee"],
+        ['4.1. Espresso', '4.2. Late', '4.3. Back Coffee'],
         res => {
-          console.log(res);
+          console.log(res)
           Pay(res => {
-            console.log(res);
+            console.log(res)
             Exit(res => {
-              console.log(res);
-            });
-          });
+              console.log(res)
+            })
+          })
         }
-      );
-    });
-  });
-});
+      )
+    })
+  })
+})
 ```
 
 ## Promise
@@ -1947,107 +2069,107 @@ Output
 
 ```javascript
 const Open = new Promise((resolve, reject) => {
-  let rand = Rand();
+  let rand = Rand()
   setTimeout(() => {
-    resolve(`1. เปิดประตู ${rand}ms`);
-  }, rand);
-});
+    resolve(`1. เปิดประตู ${rand}ms`)
+  }, rand)
+})
 
 const Order = new Promise((resolve, reject) => {
-  let rand = Rand();
+  let rand = Rand()
   setTimeout(() => {
-    resolve(`2. สั่งกาแฟ ${rand}ms`);
-  }, rand);
-});
+    resolve(`2. สั่งกาแฟ ${rand}ms`)
+  }, rand)
+})
 
 const Sit = new Promise((resolve, reject) => {
-  let rand = Rand();
+  let rand = Rand()
   setTimeout(() => {
-    resolve(`3. หาที่นั่ง ${rand}ms`);
-  }, rand);
-});
+    resolve(`3. หาที่นั่ง ${rand}ms`)
+  }, rand)
+})
 
 const Drink = new Promise((resolve, reject) => {
-  let rand = Rand();
+  let rand = Rand()
   setTimeout(() => {
-    resolve(`4. ดื่มกาแฟ ${rand}ms`);
-  }, rand);
-});
+    resolve(`4. ดื่มกาแฟ ${rand}ms`)
+  }, rand)
+})
 
 const Pay = new Promise((resolve, reject) => {
-  let rand = Rand();
+  let rand = Rand()
   setTimeout(() => {
-    resolve(`5. จ่ายตังค์ ${rand}ms`);
-  }, rand);
-});
+    resolve(`5. จ่ายตังค์ ${rand}ms`)
+  }, rand)
+})
 
 const Exit = new Promise((resolve, reject) => {
-  let rand = Rand();
+  let rand = Rand()
   setTimeout(() => {
-    resolve(`6. ออกจากร้าน ${rand}ms`);
-  }, rand);
-});
+    resolve(`6. ออกจากร้าน ${rand}ms`)
+  }, rand)
+})
 
 function Rand() {
-  return (Math.floor(Math.random() * 5) + 1) * 1000;
+  return (Math.floor(Math.random() * 5) + 1) * 1000
 }
 
 // เรียงตามลำดับ, non blocking io
 const step = async () => {
-  const open = await Open;
-  console.log(open);
+  const open = await Open
+  console.log(open)
 
-  const order = await Order;
-  console.log(order);
+  const order = await Order
+  console.log(order)
 
-  const sit = await Sit;
-  console.log(sit);
+  const sit = await Sit
+  console.log(sit)
 
-  const drink = await Drink;
-  console.log(drink);
+  const drink = await Drink
+  console.log(drink)
 
-  const pay = await Pay;
-  console.log(pay);
+  const pay = await Pay
+  console.log(pay)
 
-  const exit = await Exit;
-  console.log(exit);
-};
-step();
+  const exit = await Exit
+  console.log(exit)
+}
+step()
 ```
 
 ## Reactive
 
 ```javascript
 function createReactiveObject(obj) {
-  const keys = Object.keys(obj);
-  obj.$data = Object.assign({}, obj);
+  const keys = Object.keys(obj)
+  obj.$data = Object.assign({}, obj)
   keys.forEach(key => {
     Object.defineProperty(obj, key, {
       get: reactiveGetter.bind(obj, key),
       set: reactiveSetter.bind(obj, key)
-    });
-  });
+    })
+  })
 }
 
 function reactiveSetter(property, value) {
-  this.$data[property] = value;
-  console.log(`${property} changed to ${value}`);
+  this.$data[property] = value
+  console.log(`${property} changed to ${value}`)
 }
 
 function reactiveGetter(property) {
-  console.log(`get ${property}`);
-  return this.$data[property];
+  console.log(`get ${property}`)
+  return this.$data[property]
 }
 
 let user = {
-  name: "",
+  name: '',
   score: 0
-};
+}
 
-createReactiveObject(user);
+createReactiveObject(user)
 
-user.name = "Yo";
-console.log(user.score);
+user.name = 'Yo'
+console.log(user.score)
 ```
 
 ## Airbnb
@@ -2061,11 +2183,11 @@ A mostly reasonable approach to JavaScript [Click](https://github.com/airbnb/jav
 ## Arrow Function
 
 ```javascript
-const add = (a, b) => a + b;
-console.log(add(1, 2));
+const add = (a, b) => a + b
+console.log(add(1, 2))
 
-const numbers = [1, 2, 3];
-console.log(numbers.map(n => n * 2));
+const numbers = [1, 2, 3]
+console.log(numbers.map(n => n * 2))
 
 // function () { local scope } ต้อง => bind(this)
 // const team = {
@@ -2079,25 +2201,25 @@ console.log(numbers.map(n => n * 2));
 // }
 
 const team = {
-  members: ["Jane", "Bill"],
-  teamName: "Super Squad",
+  members: ['Jane', 'Bill'],
+  teamName: 'Super Squad',
   teamSummary: function() {
     return this.members.map(member => {
-      return `${member} is on team ${this.teamName}`;
-    });
+      return `${member} is on team ${this.teamName}`
+    })
   }
-};
+}
 
-console.log(team.teamSummary());
+console.log(team.teamSummary())
 
 const profile = {
-  name: "Alex",
+  name: 'Alex',
   getName: function() {
-    return this.name;
+    return this.name
   }
-};
+}
 
-console.log(profile.getName());
+console.log(profile.getName())
 ```
 
 ## Github Finder
@@ -2148,21 +2270,21 @@ console.log(profile.getName());
 
 // ID Creator
 function* createIds() {
-  let index = 1;
+  let index = 1
 
   while (true) {
-    yield index++;
+    yield index++
   }
 }
 
-const gen = createIds();
+const gen = createIds()
 
-console.log(gen.next().value);
-console.log(gen.next().value);
-console.log(gen.next().value);
-console.log(gen.next().value);
-console.log(gen.next().value);
-console.log(gen.next().value);
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
 ```
 
 ## Symbols
@@ -2178,15 +2300,15 @@ console.log(gen.next().value);
 // console.log(`Hello ${sym1.toString()}`)
 
 // Unique Object Keys
-const KEY1 = Symbol();
-const KEY2 = Symbol("sym2");
+const KEY1 = Symbol()
+const KEY2 = Symbol('sym2')
 
-const myObj = {};
+const myObj = {}
 
-myObj[KEY1] = "Prop1";
-myObj[KEY2] = "Prop2";
-myObj.key3 = "Prop3";
-myObj.key4 = "Prop4";
+myObj[KEY1] = 'Prop1'
+myObj[KEY2] = 'Prop2'
+myObj.key3 = 'Prop3'
+myObj.key4 = 'Prop4'
 
 // console.log(myObj[KEY1])
 // console.log(myObj[KEY2])
@@ -2197,8 +2319,8 @@ myObj.key4 = "Prop4";
 // }
 
 // Symbols are ignored by JSON.stringify
-console.log(JSON.stringify({ key: "prop" }));
-console.log(JSON.stringify({ [Symbol("sym1")]: "prop" }));
+console.log(JSON.stringify({ key: 'prop' }))
+console.log(JSON.stringify({ [Symbol('sym1')]: 'prop' }))
 ```
 
 ## Destructuring
@@ -2309,17 +2431,17 @@ console.log(double(numbers))
 ```javascript
 // MAPS = key-value pairs - can use ANY type as a key or value
 
-const map1 = new Map();
+const map1 = new Map()
 
 // Set Keys
-const key1 = "some string",
+const key1 = 'some string',
   key2 = {},
-  key3 = function() {};
+  key3 = function() {}
 
 // Set map values by key
-map1.set(key1, "Value of key1");
-map1.set(key2, "Value of key2");
-map1.set(key3, "Value of key3");
+map1.set(key1, 'Value of key1')
+map1.set(key2, 'Value of key2')
+map1.set(key3, 'Value of key3')
 
 // Get values by key
 // console.log(map1.get(key1), map1.get(key2), map1.get(key3))
@@ -2352,16 +2474,16 @@ map1.set(key3, "Value of key3");
 // CONVERT TO ARRAYS
 
 // Create an array of the key value pairs
-const keyValArr = Array.from(map1);
-console.log(keyValArr);
+const keyValArr = Array.from(map1)
+console.log(keyValArr)
 
 // Create an array of the values
-const valArr = Array.from(map1.values());
-console.log(valArr);
+const valArr = Array.from(map1.values())
+console.log(valArr)
 
 // Create an array of the keys
-const keyArr = Array.from(map1.keys());
-console.log(keyArr);
+const keyArr = Array.from(map1.keys())
+console.log(keyArr)
 ```
 
 ## Sets
@@ -2369,14 +2491,14 @@ console.log(keyArr);
 ```javascript
 // SETS - Store unique values of any type
 
-const set1 = new Set();
+const set1 = new Set()
 
 // Add values to set
-set1.add(100);
-set1.add("A string");
-set1.add({ name: "John" });
-set1.add(true);
-set1.add(100);
+set1.add(100)
+set1.add('A string')
+set1.add({ name: 'John' })
+set1.add(true)
+set1.add(100)
 
 // const set2 = new Set([1, true, 'string'])
 // console.log(set2)
@@ -2409,85 +2531,85 @@ set1.add(100);
 // })
 
 // CONVERT SET TO ARRAY
-const setArr = Array.from(set1);
-console.log(setArr);
+const setArr = Array.from(set1)
+console.log(setArr)
 ```
 
 ## Default Function Argument
 
 ```javascript
-function makeAjaxRequest(url, method = "GET") {
-  return method;
+function makeAjaxRequest(url, method = 'GET') {
+  return method
 }
-console.log(makeAjaxRequest("google.com")); // null != undefined
-console.log(makeAjaxRequest("google.com", "POST"));
+console.log(makeAjaxRequest('google.com')) // null != undefined
+console.log(makeAjaxRequest('google.com', 'POST'))
 
 function User(id) {
-  this.id = id;
+  this.id = id
 }
 
 function generateId() {
-  return Math.random() * 9999999;
+  return Math.random() * 9999999
 }
 
 function createAdminUser(user = new User(generateId())) {
-  user.admin = true;
-  return user;
+  user.admin = true
+  return user
 }
 
-console.log(createAdminUser());
+console.log(createAdminUser())
 ```
 
 ## Capturing Arguments
 
 ```javascript
-console.log("=== capturing ===");
+console.log('=== capturing ===')
 function addNumbers(...numbers) {
-  return numbers.reduce((sum, number) => sum + number, 0);
+  return numbers.reduce((sum, number) => sum + number, 0)
 }
-console.log(addNumbers(1, 2, 3, 4, 5));
+console.log(addNumbers(1, 2, 3, 4, 5))
 
-const defaultColors = ["red", "green"];
-const userFavoriteColors = ["orange", "yellow"];
+const defaultColors = ['red', 'green']
+const userFavoriteColors = ['orange', 'yellow']
 
-console.log("=== concat ===");
-console.log(defaultColors.concat(userFavoriteColors));
+console.log('=== concat ===')
+console.log(defaultColors.concat(userFavoriteColors))
 
-console.log("=== rest ===");
-console.log([...defaultColors, ...userFavoriteColors]);
+console.log('=== rest ===')
+console.log([...defaultColors, ...userFavoriteColors])
 
-console.log("=== spread ===");
+console.log('=== spread ===')
 function validateShoppingList(...items) {
-  if (items.indexOf("milk") < 0) {
-    return ["milk", ...items];
+  if (items.indexOf('milk') < 0) {
+    return ['milk', ...items]
   }
-  return items;
+  return items
 }
-console.log(validateShoppingList("oranges", "bread", "eggs"));
+console.log(validateShoppingList('oranges', 'bread', 'eggs'))
 
-console.log("=== Exercise 1 ===");
-var array = [1, 2];
-var array2 = [3, 4, 5];
+console.log('=== Exercise 1 ===')
+var array = [1, 2]
+var array2 = [3, 4, 5]
 
-console.log("=== normal ===");
+console.log('=== normal ===')
 function unshift(array, a, b, c, d, e) {
-  return [a, b, c, d, e].concat(array);
+  return [a, b, c, d, e].concat(array)
 }
 
-console.log(unshift(array, 3, 4, 5, 6, 7));
+console.log(unshift(array, 3, 4, 5, 6, 7))
 
 // Refactor
-console.log("=== rest ===");
+console.log('=== rest ===')
 function unshiftRefactor(array, ...array2) {
-  return [...array, ...array2];
+  return [...array, ...array2]
 }
-console.log(unshiftRefactor(array, 3, 4, 5, 6, 7));
+console.log(unshiftRefactor(array, 3, 4, 5, 6, 7))
 ```
 
 ## Error Handling
 
 ```javascript
-const user = { email: "jdoe@gmail.com" };
+const user = { email: 'jdoe@gmail.com' }
 
 try {
   // Produce a ReferenceError
@@ -2504,19 +2626,19 @@ try {
 
   if (!user.name) {
     //throw 'User has no name'
-    throw new SyntaxError("User has no name");
+    throw new SyntaxError('User has no name')
   }
 } catch (e) {
-  console.log(`User Error: ${e.message}`);
+  console.log(`User Error: ${e.message}`)
   // console.log(e)
   // console.log(e.message)
   // console.log(e.name)
   // console.log(e instanceof TypeError)
 } finally {
-  console.log("Finally runs reguardless of result...");
+  console.log('Finally runs reguardless of result...')
 }
 
-console.log("Program continues...");
+console.log('Program continues...')
 ```
 
 ## Regular Expressions
@@ -2524,9 +2646,9 @@ console.log("Program continues...");
 ## Evaluation Functions
 
 ```javascript
-let re;
-re = /hello/;
-re = /hello/i; // i =  case insensitive
+let re
+re = /hello/
+re = /hello/i // i =  case insensitive
 // re = /hello/g // Global search
 
 // console.log(re)
@@ -2564,89 +2686,89 @@ re = /hello/i; // i =  case insensitive
 ```javascript
 // สรุป ^, $, ., *, ? ถ้าจะใช้เป็น string ต้อง Escape -> \^, \$, \., \*, \?
 
-let re;
+let re
 // Literal Characters
-re = /hello/;
-re = /hello/i;
+re = /hello/
+re = /hello/i
 
 // Metacharacter Symbols
-re = /^h/i; // Must start with
-re = / world$/i; // Must ends with
-re = /^hello$/i; // Must begin and end with
-re = /h.llo/i; // Matches any ONE character
-re = /h*llo/i; // Matches any character 0 or more times
-re = /gre?a?y/i; // Optional character
-re = /gre?a?y\?/i; // Escape character
+re = /^h/i // Must start with
+re = / world$/i // Must ends with
+re = /^hello$/i // Must begin and end with
+re = /h.llo/i // Matches any ONE character
+re = /h*llo/i // Matches any character 0 or more times
+re = /gre?a?y/i // Optional character
+re = /gre?a?y\?/i // Escape character
 
 // String to match
-const str = "Gray?";
+const str = 'Gray?'
 
 // Log Results
-const result = re.exec(str);
-console.log(result);
+const result = re.exec(str)
+console.log(result)
 
 function reTest(re, str) {
   if (re.test(str)) {
-    console.log(`${str} matches ${re.source}`);
+    console.log(`${str} matches ${re.source}`)
   } else {
-    console.log(`${str} does NOT match ${re.source}`);
+    console.log(`${str} does NOT match ${re.source}`)
   }
 }
 
-reTest(re, str);
+reTest(re, str)
 ```
 
 ## Character Sets and Quantifiers
 
 ```javascript
 // สรุป [A-Z], [a-z], [A-Za-z], [0-9], [0-9][0-9], {2}, {2, 4}, {2, }, ()
-let re;
+let re
 // Literal Characters
-re = /hello/;
-re = /hello/i;
+re = /hello/
+re = /hello/i
 
 // Metacharacter Symbols
-re = /^h/i; // Must start with
-re = / world$/i; // Must ends with
-re = /^hello$/i; // Must begin and end with
-re = /h.llo/i; // Matches any ONE character
-re = /h*llo/i; // Matches any character 0 or more times
-re = /gre?a?y/i; // Optional character
-re = /gre?a?y\?/i; // Escape character
+re = /^h/i // Must start with
+re = / world$/i // Must ends with
+re = /^hello$/i // Must begin and end with
+re = /h.llo/i // Matches any ONE character
+re = /h*llo/i // Matches any character 0 or more times
+re = /gre?a?y/i // Optional character
+re = /gre?a?y\?/i // Escape character
 
 // Brackets [] - Character Sets
-re = /gr[ae]y/i; // Must be an a or e
-re = /[GF]ray/i; // Must be a G or F
-re = /[^GF]ray/i; // Match anything except a G or F
-re = /[A-Z]ray/; // Match any uppercase letter
-re = /[a-z]ray/; // Match any lowercase letter
-re = /[A-Za-z]ray/; // Match any  letter
-re = /[0-9][0-9]ray/; // Match any digit
+re = /gr[ae]y/i // Must be an a or e
+re = /[GF]ray/i // Must be a G or F
+re = /[^GF]ray/i // Match anything except a G or F
+re = /[A-Z]ray/ // Match any uppercase letter
+re = /[a-z]ray/ // Match any lowercase letter
+re = /[A-Za-z]ray/ // Match any  letter
+re = /[0-9][0-9]ray/ // Match any digit
 
 // Braces {} - Quantifiers
-re = /Hel{2}o/i; // Must occur exactly {m} amount of times
-re = /Hel{2,4}o/i; // Must occur exactly {m} amount of times
-re = /Hel{2,}o/i; // Must occur at least {m} times
+re = /Hel{2}o/i // Must occur exactly {m} amount of times
+re = /Hel{2,4}o/i // Must occur exactly {m} amount of times
+re = /Hel{2,}o/i // Must occur at least {m} times
 
 // Paretheses () - Grouping
-re = /^([0-9]x){3}$/;
+re = /^([0-9]x){3}$/
 
 // String to match
-const str = "3x3x3x";
+const str = '3x3x3x'
 
 // Log Results
-const result = re.exec(str);
-console.log(result);
+const result = re.exec(str)
+console.log(result)
 
 function reTest(re, str) {
   if (re.test(str)) {
-    console.log(`${str} matches ${re.source}`);
+    console.log(`${str} matches ${re.source}`)
   } else {
-    console.log(`${str} does NOT match ${re.source}`);
+    console.log(`${str} does NOT match ${re.source}`)
   }
 }
 
-reTest(re, str);
+reTest(re, str)
 ```
 
 ## Shorthand Character Classes
@@ -2655,120 +2777,120 @@ reTest(re, str);
 // สรุป
 // \w, \w+, \W, \d, \d+, \D, \s, \S, \b, (?=), (?!)
 
-let re;
+let re
 // Literal Characters
-re = /hello/;
-re = /hello/i;
+re = /hello/
+re = /hello/i
 
 // Metacharacter Symbols
-re = /^h/i; // Must start with
-re = / world$/i; // Must ends with
-re = /^hello$/i; // Must begin and end with
-re = /h.llo/i; // Matches any ONE character
-re = /h*llo/i; // Matches any character 0 or more times
-re = /gre?a?y/i; // Optional character
-re = /gre?a?y\?/i; // Escape character
+re = /^h/i // Must start with
+re = / world$/i // Must ends with
+re = /^hello$/i // Must begin and end with
+re = /h.llo/i // Matches any ONE character
+re = /h*llo/i // Matches any character 0 or more times
+re = /gre?a?y/i // Optional character
+re = /gre?a?y\?/i // Escape character
 
 // Brackets [] - Character Sets
-re = /gr[ae]y/i; // Must be an a or e
-re = /[GF]ray/i; // Must be a G or F
-re = /[^GF]ray/i; // Match anything except a G or F
-re = /[A-Z]ray/; // Match any uppercase letter
-re = /[a-z]ray/; // Match any lowercase letter
-re = /[A-Za-z]ray/; // Match any  letter
-re = /[0-9][0-9]ray/; // Match any digit
+re = /gr[ae]y/i // Must be an a or e
+re = /[GF]ray/i // Must be a G or F
+re = /[^GF]ray/i // Match anything except a G or F
+re = /[A-Z]ray/ // Match any uppercase letter
+re = /[a-z]ray/ // Match any lowercase letter
+re = /[A-Za-z]ray/ // Match any  letter
+re = /[0-9][0-9]ray/ // Match any digit
 
 // Braces {} - Quantifiers
-re = /Hel{2}o/i; // Must occur exactly {m} amount of times
-re = /Hel{2,4}o/i; // Must occur exactly {m} amount of times
-re = /Hel{2,}o/i; // Must occur at least {m} times
+re = /Hel{2}o/i // Must occur exactly {m} amount of times
+re = /Hel{2,4}o/i // Must occur exactly {m} amount of times
+re = /Hel{2,}o/i // Must occur at least {m} times
 
 // Paretheses () - Grouping
-re = /^([0-9]x){3}$/;
+re = /^([0-9]x){3}$/
 
 // Shorthand Character Classes
-re = /\w/; // Word character - alphanumeric or _
-re = /\w+/; // + = one or more
-re = /\W/; // Non-Word character
-re = /\d/; // Match any digit
-re = /\d+/; // Match any digit 0 or more times
-re = /\D/; // Match any Non-digit
-re = /\s/; // Match whitespace char
-re = /\S/; // Match non-whitespace char
-re = /Hell\b/i; // Word boundary
+re = /\w/ // Word character - alphanumeric or _
+re = /\w+/ // + = one or more
+re = /\W/ // Non-Word character
+re = /\d/ // Match any digit
+re = /\d+/ // Match any digit 0 or more times
+re = /\D/ // Match any Non-digit
+re = /\s/ // Match whitespace char
+re = /\S/ // Match non-whitespace char
+re = /Hell\b/i // Word boundary
 
 // Assertions
-re = /x(?=y)/; // Match x only if followed by y
-re = /x(?!y)/; // Match x only if NOT followed by y
+re = /x(?=y)/ // Match x only if followed by y
+re = /x(?!y)/ // Match x only if NOT followed by y
 
 // String to match
-const str = "dkjekdxydjekdj";
+const str = 'dkjekdxydjekdj'
 
 // Log Results
-const result = re.exec(str);
-console.log(result);
+const result = re.exec(str)
+console.log(result)
 
 function reTest(re, str) {
   if (re.test(str)) {
-    console.log(`${str} matches ${re.source}`);
+    console.log(`${str} matches ${re.source}`)
   } else {
-    console.log(`${str} does NOT match ${re.source}`);
+    console.log(`${str} does NOT match ${re.source}`)
   }
 }
 
-reTest(re, str);
+reTest(re, str)
 ```
 
 ## Form Validation Project
 
 ```javascript
 // Form Blur Event Listeners
-document.getElementById("name").addEventListener("blur", validateName);
-document.getElementById("zip").addEventListener("blur", validateZip);
-document.getElementById("email").addEventListener("blur", validateEmail);
-document.getElementById("phone").addEventListener("blur", validatePhone);
+document.getElementById('name').addEventListener('blur', validateName)
+document.getElementById('zip').addEventListener('blur', validateZip)
+document.getElementById('email').addEventListener('blur', validateEmail)
+document.getElementById('phone').addEventListener('blur', validatePhone)
 
 function validateName() {
-  const name = document.getElementById("name");
-  const re = /^[a-zA-Z]{2,10}$/;
+  const name = document.getElementById('name')
+  const re = /^[a-zA-Z]{2,10}$/
 
   if (!re.test(name.value)) {
-    name.classList.add("is-invalid");
+    name.classList.add('is-invalid')
   } else {
-    name.classList.remove("is-invalid");
+    name.classList.remove('is-invalid')
   }
 }
 
 function validateZip() {
-  const zip = document.getElementById("zip");
-  const re = /^[0-9]{5}(-[0-9]{4})?$/;
+  const zip = document.getElementById('zip')
+  const re = /^[0-9]{5}(-[0-9]{4})?$/
 
   if (!re.test(zip.value)) {
-    zip.classList.add("is-invalid");
+    zip.classList.add('is-invalid')
   } else {
-    zip.classList.remove("is-invalid");
+    zip.classList.remove('is-invalid')
   }
 }
 
 function validateEmail() {
-  const email = document.getElementById("email");
-  const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+  const email = document.getElementById('email')
+  const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/
 
   if (!re.test(email.value)) {
-    email.classList.add("is-invalid");
+    email.classList.add('is-invalid')
   } else {
-    email.classList.remove("is-invalid");
+    email.classList.remove('is-invalid')
   }
 }
 
 function validatePhone() {
-  const phone = document.getElementById("phone");
-  const re = /^\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}$/;
+  const phone = document.getElementById('phone')
+  const re = /^\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}$/
 
   if (!re.test(phone.value)) {
-    phone.classList.add("is-invalid");
+    phone.classList.add('is-invalid')
   } else {
-    phone.classList.remove("is-invalid");
+    phone.classList.remove('is-invalid')
   }
 }
 ```
@@ -2812,55 +2934,55 @@ function validatePhone() {
 
 // REVEALING MODULE PATTERN
 const ItemCtrl = (function() {
-  let data = [];
+  let data = []
 
   function add(item) {
-    data.push(item);
-    console.log("Item Added....");
+    data.push(item)
+    console.log('Item Added....')
   }
 
   function get(id) {
     return data.find(item => {
-      return item.id === id;
-    });
+      return item.id === id
+    })
   }
 
   return {
     add: add
     // get: get
-  };
-})();
+  }
+})()
 
-ItemCtrl.add({ id: 1, name: "John" });
-ItemCtrl.add({ id: 2, name: "Mark" });
-console.log(ItemCtrl.get(2));
+ItemCtrl.add({ id: 1, name: 'John' })
+ItemCtrl.add({ id: 2, name: 'Mark' })
+console.log(ItemCtrl.get(2))
 ```
 
 ## Singleton Pattern
 
 ```javascript
 const Singleton = (function() {
-  let instance;
+  let instance
 
   function createInstance() {
-    const object = new Object({ name: "Brad" });
-    return object;
+    const object = new Object({ name: 'Brad' })
+    return object
   }
 
   return {
     getInstance: function() {
       if (!instance) {
-        instance = createInstance();
+        instance = createInstance()
       }
-      return instance;
+      return instance
     }
-  };
-})();
+  }
+})()
 
-const instanceA = Singleton.getInstance();
-const instanceB = Singleton.getInstance();
+const instanceA = Singleton.getInstance()
+const instanceB = Singleton.getInstance()
 
-console.log(instanceA === instanceB);
+console.log(instanceA === instanceB)
 
 // console.log(instanceA)
 ```
@@ -2870,54 +2992,54 @@ console.log(instanceA === instanceB);
 ```javascript
 function MemberFactory() {
   this.createMember = function(name, type) {
-    let member;
+    let member
 
-    if (type === "simple") {
-      member = new SimpleMembership(name);
-    } else if (type === "standard") {
-      member = new StandardMembership(name);
-    } else if (type === "super") {
-      member = new SuperMembership(name);
+    if (type === 'simple') {
+      member = new SimpleMembership(name)
+    } else if (type === 'standard') {
+      member = new StandardMembership(name)
+    } else if (type === 'super') {
+      member = new SuperMembership(name)
     }
 
-    member.type = type;
+    member.type = type
 
     member.define = function() {
-      console.log(`${this.name} (${this.type}): ${this.cost}`);
-    };
+      console.log(`${this.name} (${this.type}): ${this.cost}`)
+    }
 
-    return member;
-  };
+    return member
+  }
 }
 
 const SimpleMembership = function(name) {
-  this.name = name;
-  this.cost = "$5";
-};
+  this.name = name
+  this.cost = '$5'
+}
 
 const StandardMembership = function(name) {
-  this.name = name;
-  this.cost = "$15";
-};
+  this.name = name
+  this.cost = '$15'
+}
 
 const SuperMembership = function(name) {
-  this.name = name;
-  this.cost = "$25";
-};
+  this.name = name
+  this.cost = '$25'
+}
 
-const members = [];
-const factory = new MemberFactory();
+const members = []
+const factory = new MemberFactory()
 
-members.push(factory.createMember("John Doe", "simple"));
-members.push(factory.createMember("Chris Jackson", "super"));
-members.push(factory.createMember("Janice Williams", "simple"));
-members.push(factory.createMember("Tom Smith", "standard"));
+members.push(factory.createMember('John Doe', 'simple'))
+members.push(factory.createMember('Chris Jackson', 'super'))
+members.push(factory.createMember('Janice Williams', 'simple'))
+members.push(factory.createMember('Tom Smith', 'standard'))
 
 // console.log(members)
 
 members.forEach(function(member) {
-  member.define();
-});
+  member.define()
+})
 ```
 
 ## Observer Pattern
@@ -2925,139 +3047,139 @@ members.forEach(function(member) {
 ```javascript
 class EventObserver {
   constructor() {
-    this.observers = [];
+    this.observers = []
   }
 
   subscribe(fn) {
-    this.observers.push(fn);
-    console.log(`You are now subscribed to ${fn.name}`);
+    this.observers.push(fn)
+    console.log(`You are now subscribed to ${fn.name}`)
   }
 
   unsubscribe(fn) {
     // Filter out from the list whatever matches the callback function. If there is no match, the callback gets to stay on the list. The filter returns a new list and reassigns the list of observers.
     this.observers = this.observers.filter(function(item) {
       if (item !== fn) {
-        return item;
+        return item
       }
-    });
-    console.log(`You are now unsubscribed from ${fn.name}`);
+    })
+    console.log(`You are now unsubscribed from ${fn.name}`)
   }
 
   fire() {
     this.observers.forEach(function(item) {
-      item.call();
-    });
+      item.call()
+    })
   }
 }
 
-const click = new EventObserver();
+const click = new EventObserver()
 
 // Event Listeners
-document.querySelector(".sub-ms").addEventListener("click", function() {
-  click.subscribe(getCurMilliseconds);
-});
+document.querySelector('.sub-ms').addEventListener('click', function() {
+  click.subscribe(getCurMilliseconds)
+})
 
-document.querySelector(".unsub-ms").addEventListener("click", function() {
-  click.unsubscribe(getCurMilliseconds);
-});
+document.querySelector('.unsub-ms').addEventListener('click', function() {
+  click.unsubscribe(getCurMilliseconds)
+})
 
-document.querySelector(".sub-s").addEventListener("click", function() {
-  click.subscribe(getCurSeconds);
-});
+document.querySelector('.sub-s').addEventListener('click', function() {
+  click.subscribe(getCurSeconds)
+})
 
-document.querySelector(".unsub-s").addEventListener("click", function() {
-  click.unsubscribe(getCurSeconds);
-});
+document.querySelector('.unsub-s').addEventListener('click', function() {
+  click.unsubscribe(getCurSeconds)
+})
 
-document.querySelector(".fire").addEventListener("click", function() {
-  click.fire();
-});
+document.querySelector('.fire').addEventListener('click', function() {
+  click.fire()
+})
 
 // Click Handler
 const getCurMilliseconds = function() {
-  console.log(`Current Milliseconds: ${new Date().getMilliseconds()}`);
-};
+  console.log(`Current Milliseconds: ${new Date().getMilliseconds()}`)
+}
 
 const getCurSeconds = function() {
-  console.log(`Current Seconds: ${new Date().getSeconds()}`);
-};
+  console.log(`Current Seconds: ${new Date().getSeconds()}`)
+}
 ```
 
 ## Mediator Pattern
 
 ```javascript
 const User = function(name) {
-  this.name = name;
-  this.chatroom = null;
-};
+  this.name = name
+  this.chatroom = null
+}
 
 User.prototype = {
   send: function(message, to) {
-    this.chatroom.send(message, this, to);
+    this.chatroom.send(message, this, to)
   },
   recieve: function(message, from) {
-    console.log(`${from.name} to ${this.name}: ${message}`);
+    console.log(`${from.name} to ${this.name}: ${message}`)
   }
-};
+}
 
 const Chatroom = function() {
-  let users = {}; // list of users
+  let users = {} // list of users
 
   return {
     register: function(user) {
-      users[user.name] = user;
-      user.chatroom = this;
+      users[user.name] = user
+      user.chatroom = this
     },
     send: function(message, from, to) {
       if (to) {
         // Single user message
-        to.recieve(message, from);
+        to.recieve(message, from)
       } else {
         // Mass message
         for (key in users) {
           if (users[key] !== from) {
-            users[key].recieve(message, from);
+            users[key].recieve(message, from)
           }
         }
       }
     }
-  };
-};
+  }
+}
 
-const brad = new User("Brad");
-const jeff = new User("Jeff");
-const sara = new User("Sara");
+const brad = new User('Brad')
+const jeff = new User('Jeff')
+const sara = new User('Sara')
 
-const chatroom = new Chatroom();
+const chatroom = new Chatroom()
 
-chatroom.register(brad);
-chatroom.register(jeff);
-chatroom.register(sara);
+chatroom.register(brad)
+chatroom.register(jeff)
+chatroom.register(sara)
 
-brad.send("Hello Jeff", jeff);
-sara.send("Hello Brad, you are the best dev ever!", brad);
-jeff.send("Hello Everyone!!!!");
+brad.send('Hello Jeff', jeff)
+sara.send('Hello Brad, you are the best dev ever!', brad)
+jeff.send('Hello Everyone!!!!')
 ```
 
 ## State Pattern
 
 ```javascript
 const PageState = function() {
-  let currentState = new homeState(this);
+  let currentState = new homeState(this)
 
   this.init = function() {
-    this.change(new homeState());
-  };
+    this.change(new homeState())
+  }
 
   this.change = function(state) {
-    currentState = state;
-  };
-};
+    currentState = state
+  }
+}
 
 // Home State
 const homeState = function(page) {
-  document.querySelector("#heading").textContent = null;
-  document.querySelector("#content").innerHTML = `
+  document.querySelector('#heading').textContent = null
+  document.querySelector('#content').innerHTML = `
     <div class="jumbotron">
     <h1 class="display-3">Hello, world!</h1>
     <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
@@ -3067,21 +3189,21 @@ const homeState = function(page) {
       <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </p>
   </div>
-  `;
-};
+  `
+}
 
 // About State
 const aboutState = function(page) {
-  document.querySelector("#heading").textContent = "About Us";
-  document.querySelector("#content").innerHTML = `
+  document.querySelector('#heading').textContent = 'About Us'
+  document.querySelector('#content').innerHTML = `
     <p>This is the about page</p>
-`;
-};
+`
+}
 
 // Contact State
 const contactState = function(page) {
-  document.querySelector("#heading").textContent = "Contact Us";
-  document.querySelector("#content").innerHTML = `
+  document.querySelector('#heading').textContent = 'Contact Us'
+  document.querySelector('#content').innerHTML = `
   <form>
     <div class="form-group">
       <label>Name</label>
@@ -3093,40 +3215,40 @@ const contactState = function(page) {
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
   </form>
-`;
-};
+`
+}
 
 // Instantiate pageState
-const page = new PageState();
+const page = new PageState()
 
 // Init the first state
-page.init();
+page.init()
 
 // UI Vars
-const home = document.getElementById("home"),
-  about = document.getElementById("about"),
-  contact = document.getElementById("contact");
+const home = document.getElementById('home'),
+  about = document.getElementById('about'),
+  contact = document.getElementById('contact')
 
 // Home
-home.addEventListener("click", e => {
-  page.change(new homeState());
+home.addEventListener('click', e => {
+  page.change(new homeState())
 
-  e.preventDefault();
-});
+  e.preventDefault()
+})
 
 // About
-about.addEventListener("click", e => {
-  page.change(new aboutState());
+about.addEventListener('click', e => {
+  page.change(new aboutState())
 
-  e.preventDefault();
-});
+  e.preventDefault()
+})
 
 // Contact
-contact.addEventListener("click", e => {
-  page.change(new contactState());
+contact.addEventListener('click', e => {
+  page.change(new contactState())
 
-  e.preventDefault();
-});
+  e.preventDefault()
+})
 ```
 
 ## Tracalorie Project
@@ -3139,33 +3261,33 @@ contact.addEventListener("click", e => {
 
 ```javascript
 function createReactiveObject(obj) {
-  const keys = Object.keys(obj);
-  obj.$data = Object.assign({}, obj);
+  const keys = Object.keys(obj)
+  obj.$data = Object.assign({}, obj)
   keys.forEach(key => {
     Object.defineProperty(obj, key, {
       get: reactiveGetter.bind(obj, key),
       set: reactiveSetter.bind(obj, key)
-    });
-  });
+    })
+  })
 }
 
 function reactiveSetter(property, value) {
-  this.$data[property] = value;
-  console.log(`${property} changed to ${value}`);
+  this.$data[property] = value
+  console.log(`${property} changed to ${value}`)
 }
 
 function reactiveGetter(property) {
-  console.log(`get ${property}`);
-  return this.$data[property];
+  console.log(`get ${property}`)
+  return this.$data[property]
 }
 
 let user = {
-  name: "",
+  name: '',
   score: 0
-};
+}
 
-createReactiveObject(user);
+createReactiveObject(user)
 
-user.name = "Yo";
-console.log(user.score);
+user.name = 'Yo'
+console.log(user.score)
 ```
