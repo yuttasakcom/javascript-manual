@@ -2,102 +2,101 @@
 
 ## Table of Contents
 
-* Fundamentals
-  * [Introduction](#introduction)
-  * [Editor for JavaScript](#editor-for-javascript)
-  * [Using JavaScript](#using-javascript)
-  * [Console Log](#console-log)
-  * [Variables](#variables)
-  * [Const/Let](#const-let)
-  * [Data Types in JavaScript](#data-types-in-javascript)
-  * [Type Conversion](#type-conversion)
-  * [Operators](#operators)
-  * [Math](#math)
-  * [String Method](#string-method)
-    * [indexOf](#index-of)
-    * [lastIndexOf](#last-index-of)
-    * [concat](#concat)
-  * [Template Strings](#template-strings)
-  * [Array Helper Methods](#array-helper-methods)
-    * [Array Methods](#array-methods)
-    * [push](#push)
-    * [unshift](#unshift)
-    * [pop](#pop)
-    * [shift](#shift)
-    * [join](#join)
-    * [splice](#splice)
-    * [slice](#slice)
-    * [split](#split)
-    * [reverse](#reverse)
-    * [forEach](#foreach)
-    * [map](#map)
-    * [filter](#filter)
-    * [find](#find)
-    * [findIndex](#find-index)
-    * [every and some](#every-and-some)
-    * [reduce](#reduce)
-    * [sort](#sort)
-  * [Object Literals](#object-literals)
-  * [Date & Time](#date-time)
-  * [Control Structures](#control-structures)
-    * [If / Else-If/ Else](#if-else-if-else)
-    * [Switch](#switch)
-    * [For](#for)
-    * [While](#while)
-  * [Scope](#scope)
-    * [Global Scope](#global-scope)
-    * [Local Scope](#local-scope)
-  * [Arrow Function](#arrow-function)
-  * [Enhanced Object Literals](#enhanced-object-literals)
-  * [Default Function Argument](#default-function-argument)
-  * Rest and Spread Operator
-    * [Rest and Spread](#capturing-arguments)
-  * [Destructuring](#destructuring)
-  * [DOM Manipulation & Events](#dom-manipulation-and-events)
-  * [Classed](#classes)
-    * [Introduction](#introduction)
-    * [Prototypal Inheritance](#prototypal-inheritance)
-    * [Refactoring with Classes](#refactoring-with-classes)
-  * [Asynchronous, Ajax & Fetch](#asynchronous-ajax-fetch)
-    * [XMLHttpRequest](#xmlhttprequest)
-    * [Ajax](#ajax)
-    * [Fetch](#fetch)
-  * [Callback](#callback)
-    * [Recursive Function](#recursive-function)
-  * [Promise](#promise)
-  * [Async Await](#async-await)
-  * [Arrow Function](#arrow-function)
-  * [Github Finder](#github-finder)
-  * [Iterators & Generators](#iterators-and-generators)
-  * [Symbols](#symbols)
-  * [Destructuring](#destructuring)
-  * [Maps](#maps)
-  * [Sets](#sets)
-  * [Default Function Argument](#default-function-argument)
+* [Introduction](#introduction)
+* [Editor for JavaScript](#editor-for-javascript)
+* [Using JavaScript](#using-javascript)
+* [Console Log](#console-log)
+* [Variables](#variables)
+* [Const/Let](#const-let)
+* [Data Types in JavaScript](#data-types-in-javascript)
+* [Type Conversion](#type-conversion)
+* [Operators](#operators)
+* [Math](#math)
+* [String Method](#string-method)
+  * [indexOf](#index-of)
+  * [lastIndexOf](#last-index-of)
+  * [concat](#concat)
+* [Template Strings](#template-strings)
+* [Array Helper Methods](#array-helper-methods)
+  * [Array Methods](#array-methods)
+  * [push](#push)
+  * [unshift](#unshift)
+  * [pop](#pop)
+  * [shift](#shift)
+  * [join](#join)
+  * [splice](#splice)
+  * [slice](#slice)
+  * [split](#split)
+  * [reverse](#reverse)
+  * [forEach](#foreach)
+  * [map](#map)
+  * [filter](#filter)
+  * [find](#find)
+  * [findIndex](#find-index)
+  * [every and some](#every-and-some)
+  * [reduce](#reduce)
+  * [sort](#sort)
+* [Object Literals](#object-literals)
+* [Date & Time](#date-time)
+* [Control Structures](#control-structures)
+  * [If / Else-If/ Else](#if-else-if-else)
+  * [Switch](#switch)
+  * [For](#for)
+  * [While](#while)
+* [Scope](#scope)
+  * [Global Scope](#global-scope)
+  * [Local Scope](#local-scope)
+* [Arrow Function](#arrow-function)
+* [Enhanced Object Literals](#enhanced-object-literals)
+* [Default Function Argument](#default-function-argument)
+* Rest and Spread Operator
   * [Rest and Spread](#capturing-arguments)
-  * [Error Handling](#error-handling)
-  * [Regular Expressions](#regular-expressions)
-    * [Evaluation Functions](#evaluation-functions)
-    * [Metacharacter Symbols](#metacharacter-symbols)
-    * [Character Sets & Quantifiers](#character-sets-and-quantifiers)
-    * [Shorthand Character Classes](#shorthand-character-classes)
-    * [Form Validation Project](#form-validation-project)
-  * [Javascript Patterns](#javascript-patterns)
-    * [Module & Revealing Module Pattern](#module-and-revealing-module-pattern)
-    * [Singleton Pattern](#singleton-pattern)
-    * [Factory Pattern](#factory-pattern)
-    * [Observer Pattern](#observer-pattern)
-    * [Mediator Pattern](#mediator-pattern)
-    * [State Pattern](#state-pattern)
-    * [Tracalorie Project](#tracalorie-project)
-  * [Reactive](#reactive)
-  * Testing
-    * Reference
-      * [Mocha](https://mochajs.org/)
-      * [Expect](https://github.com/mjackson/expect)
-      * [Super Test](https://github.com/visionmedia/supertest)
-      * [Chai](http://chaijs.com/)
-      * [Jest](https://facebook.github.io/jest/)
+* [Destructuring](#destructuring)
+* [DOM Manipulation & Events](#dom-manipulation-and-events)
+* [Classed](#classes)
+  * [Introduction](#introduction)
+  * [Prototypal Inheritance](#prototypal-inheritance)
+  * [Refactoring with Classes](#refactoring-with-classes)
+* [Asynchronous, Ajax & Fetch](#asynchronous-ajax-fetch)
+  * [XMLHttpRequest](#xmlhttprequest)
+  * [Ajax](#ajax)
+  * [Fetch](#fetch)
+* [Callback](#callback)
+  * [Recursive Function](#recursive-function)
+* [Promise](#promise)
+* [Async Await](#async-await)
+* [Arrow Function](#arrow-function)
+* [Github Finder](#github-finder)
+* [Iterators & Generators](#iterators-and-generators)
+* [Symbols](#symbols)
+* [Destructuring](#destructuring)
+* [Maps](#maps)
+* [Sets](#sets)
+* [Default Function Argument](#default-function-argument)
+* [Rest and Spread](#capturing-arguments)
+* [Error Handling](#error-handling)
+* [Regular Expressions](#regular-expressions)
+  * [Evaluation Functions](#evaluation-functions)
+  * [Metacharacter Symbols](#metacharacter-symbols)
+  * [Character Sets & Quantifiers](#character-sets-and-quantifiers)
+  * [Shorthand Character Classes](#shorthand-character-classes)
+  * [Form Validation Project](#form-validation-project)
+* [Javascript Patterns](#javascript-patterns)
+  * [Module & Revealing Module Pattern](#module-and-revealing-module-pattern)
+  * [Singleton Pattern](#singleton-pattern)
+  * [Factory Pattern](#factory-pattern)
+  * [Observer Pattern](#observer-pattern)
+  * [Mediator Pattern](#mediator-pattern)
+  * [State Pattern](#state-pattern)
+  * [Tracalorie Project](#tracalorie-project)
+* [Reactive](#reactive)
+* Testing
+  * Reference
+    * [Mocha](https://mochajs.org/)
+    * [Expect](https://github.com/mjackson/expect)
+    * [Super Test](https://github.com/visionmedia/supertest)
+    * [Chai](http://chaijs.com/)
+    * [Jest](https://facebook.github.io/jest/)
 
 ## Introduction
 
@@ -108,39 +107,27 @@
 สำหรับ Editor ที่แนะนำให้ใช้ คือ [Visual Studio Code](https://code.visualstudio.com/)
 
 * ติดตั้ง Extensions เพิ่มเติม
+  * ESLint
   * JavaScript (ES6) code snippets
-  * JavaScript Standard Style
   * Prettier - Code formatter
   * Bracket Pair Colorizer
-  * Live Server
+  * Vetur
 * หากต้องการใช้ Javascript Standard ในการกำหนด format style ให้ติดตั้ง `sudo npm i -g standard`
 
 ```json
 // ตั้งค่า vs code ให้จัด format style อัตโนมัติตอนกด save
 {
-  "editor.wordWrap": "on",
-  "standard.autoFixOnSave": true,
-  "workbench.startupEditor": "newUntitledFile",
-  "liveServer.settings.donotShowInfoMsg": true,
-  "[markdown]": {
-    "editor.formatOnSave": true
-  },
-  "[html]": {
-    "editor.formatOnSave": true
-  },
-  "[css]": {
-    "editor.formatOnSave": true
-  },
-  "[scss]": {
-    "editor.formatOnSave": true
-  },
-  "[vue]": {
-    "editor.formatOnSave": true
-  },
-  "[json]": {
-    "editor.formatOnSave": true
-  },
-  "editor.tabSize": 2
+  "eslint.autoFixOnSave": true,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "eslint.validate": ["javascript", "javascriptreact", "vue"],
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "vetur.format.defaultFormatter.css": "prettier",
+  "vetur.format.defaultFormatter.scss": "prettier",
+  "vetur.format.defaultFormatter.js": "prettier",
+  "editor.wordWrap": "on"
 }
 ```
 
