@@ -36,7 +36,7 @@
   * [every and some](#every-and-some)
   * [reduce](#reduce)
   * [sort](#sort)
-* [Object Literals](#object-literals)
+* [Objects](#objects)
 * [Date & Time](#date-time)
 * [Control Structures](#control-structures)
   * [If / Else-If/ Else](#if-else-if-else)
@@ -1297,7 +1297,33 @@ console.log(items)
 // { name: 'Zeros', value: 37 } ]
 ```
 
-## Object Literals
+## Objects
+
+```javascript
+let person = {
+  _name: 'Lu Xun',
+  _age: 137,
+
+  set age(ageIn) {
+    if (typeof ageIn === 'number') {
+      this._age = ageIn
+    } else {
+      console.log('Invalid input')
+      return 'Invalid input'
+    }
+  },
+
+  get age() {
+    return `${this._name} is ${this._age} years old.`
+  }
+}
+
+console.log(person.age)
+
+/* Output
+Lu Xun is 137 years old.
+*/
+```
 
 ```javascript
 const person = {
@@ -1339,6 +1365,57 @@ const inventory = [
 const bookShop = createBookShop(inventory)
 console.log(bookShop.inventoryValue())
 console.log(bookShop.priceForTitle('Harry Potter'))
+```
+
+```javascript
+let person = {
+  name: 'Tyron',
+  age: 40,
+  weekendAlarm: 'No alarms needed',
+  weekAlarm: 'Alarm set to 7AM',
+  sayHello: function() {
+    return `Hello, my name is ${this.name}`
+  },
+  sayGoodbye() {
+    return 'Goodbye!'
+  }
+}
+
+let friend = {
+  name: 'Yo'
+}
+
+friend.sayHello = person.sayHello
+
+console.log(friend.sayHello())
+
+person.hobbies = ['Basketball', 'Coaching']
+person.hobbies = ['Basketball']
+console.log(person.hobbies)
+
+console.log(person['name'])
+console.log(person['age'])
+
+let day = 'Tuesday'
+let alarm
+
+if (day === 'Saturday' || day === 'Sunday') {
+  alarm = 'weekendAlarm'
+} else {
+  alarm = 'weekAlarm'
+}
+
+console.log(person[alarm])
+console.log(person.sayHello())
+
+/* Output
+Hello, my name is Yo
+[ 'Basketball' ]
+Tyron
+40
+Alarm set to 7AM
+Hello, my name is Tyron
+*/
 ```
 
 ## Date & Time
